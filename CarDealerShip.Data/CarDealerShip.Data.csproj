@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CarDealerShip.Common\CarDealerShip.Common.csproj" />
+    <ProjectReference Include="..\CarDealerShip.Data.Models\CarDealerShip.Data.Models.csproj" />
+  </ItemGroup>
+
 </Project>

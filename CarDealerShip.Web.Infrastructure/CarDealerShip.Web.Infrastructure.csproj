@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\CarDealerShip.Common\CarDealerShip.Common.csproj" />
-  </ItemGroup>
-
 </Project>
