@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using CarDealerShip.Data;
 namespace CarDealerShip
 {
     public class Program
@@ -5,6 +8,11 @@ namespace CarDealerShip
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            var connectionString = builder.Configuration.GetConnectionString("DealerShipDbContextConnection") ?? throw new InvalidOperationException("Connection string 'DealerShipDbContextConnection' not found.");
+
+            builder.Services.AddDbContext<DealerShipDbContext>(options => options.UseSqlServer(connectionString));
+
+            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<DealerShipDbContext>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
