@@ -59,5 +59,10 @@ namespace CarDealerShip.Common
         {
             public const int NameMaxLength = 30;
         }
+
+        public static class PurposeValidations
+        {
+            public const int NameMaxLength = 20;
+        }
     }
 }
