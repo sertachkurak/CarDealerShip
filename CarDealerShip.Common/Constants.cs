@@ -54,5 +54,10 @@ namespace CarDealerShip.Common
 
             public const int ImageUrlMaxLength = 300;
         }
+
+        public static class LocationValidations
+        {
+            public const int NameMaxLength = 30;
+        }
     }
 }
