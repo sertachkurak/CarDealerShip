@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using CarDealerShip.Data.Models;
+﻿using CarDealership.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace CarDealerShip.Data
+namespace CarDealership.Data
 {
-    public class DealerShipDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
+    public class DealershipDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
     {
 
-        public DealerShipDbContext()
+        public DealershipDbContext()
         {
             
         }
 
 
-        public DealerShipDbContext(DbContextOptions options)
+        public DealershipDbContext(DbContextOptions options)
                 :base(options)
         {
             

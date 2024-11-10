@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace CarDealerShip.Data;
+namespace CarDealership.Data;
 
 public class DealerShipDbContext : IdentityDbContext<IdentityUser>
 {

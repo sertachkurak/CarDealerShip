@@ -1,4 +1,4 @@
-﻿namespace CarDealerShip.Web.Infrastructure
+﻿namespace CarDealership.Web.Infrastructure
 {
     public class ClaimsPrincipalExtensions
     {

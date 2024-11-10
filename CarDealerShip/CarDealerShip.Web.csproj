@@ -19,9 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CarDealerShip.Common\CarDealerShip.Common.csproj" />
-    <ProjectReference Include="..\CarDealerShip.Data\CarDealerShip.Data.csproj" />
-    <ProjectReference Include="..\CarDealerShip.Web.ViewModels\CarDealerShip.Web.ViewModels.csproj" />
+    <ProjectReference Include="..\CarDealerShip.Common\CarDealership.Common.csproj" />
+    <ProjectReference Include="..\CarDealerShip.Data\CarDealership.Data.csproj" />
+    <ProjectReference Include="..\CarDealerShip.Web.ViewModels\CarDealership.Web.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

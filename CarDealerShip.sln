@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealerShip.Web", "CarDealerShip\CarDealerShip.Web.csproj", "{D70AA7C7-C90E-4229-BDDF-12230EFE3A59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealership.Web", "CarDealerShip\CarDealership.Web.csproj", "{D70AA7C7-C90E-4229-BDDF-12230EFE3A59}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{52DFF262-738C-464E-9506-BB520492ACEB}"
 EndProject
@@ -11,17 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{A0D9FF3C-B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E61B3931-E6DC-45FE-9CE5-9D544F4F0A5F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealerShip.Services.Data", "CarDealerShip.Services.Data\CarDealerShip.Services.Data.csproj", "{3D0CE6FD-BF0D-4616-8A04-B379102A68A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealership.Services.Data", "CarDealerShip.Services.Data\CarDealership.Services.Data.csproj", "{3D0CE6FD-BF0D-4616-8A04-B379102A68A7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealerShip.Data", "CarDealerShip.Data\CarDealerShip.Data.csproj", "{76F3FD72-BB5D-4EBB-A71E-A8EB4E4AA3FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealership.Data", "CarDealerShip.Data\CarDealership.Data.csproj", "{76F3FD72-BB5D-4EBB-A71E-A8EB4E4AA3FC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealerShip.Data.Models", "CarDealerShip.Data.Models\CarDealerShip.Data.Models.csproj", "{1DDBF48E-65A3-4FBE-93C8-88F068BAF8D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealership.Data.Models", "CarDealerShip.Data.Models\CarDealership.Data.Models.csproj", "{1DDBF48E-65A3-4FBE-93C8-88F068BAF8D0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealerShip.Web.ViewModels", "CarDealerShip.Web.ViewModels\CarDealerShip.Web.ViewModels.csproj", "{C46B5A56-5F5A-4EF5-98BC-64EBF7C59FF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealership.Web.ViewModels", "CarDealerShip.Web.ViewModels\CarDealership.Web.ViewModels.csproj", "{C46B5A56-5F5A-4EF5-98BC-64EBF7C59FF5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealerShip.Common", "CarDealerShip.Common\CarDealerShip.Common.csproj", "{0B74952B-FBA8-4BA5-83B9-38AEB84A8617}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealership.Common", "CarDealerShip.Common\CarDealership.Common.csproj", "{0B74952B-FBA8-4BA5-83B9-38AEB84A8617}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDealerShip.Web.Infrastructure", "CarDealerShip.Web.Infrastructure\CarDealerShip.Web.Infrastructure.csproj", "{9BF9E6DF-38A2-425A-A66F-DF864FBEBC9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealership.Web.Infrastructure", "CarDealerShip.Web.Infrastructure\CarDealership.Web.Infrastructure.csproj", "{9BF9E6DF-38A2-425A-A66F-DF864FBEBC9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,19 +1,17 @@
 ﻿
-namespace CarDealerShip.Data.Repository
+namespace CarDealership.Data.Repository
 {
-    using System.Linq.Expressions;
-
-    using Microsoft.EntityFrameworkCore;
-
     using Interfaces;
+    using Microsoft.EntityFrameworkCore;
+    using System.Linq.Expressions;
 
     public class BaseRepository<TType, TId> : IRepository<TType, TId>
         where TType : class
     {
-        private readonly DealerShipDbContext dbContext;
+        private readonly DealershipDbContext dbContext;
         private readonly DbSet<TType> dbSet;
 
-        public BaseRepository(DealerShipDbContext dbContext)
+        public BaseRepository(DealershipDbContext dbContext)
         {
             this.dbContext = dbContext;
             this.dbSet = this.dbContext.Set<TType>();

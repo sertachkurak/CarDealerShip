@@ -1,8 +1,9 @@
-using CarDealerShip.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using CarDealership.Data.Models;
+using CarDealership.Web.Models;
 
-namespace CarDealerShip.Controllers
+namespace CarDealership.Web.Controllers
 {
     public class HomeController : Controller
     {

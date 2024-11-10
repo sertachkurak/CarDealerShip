@@ -1,21 +1,27 @@
+using CarDealership.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using CarDealerShip.Data;
-namespace CarDealerShip
+
+namespace CarDealership.Web
 {
     public class Program
     {
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var connectionString = builder.Configuration.GetConnectionString("DealerShipDbContextConnection") ?? throw new InvalidOperationException("Connection string 'DealerShipDbContextConnection' not found.");
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;
 
             builder.Services.AddDbContext<DealerShipDbContext>(options => options.UseSqlServer(connectionString));
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<DealerShipDbContext>();
+            builder.Services.AddDefaultIdentity<IdentityUser>
+                (
+                options => options.SignIn.RequireConfirmedAccount = true
+                )
+                .AddEntityFrameworkStores<DealerShipDbContext>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddRazorPages();
 
             var app = builder.Build();
 
@@ -38,7 +44,35 @@ namespace CarDealerShip
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
+            app.MapRazorPages();
+
             app.Run();
         }
+
+        //private static void IdentityConfigure(WebApplicationBuilder builder, IdentityOptions cfg)
+        //{
+        //    cfg.Password.RequireDigit =
+        //        builder.Configuration.GetValue<bool>("Identity:Password:RequireDigits");
+        //    cfg.Password.RequireLowercase =
+        //        builder.Configuration.GetValue<bool>("Identity:Password:RequireLowercase");
+        //    cfg.Password.RequireUppercase =
+        //        builder.Configuration.GetValue<bool>("Identity:Password:RequireUppercase");
+        //    cfg.Password.RequireNonAlphanumeric =
+        //        builder.Configuration.GetValue<bool>("Identity:Password:RequireNonAlphanumerical");
+        //    cfg.Password.RequiredLength =
+        //        builder.Configuration.GetValue<int>("Identity:Password:RequiredLength");
+        //    cfg.Password.RequiredUniqueChars =
+        //        builder.Configuration.GetValue<int>("Identity:Password:RequiredUniqueCharacters");
+        //
+        //    cfg.SignIn.RequireConfirmedAccount =
+        //        builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedAccount");
+        //    cfg.SignIn.RequireConfirmedEmail =
+        //        builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedEmail");
+        //    cfg.SignIn.RequireConfirmedPhoneNumber =
+        //        builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedPhoneNumber");
+        //
+        //    cfg.User.RequireUniqueEmail =
+        //        builder.Configuration.GetValue<bool>("Identity:User:RequireUniqueEmail");
+        //}
     }
 }

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Linq.Expressions;
-using System.Security.Cryptography;
+﻿using System.Linq.Expressions;
 
 
-namespace CarDealerShip.Data.Repository.Interfaces
+namespace CarDealership.Data.Repository.Interfaces
 {
     public interface IRepository<TType, TId>
     {
