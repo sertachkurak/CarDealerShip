@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace CarDealership.Data.Models
 {
@@ -18,6 +19,7 @@ namespace CarDealership.Data.Models
         public string Model { get; set; } = null!;
 
         [Required]
+        [Precision(18,2)]
         public decimal Price { get; set; }
 
         [Required]
@@ -56,25 +58,25 @@ namespace CarDealership.Data.Models
         public string ImageUrl { get; set; } = null!;
 
         [Required]
-        public int TypeId { get; set; }
+        public Guid TypeId { get; set; }
 
         [ForeignKey(nameof(TypeId))]
         public VehicleType VehicleType { get; set; } = null!;
 
         [Required]
-        public int CategoryId { get; set; }
+        public Guid CategoryId { get; set; }
 
         [ForeignKey(nameof(CategoryId))]
         public VehicleCategory VehicleCategory { get; set; } = null!;
 
         [Required]
-        public int LocationId { get; set; }
+        public Guid LocationId { get; set; }
 
         [ForeignKey(nameof(LocationId))]
         public Location Location { get; set; } = null!;
 
         [Required]
-        public int PurposeId { get; set; }
+        public Guid PurposeId { get; set; }
 
         [ForeignKey(nameof(PurposeId))]
         public VehiclePurpose Purpose { get; set; } = null!;

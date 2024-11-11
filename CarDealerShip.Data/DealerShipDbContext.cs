@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CarDealership.Data
 {
+    using Models;
     public class DealershipDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
     {
 
@@ -14,7 +15,7 @@ namespace CarDealership.Data
         }
 
 
-        public DealershipDbContext(DbContextOptions options)
+        public DealershipDbContext(DbContextOptions<DealershipDbContext> options)
                 :base(options)
         {
             
