@@ -1,4 +1,5 @@
 using CarDealership.Data;
+using CarDealership.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,15 +10,22 @@ namespace CarDealership.Web
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;
+            var connectionString = builder.Configuration.GetConnectionString("SQLServer");
 
-            builder.Services.AddDbContext<DealerShipDbContext>(options => options.UseSqlServer(connectionString));
+            builder.Services
+                .AddDbContext<DealershipDbContext>(
+                    options =>
+                    {
+                        options.UseSqlServer(connectionString);
+                    });
 
-            builder.Services.AddDefaultIdentity<IdentityUser>
-                (
-                options => options.SignIn.RequireConfirmedAccount = true
-                )
-                .AddEntityFrameworkStores<DealerShipDbContext>();
+            builder.Services
+                .AddDefaultIdentity<ApplicationUser>( cfg =>
+                {
+                   // cfg.SignIn.RequireConfirmedAccount = true;
+                })
+                .AddRoles<IdentityRole<Guid>>()
+                .AddEntityFrameworkStores<DealershipDbContext>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -38,6 +46,7 @@ namespace CarDealership.Web
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
