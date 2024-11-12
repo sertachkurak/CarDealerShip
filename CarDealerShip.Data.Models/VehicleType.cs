@@ -7,7 +7,7 @@ namespace CarDealership.Data.Models
     public class VehicleType
     {
 
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
 
 
         [Required] 
