@@ -32,6 +32,7 @@ namespace CarDealership.Data
         {
             modelBuilder.ApplyConfiguration(new VehicleCategoryConfiguration());
             modelBuilder.ApplyConfiguration(new VehicleTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new VehiclePurposeConfiguration());
 
             base.OnModelCreating(modelBuilder);
         } 

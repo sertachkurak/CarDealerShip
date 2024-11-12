@@ -4,6 +4,7 @@ using CarDealership.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarDealership.Data.Migrations
 {
     [DbContext(typeof(DealershipDbContext))]
-    partial class DealershipDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241112232634_PurposeConfiguration")]
+    partial class PurposeConfiguration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -205,48 +208,6 @@ namespace CarDealership.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("VehiclesCategories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("6212c089-8132-4b41-8d77-3316d8f9eed1"),
-                            Name = "Седан"
-                        },
-                        new
-                        {
-                            Id = new Guid("80538dc9-3a30-453c-bdf6-d92e9ad2d293"),
-                            Name = "Комби"
-                        },
-                        new
-                        {
-                            Id = new Guid("7122e511-b465-4368-b314-0bc022645836"),
-                            Name = "Кабрио"
-                        },
-                        new
-                        {
-                            Id = new Guid("0477079b-9fcb-488c-82fa-903982cad7ab"),
-                            Name = "Хечбег"
-                        },
-                        new
-                        {
-                            Id = new Guid("e43f56f0-295b-4060-bfa0-ec479fc5f598"),
-                            Name = "Ван"
-                        },
-                        new
-                        {
-                            Id = new Guid("3cec4a6e-ad30-4172-a82f-352f3d58cae9"),
-                            Name = "Пикап"
-                        },
-                        new
-                        {
-                            Id = new Guid("987ef0e6-11a8-4699-bec3-adbe81ae9cbe"),
-                            Name = "Купе"
-                        },
-                        new
-                        {
-                            Id = new Guid("7215cb33-eee4-4c94-87e6-2a9d644030e1"),
-                            Name = "Джип"
-                        });
                 });
 
             modelBuilder.Entity("CarDealership.Data.Models.VehiclePurpose", b =>
@@ -267,37 +228,37 @@ namespace CarDealership.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("cca4a00d-b6a9-4795-9289-2e0e5703288e"),
+                            Id = new Guid("8f6520ca-6154-48e1-a18f-73998c492cd3"),
                             Name = "Икономичен"
                         },
                         new
                         {
-                            Id = new Guid("374654e1-9c79-4b5e-955f-72d339ad3d3e"),
+                            Id = new Guid("340330ff-e480-4204-b1ba-8a6788e4052e"),
                             Name = "Икономичен Комби"
                         },
                         new
                         {
-                            Id = new Guid("b4fb0c28-ead9-45e0-97cb-5acfa837e61e"),
+                            Id = new Guid("1f455a4e-6194-4d9b-9c2d-5b68bc88b9c8"),
                             Name = "Компактен"
                         },
                         new
                         {
-                            Id = new Guid("54d44ac7-f83a-46e3-9ab3-3dd4d3a63532"),
+                            Id = new Guid("fc6ee428-18c4-4835-ad41-986bf68cbab6"),
                             Name = "Стандартен"
                         },
                         new
                         {
-                            Id = new Guid("d43c6dca-af92-414a-aeab-74b889e18e67"),
+                            Id = new Guid("46f0224e-b70c-4ea1-bf28-28d3cc904a46"),
                             Name = "Стандартен Комби"
                         },
                         new
                         {
-                            Id = new Guid("7d2a79f6-2210-46e4-82be-7b6c43242418"),
+                            Id = new Guid("c209318d-3673-4604-acf3-95ff160f846f"),
                             Name = "Голям"
                         },
                         new
                         {
-                            Id = new Guid("c790dfd0-3913-4128-8e2c-37b2e9781b0b"),
+                            Id = new Guid("e8948072-e9c1-44ad-afd0-52dbb59f38a8"),
                             Name = "Луксозен"
                         });
                 });
@@ -316,23 +277,6 @@ namespace CarDealership.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("VehiclesTypes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("b7c4cebd-60a4-4be7-a300-7512d920b279"),
-                            Name = "Автомобил"
-                        },
-                        new
-                        {
-                            Id = new Guid("945139c5-da5f-47eb-8b22-e86d2b9c1363"),
-                            Name = "Камион"
-                        },
-                        new
-                        {
-                            Id = new Guid("519959da-e51d-4467-88d7-36da7055019f"),
-                            Name = "Бус"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>
