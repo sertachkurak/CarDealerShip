@@ -5,7 +5,7 @@ namespace CarDealership.Data.Models
     using static Common.Constants.PurposeValidations;
     public class VehiclePurpose
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required] 
         [MaxLength(NameMaxLength)] 

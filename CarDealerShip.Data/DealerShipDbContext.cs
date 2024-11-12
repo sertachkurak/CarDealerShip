@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace CarDealership.Data
 {
     using Models;
+    using Configuration;
     public class DealershipDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
     {
 
@@ -29,6 +30,8 @@ namespace CarDealership.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new VehicleCategoryConfiguration());
+
             base.OnModelCreating(modelBuilder);
         } 
     }

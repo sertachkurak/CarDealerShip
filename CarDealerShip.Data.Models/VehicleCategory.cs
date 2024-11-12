@@ -5,8 +5,8 @@ namespace CarDealership.Data.Models
     using static Common.Constants.VehicleCategoryValidations;
     public class VehicleCategory
     {
-        [Key]
-        public Guid Id { get; set; }
+        [Key] 
+        public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required]
         [MaxLength(NameMaxLength)] 
