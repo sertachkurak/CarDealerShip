@@ -31,6 +31,7 @@ namespace CarDealership.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new VehicleCategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new VehicleTypeConfiguration());
 
             base.OnModelCreating(modelBuilder);
         } 
