@@ -106,27 +106,27 @@ namespace CarDealership.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f0da67d3-bd2c-4bc5-acf6-d92e8d7693d2"),
+                            Id = new Guid("30b08e92-62de-42f7-b345-aca315dfd54a"),
                             Name = "София"
                         },
                         new
                         {
-                            Id = new Guid("53f28935-be30-4e73-94f0-fd8c6f962736"),
+                            Id = new Guid("683f4284-6138-4dce-9191-32206dfd442e"),
                             Name = "Пловдив"
                         },
                         new
                         {
-                            Id = new Guid("f4c5f3ba-88d5-4612-bc76-98610930e250"),
+                            Id = new Guid("729897ec-6a17-4851-8831-4d2b2d04f064"),
                             Name = "Варна"
                         },
                         new
                         {
-                            Id = new Guid("e54763ce-3d75-4cf3-a451-de696c3a7ace"),
+                            Id = new Guid("928c42ce-f6cf-4a56-8eb0-08d9bd65f99a"),
                             Name = "Плевен"
                         },
                         new
                         {
-                            Id = new Guid("6c8d8984-12f4-4611-92fb-92e03129f651"),
+                            Id = new Guid("47c0d9b6-ff78-4c4b-8872-14f12e12f024"),
                             Name = "Бургас"
                         });
                 });
@@ -236,43 +236,53 @@ namespace CarDealership.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("97fd00a1-12b4-422b-97b5-4847b035442b"),
+                            Id = new Guid("89253114-1117-481a-94c8-c93e798c73f3"),
                             Name = "Седан"
                         },
                         new
                         {
-                            Id = new Guid("6b0a2e4f-a39b-4ded-b674-5caabb86f744"),
+                            Id = new Guid("8d5dd07e-cefe-45c2-8266-c28946a99400"),
                             Name = "Комби"
                         },
                         new
                         {
-                            Id = new Guid("53dba81b-dcd0-4836-afba-52de99c5eb69"),
+                            Id = new Guid("7ae247d2-af02-4d12-8531-aec70481ec82"),
                             Name = "Кабрио"
                         },
                         new
                         {
-                            Id = new Guid("4ab11a46-fe07-4731-a41c-3272c6d4e53b"),
+                            Id = new Guid("f4216b8c-f6e0-40a8-8a6a-ae0534601801"),
                             Name = "Хечбег"
                         },
                         new
                         {
-                            Id = new Guid("e1ef5fc5-a4fd-4f74-a585-8ff744a39b5c"),
+                            Id = new Guid("e091f5bb-8030-47c1-bf33-4856df0d905e"),
                             Name = "Ван"
                         },
                         new
                         {
-                            Id = new Guid("f9f2bd79-0bbe-447d-a9e2-99738d734dea"),
+                            Id = new Guid("94e34e27-1dbd-4d96-b3f2-7bc799cc2853"),
                             Name = "Пикап"
                         },
                         new
                         {
-                            Id = new Guid("9d3eea84-a1c6-4316-9e7c-72791b7d2345"),
+                            Id = new Guid("bbcee395-3c50-4b16-8c6b-078997031124"),
                             Name = "Купе"
                         },
                         new
                         {
-                            Id = new Guid("60110492-f5b7-4887-be15-7951b5d81ab7"),
+                            Id = new Guid("a9f48de6-0feb-4b5f-8585-bffac93e5041"),
                             Name = "Джип"
+                        },
+                        new
+                        {
+                            Id = new Guid("d5a8ece2-9696-42ae-94e5-30319050da93"),
+                            Name = "Камион"
+                        },
+                        new
+                        {
+                            Id = new Guid("0e706b47-5378-48e6-b7df-21e2b1d32901"),
+                            Name = "Бус"
                         });
                 });
 
@@ -294,37 +304,37 @@ namespace CarDealership.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("ecf27776-9218-4f7a-9a12-ec6fcbbb6861"),
+                            Id = new Guid("790c2f30-a75a-45a2-85a7-6f9075a35135"),
                             Name = "Икономичен"
                         },
                         new
                         {
-                            Id = new Guid("4eddb115-68fa-47bc-a4d2-eb668a7ce2c3"),
+                            Id = new Guid("13abd18e-8941-4102-ace6-e02ee85b97e3"),
                             Name = "Икономичен Комби"
                         },
                         new
                         {
-                            Id = new Guid("12788535-c551-45f4-b3de-7df17ae865b2"),
+                            Id = new Guid("1e33c1b2-1c29-4ec3-8907-fbaae15a61f5"),
                             Name = "Компактен"
                         },
                         new
                         {
-                            Id = new Guid("6de3fed0-6aff-4245-872b-b80bb128bce3"),
+                            Id = new Guid("e1a23bd8-ca1f-43f1-a73e-63dbd887fc20"),
                             Name = "Стандартен"
                         },
                         new
                         {
-                            Id = new Guid("db63dc5a-885f-4e35-a9cc-f57e8d30a49a"),
+                            Id = new Guid("edd96e69-2979-4813-99c3-5ede5304d595"),
                             Name = "Стандартен Комби"
                         },
                         new
                         {
-                            Id = new Guid("b6466c19-1856-43cd-a2ae-abd5fb014994"),
+                            Id = new Guid("545e3752-ee3a-42a4-8ad1-c1250e6ba184"),
                             Name = "Голям"
                         },
                         new
                         {
-                            Id = new Guid("318e40fa-13f0-4ab2-95ce-f665e3758820"),
+                            Id = new Guid("5999e3db-7948-47ab-a2b7-2aa0393ad07e"),
                             Name = "Луксозен"
                         });
                 });
@@ -347,17 +357,17 @@ namespace CarDealership.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("8c427355-85ad-4ea9-9326-46e604917465"),
+                            Id = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
                             Name = "Автомобил"
                         },
                         new
                         {
-                            Id = new Guid("ce20a296-5047-46ac-aec9-b7350f5f7c6c"),
+                            Id = new Guid("372dded3-031b-4892-b74b-7b4853d68603"),
                             Name = "Камион"
                         },
                         new
                         {
-                            Id = new Guid("a8bbdf18-b247-4712-a8cc-a1a61b1bbe59"),
+                            Id = new Guid("8474c958-2f28-47d2-9878-d7eca96ee0d4"),
                             Name = "Бус"
                         });
                 });

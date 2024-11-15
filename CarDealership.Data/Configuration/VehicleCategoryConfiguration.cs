@@ -52,6 +52,14 @@ namespace CarDealership.Data.Configuration
                 {
                     Name = "Джип"
                 },
+                new VehicleCategory()
+                {
+                    Name = "Камион"
+                },
+                new VehicleCategory()
+                {
+                    Name = "Бус"
+                },
             };
 
             return categories;
