@@ -18,6 +18,8 @@ namespace CarDealership.Data.Models
         [MaxLength(ModelMaxLength)] 
         public string Model { get; set; } = null!;
 
+
+
         [Required]
         [Precision(18,2)]
         public decimal Price { get; set; }
@@ -81,6 +83,6 @@ namespace CarDealership.Data.Models
         [ForeignKey(nameof(PurposeId))]
         public VehiclePurpose Purpose { get; set; } = null!;
 
-        public bool IsAvailable { get; set; } = true;
+        public bool IsDeleted { get; set; }
     }
 }
