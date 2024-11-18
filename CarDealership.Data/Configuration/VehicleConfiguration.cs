@@ -419,6 +419,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Volkswagen",
                     Model = "Passat",
+                    Price = 35500,
                     FuelType = "Дизел",
                     GearBox = "Автоматична",
                     Year = "2020",
@@ -439,6 +440,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Skoda",
                     Model = "Octavia",
+                    Price = 22500,
                     FuelType = "Дизел",
                     GearBox = "Автоматична",
                     Year = "2017",
@@ -459,6 +461,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Peugeot",
                     Model = "307",
+                    Price = 5500,
                     FuelType = "Дизел",
                     GearBox = "Автоматична",
                     Year = "2009",
@@ -479,6 +482,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Renault",
                     Model = "Kadjar",
+                    Price = 19500,
                     FuelType = "Дизел",
                     GearBox = "Автоматична",
                     Year = "2017",
@@ -499,6 +503,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Volkswagen",
                     Model = "Scirocco",
+                    Price = 9500,
                     FuelType = "Дизел",
                     GearBox = "Автоматична",
                     Year = "2013",
@@ -519,6 +524,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Volkswagen",
                     Model = "Golf",
+                    Price = 12500,
                     FuelType = "Дизел",
                     GearBox = "Автоматична",
                     Year = "2013",
@@ -538,6 +544,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Toyota",
                     Model = "Auris",
+                    Price = 13000,
                     FuelType = "Дизел",
                     GearBox = "Ръчни",
                     Year = "2013",
@@ -558,6 +565,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Opel",
                     Model = "Mokka",
+                    Price = 23000,
                     FuelType = "Дизел",
                     GearBox = "Автоматична",
                     Year = "2020",
@@ -578,6 +586,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Volkswagen",
                     Model = "Sharan",
+                    Price = 15000,
                     FuelType = "Дизел",
                     GearBox = "Автоматична",
                     Year = "2012",
@@ -598,6 +607,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Peugeot",
                     Model = "208",
+                    Price = 9000,
                     FuelType = "Бензин",
                     GearBox = "Автоматична",
                     Year = "2015",
@@ -618,6 +628,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Peugeot",
                     Model = "208",
+                    Price = 10000,
                     FuelType = "Бензин",
                     GearBox = "Автоматична",
                     Year = "2015",
@@ -637,6 +648,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Renault",
                     Model = "Clio",
+                    Price = 18000,
                     FuelType = "Дизел",
                     GearBox = "Автоматична",
                     Year = "2020",
@@ -657,6 +669,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Audi",
                     Model = "Q8",
+                    Price = 95000,
                     FuelType = "Дизел",
                     GearBox = "Автоматична",
                     Year = "2020",
@@ -677,6 +690,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Audi",
                     Model = "Q7",
+                    Price = 50000,
                     FuelType = "Дизел",
                     GearBox = "Автоматична",
                     Year = "2018",
@@ -697,6 +711,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "BMW",
                     Model = "750",
+                    Price = 90000,
                     FuelType = "Дизел",
                     GearBox = "Автоматична",
                     Year = "2019",
@@ -717,6 +732,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Audi",
                     Model = "Q7",
+                    Price = 55000,
                     FuelType = "Дизел",
                     GearBox = "Автоматична",
                     Year = "2018",
@@ -737,6 +753,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "RAM",
                     Model = "1500",
+                    Price = 45000,
                     FuelType = "Бензин",
                     GearBox = "Автоматична",
                     Year = "2018",
@@ -757,6 +774,7 @@ namespace CarDealership.Data.Configuration
                 {
                     Make = "Mini",
                     Model = "Countryman",
+                    Price = 18000,
                     FuelType = "Дизел",
                     GearBox = "Автоматична",
                     Year = "2020",
