@@ -415,6 +415,363 @@ namespace CarDealership.Data.Configuration
                     PurposeId = Guid.Parse("1E33C1B2-1C29-4EC3-8907-FBAAE15A61F5")
 
                 },
+                new Vehicle()
+                {
+                    Make = "Volkswagen",
+                    Model = "Passat",
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2020",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 65,
+                    HorsePower = 240,
+                    Cubage = 2000,
+                    ImageUrl = "https://cdn.jdpower.com/JDPA_2020%20Volkswagen%20Passat%20R-Line%20Aurora%20Red%20Front%20View%20Small_edited.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("89253114-1117-481A-94C8-C93E798C73F3"),
+                    LocationId = Guid.Parse("47C0D9B6-FF78-4C4B-8872-14F12E12F024"),
+                    PurposeId = Guid.Parse("E1A23BD8-CA1F-43F1-A73E-63DBD887FC20")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Skoda",
+                    Model = "Octavia",
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2017",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 60,
+                    HorsePower = 185,
+                    Cubage = 2000,
+                    ImageUrl = "https://automedia.investor.bg/media/files/resized/uploadedfiles/640x0/b26/c230bdb3a7c8e9242f83577101b65b26-1920px-2018-skoda-octavia-5e-my185-110tsi-station-wagon-2018-11-02.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("8D5DD07E-CEFE-45C2-8266-C28946A99400"),
+                    LocationId = Guid.Parse("30B08E92-62DE-42F7-B345-ACA315DFD54A"),
+                    PurposeId = Guid.Parse("13ABD18E-8941-4102-ACE6-E02EE85B97E3")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Peugeot",
+                    Model = "307",
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2009",
+                    Doors = 2,
+                    Seats = 4,
+                    TankCapacity = 50,
+                    HorsePower = 136,
+                    Cubage = 2000,
+                    ImageUrl = "https://www.auto-data.net/images/f21/Peugeot-307-facelift-2005.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("F4216B8C-F6E0-40A8-8A6A-AE0534601801"),
+                    LocationId = Guid.Parse("928C42CE-F6CF-4A56-8EB0-08D9BD65F99A"),
+                    PurposeId = Guid.Parse("790C2F30-A75A-45A2-85A7-6F9075A35135")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Renault",
+                    Model = "Kadjar",
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2017",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 65,
+                    HorsePower = 130,
+                    Cubage = 1600,
+                    ImageUrl = "https://images.clickdealer.co.uk/vehicles/5611/5611012/large1/131132474.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("A9F48DE6-0FEB-4B5F-8585-BFFAC93E5041"),
+                    LocationId = Guid.Parse("683F4284-6138-4DCE-9191-32206DFD442E"),
+                    PurposeId = Guid.Parse("545E3752-EE3A-42A4-8AD1-C1250E6BA184")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Volkswagen",
+                    Model = "Scirocco",
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2013",
+                    Doors = 2,
+                    Seats = 4,
+                    TankCapacity = 55,
+                    HorsePower = 140,
+                    Cubage = 2000,
+                    ImageUrl = "https://www.motortrend.com/uploads/sites/5/2013/11/2013-Volkswagen-Scirocco-R-front-three-quarters1.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("BBCEE395-3C50-4B16-8C6B-078997031124"),
+                    LocationId = Guid.Parse("729897EC-6A17-4851-8831-4D2B2D04F064"),
+                    PurposeId = Guid.Parse("1E33C1B2-1C29-4EC3-8907-FBAAE15A61F5")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Volkswagen",
+                    Model = "Golf",
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2013",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 50,
+                    HorsePower = 110,
+                    Cubage = 1600,
+                    ImageUrl = "https://media.stockmanager.ie/media/0380e15958fbd2bb2c34655d332a20d1.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("F4216B8C-F6E0-40A8-8A6A-AE0534601801"),
+                    LocationId = Guid.Parse("47C0D9B6-FF78-4C4B-8872-14F12E12F024"),
+                    PurposeId = Guid.Parse("790C2F30-A75A-45A2-85A7-6F9075A35135")
+
+                },
+                new Vehicle()
+                {
+                    Make = "Toyota",
+                    Model = "Auris",
+                    FuelType = "Дизел",
+                    GearBox = "Ръчни",
+                    Year = "2013",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 50,
+                    HorsePower = 90,
+                    Cubage = 1400,
+                    ImageUrl = "https://aaaautoeuimg.vshcdn.net/thumb/900482724_640x480x95.jpg?58802",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("8D5DD07E-CEFE-45C2-8266-C28946A99400"),
+                    LocationId = Guid.Parse("928C42CE-F6CF-4A56-8EB0-08D9BD65F99A"),
+                    PurposeId = Guid.Parse("13ABD18E-8941-4102-ACE6-E02EE85B97E3")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Opel",
+                    Model = "Mokka",
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2020",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 45,
+                    HorsePower = 110,
+                    Cubage = 1500,
+                    ImageUrl = "https://autobild.bg/wp-content/uploads/2021/09/IMG_5826.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("A9F48DE6-0FEB-4B5F-8585-BFFAC93E5041"),
+                    LocationId = Guid.Parse("30B08E92-62DE-42F7-B345-ACA315DFD54A"),
+                    PurposeId = Guid.Parse("1E33C1B2-1C29-4EC3-8907-FBAAE15A61F5")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Volkswagen",
+                    Model = "Sharan",
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2012",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 70,
+                    HorsePower = 140,
+                    Cubage = 2000,
+                    ImageUrl = "https://cdn3.riastatic.com/photos/ir/new/auto/photo/volkswagen_sharan__344776878-620x415x70.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("E091F5BB-8030-47C1-BF33-4856DF0D905E"),
+                    LocationId = Guid.Parse("729897EC-6A17-4851-8831-4D2B2D04F064"),
+                    PurposeId = Guid.Parse("545E3752-EE3A-42A4-8AD1-C1250E6BA184")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Peugeot",
+                    Model = "208",
+                    FuelType = "Бензин",
+                    GearBox = "Автоматична",
+                    Year = "2015",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 50,
+                    HorsePower = 110,
+                    Cubage = 1200,
+                    ImageUrl = "https://cloud.leparking.fr/2021/04/27/00/23/peugeot-208-peugeot-208-2015-67000km-garantie-inconnu_8085850837.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("F4216B8C-F6E0-40A8-8A6A-AE0534601801"),
+                    LocationId = Guid.Parse("683F4284-6138-4DCE-9191-32206DFD442E"),
+                    PurposeId = Guid.Parse("1E33C1B2-1C29-4EC3-8907-FBAAE15A61F5")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Peugeot",
+                    Model = "208",
+                    FuelType = "Бензин",
+                    GearBox = "Автоматична",
+                    Year = "2015",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 50,
+                    HorsePower = 110,
+                    Cubage = 1200,
+                    ImageUrl = "https://ssl.caranddriving.com/cdwebsite/image169.ashx?url=https://ssl.caranddriving.com/ssl/f2/images/used/big/peugeot2082015to2019.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("F4216B8C-F6E0-40A8-8A6A-AE0534601801"),
+                    LocationId = Guid.Parse("47C0D9B6-FF78-4C4B-8872-14F12E12F024"),
+                    PurposeId = Guid.Parse("1E33C1B2-1C29-4EC3-8907-FBAAE15A61F5")
+
+                },
+                new Vehicle()
+                {
+                    Make = "Renault",
+                    Model = "Clio",
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2020",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 45,
+                    HorsePower = 140,
+                    Cubage = 1600,
+                    ImageUrl = "https://m4.netinfo.bg/media/images/38599/38599839/655-402-renault-clio-v-test-drajv.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("F4216B8C-F6E0-40A8-8A6A-AE0534601801"),
+                    LocationId = Guid.Parse("928C42CE-F6CF-4A56-8EB0-08D9BD65F99A"),
+                    PurposeId = Guid.Parse("790C2F30-A75A-45A2-85A7-6F9075A35135")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Audi",
+                    Model = "Q8",
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2020",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 75,
+                    HorsePower = 286,
+                    Cubage = 3000,
+                    ImageUrl = "https://pictures.dealer.com/r/rockvilleaudiaoa/1813/530e70010e6e34ac80d27f60876ab89ex.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("A9F48DE6-0FEB-4B5F-8585-BFFAC93E5041"),
+                    LocationId = Guid.Parse("30B08E92-62DE-42F7-B345-ACA315DFD54A"),
+                    PurposeId = Guid.Parse("545E3752-EE3A-42A4-8AD1-C1250E6BA184")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Audi",
+                    Model = "Q7",
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2018",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 75,
+                    HorsePower = 286,
+                    Cubage = 3000,
+                    ImageUrl = "https://media.ed.edmunds-media.com/audi/q7/2018/oem/2018_audi_q7_4dr-suv_30t-prestige-quattro_fq_oem_1_1600.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("A9F48DE6-0FEB-4B5F-8585-BFFAC93E5041"),
+                    LocationId = Guid.Parse("729897EC-6A17-4851-8831-4D2B2D04F064"),
+                    PurposeId = Guid.Parse("545E3752-EE3A-42A4-8AD1-C1250E6BA184")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "BMW",
+                    Model = "750",
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2019",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 80,
+                    HorsePower = 400,
+                    Cubage = 4000,
+                    ImageUrl = "https://www.sherifo.lt/_next/image?url=https%3A%2F%2Fproduction-carloading-api-media.s3.amazonaws.com%2Flot_images%2F1_S1ptd2M.png.1920x1080_q85.png&w=3840&q=75",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("89253114-1117-481A-94C8-C93E798C73F3"),
+                    LocationId = Guid.Parse("683F4284-6138-4DCE-9191-32206DFD442E"),
+                    PurposeId = Guid.Parse("5999E3DB-7948-47AB-A2B7-2AA0393AD07E")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Audi",
+                    Model = "Q7",
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2018",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 75,
+                    HorsePower = 286,
+                    Cubage = 3000,
+                    ImageUrl = "https://cdn.dealerspike.com/imglib/v1/800x600/imglib/Assets/Inventory/A6/07/A6070369-F91B-47F8-9FA9-93AEF34C7EB4.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("A9F48DE6-0FEB-4B5F-8585-BFFAC93E5041"),
+                    LocationId = Guid.Parse("47C0D9B6-FF78-4C4B-8872-14F12E12F024"),
+                    PurposeId = Guid.Parse("545E3752-EE3A-42A4-8AD1-C1250E6BA184")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "RAM",
+                    Model = "1500",
+                    FuelType = "Бензин",
+                    GearBox = "Автоматична",
+                    Year = "2018",
+                    Doors = 4,
+                    Seats = 6,
+                    TankCapacity = 90,
+                    HorsePower = 395,
+                    Cubage = 5700,
+                    ImageUrl = "https://di-uploads-pod12.dealerinspire.com/universitydodgeram/uploads/2017/11/2018Ram1500_UniversityDodge.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("A9F48DE6-0FEB-4B5F-8585-BFFAC93E5041"),
+                    LocationId = Guid.Parse("928C42CE-F6CF-4A56-8EB0-08D9BD65F99A"),
+                    PurposeId = Guid.Parse("545E3752-EE3A-42A4-8AD1-C1250E6BA184")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Mini",
+                    Model = "Countryman",
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2020",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 50,
+                    HorsePower = 116,
+                    Cubage = 1500,
+                    ImageUrl = "https://www.carpixel.net/w/a38025585b428caf0a5e472b1da228bb/mini-cooper-s-countryman-car-wallpaper-101089.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("A9F48DE6-0FEB-4B5F-8585-BFFAC93E5041"),
+                    LocationId = Guid.Parse("30B08E92-62DE-42F7-B345-ACA315DFD54A"),
+                    PurposeId = Guid.Parse("E1A23BD8-CA1F-43F1-A73E-63DBD887FC20")
+
+                },
             };
 
             return vehicles;
