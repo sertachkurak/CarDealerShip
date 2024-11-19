@@ -790,6 +790,231 @@ namespace CarDealership.Data.Configuration
                     PurposeId = Guid.Parse("E1A23BD8-CA1F-43F1-A73E-63DBD887FC20")
 
                 },
+                new Vehicle()
+                {
+                    Make = "Dacia",
+                    Model = "Duster",
+                    Price = 23000,
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2021",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 50,
+                    HorsePower = 116,
+                    Cubage = 1500,
+                    ImageUrl = "https://www.elcarrocolombiano.com/wp-content/uploads/2020/03/20200304-RENAULT-DUSTER-2021-PRECIO-CARACTERISTICAS-EN-BRASIL-01.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("A9F48DE6-0FEB-4B5F-8585-BFFAC93E5041"),
+                    LocationId = Guid.Parse("729897EC-6A17-4851-8831-4D2B2D04F064"),
+                    PurposeId = Guid.Parse("790C2F30-A75A-45A2-85A7-6F9075A35135")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Toyota",
+                    Model = "Corolla",
+                    Price = 19000,
+                    FuelType = "Бензин",
+                    GearBox = "Автоматична",
+                    Year = "2016",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 55,
+                    HorsePower = 132,
+                    Cubage = 1600,
+                    ImageUrl = "https://www.avtotachki.com/wp-content/uploads/2020/11/toyota-corolla-2016-1024x685.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("89253114-1117-481A-94C8-C93E798C73F3"),
+                    LocationId = Guid.Parse("683F4284-6138-4DCE-9191-32206DFD442E"),
+                    PurposeId = Guid.Parse("E1A23BD8-CA1F-43F1-A73E-63DBD887FC20")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Citroen",
+                    Model = "C5",
+                    Price = 16000,
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2016",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 70,
+                    HorsePower = 150,
+                    Cubage = 2000,
+                    ImageUrl = "https://img-pa.auto1.com/imgd0/8a/d08a3dea07a8b236e71910325cec96f4/pa/KS84681_2c7e1945aff6e9ae46f0916d71cee46d.jpeg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("8D5DD07E-CEFE-45C2-8266-C28946A99400"),
+                    LocationId = Guid.Parse("47C0D9B6-FF78-4C4B-8872-14F12E12F024"),
+                    PurposeId = Guid.Parse("13ABD18E-8941-4102-ACE6-E02EE85B97E3")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Hyundai",
+                    Model = "i10",
+                    Price = 10000,
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2017",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 40,
+                    HorsePower = 75,
+                    Cubage = 1200,
+                    ImageUrl = "https://www.avtotachki.com/wp-content/uploads/2020/12/hyundai-i10-2017-1024x640.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("F4216B8C-F6E0-40A8-8A6A-AE0534601801"),
+                    LocationId = Guid.Parse("928C42CE-F6CF-4A56-8EB0-08D9BD65F99A"),
+                    PurposeId = Guid.Parse("1E33C1B2-1C29-4EC3-8907-FBAAE15A61F5")
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Hyundai",
+                    Model = "i10",
+                    Price = 10500,
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2017",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 40,
+                    HorsePower = 75,
+                    Cubage = 1200,
+                    ImageUrl = "https://www.auto-data.net/images/f11/Hyundai-Grand-i10-facelift-2017.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("F4216B8C-F6E0-40A8-8A6A-AE0534601801"),
+                    LocationId = Guid.Parse("30B08E92-62DE-42F7-B345-ACA315DFD54A"),
+                    PurposeId = Guid.Parse("1E33C1B2-1C29-4EC3-8907-FBAAE15A61F5"),
+
+                },
+
+                new Vehicle()
+                {
+                    Make = "Dacia",
+                    Model = "Duster",
+                    Price = 25000,
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2021",
+                    Doors = 4,
+                    Seats = 5,
+                    TankCapacity = 50,
+                    HorsePower = 116,
+                    Cubage = 1500,
+                    ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/c/c2/2018_Dacia_Duster_Comfort_1.6.jpg",
+                    TypeId = Guid.Parse("F6FCC477-D738-4077-B0D0-C5F5FCFDBE68"),
+                    CategoryId = Guid.Parse("A9F48DE6-0FEB-4B5F-8585-BFFAC93E5041"),
+                    LocationId = Guid.Parse("683F4284-6138-4DCE-9191-32206DFD442E"),
+                    PurposeId = Guid.Parse("790C2F30-A75A-45A2-85A7-6F9075A35135")
+
+                },
+                new Vehicle()
+                {
+                    Make = "Daf",
+                    Model = "XF 480",
+                    Price = 85000,
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2020",
+                    Doors = 2,
+                    Seats = 2,
+                    TankCapacity = 1100,
+                    HorsePower = 480,
+                    Cubage = 13000,
+                    ImageUrl = "https://d2e5b8shawuel2.cloudfront.net/vehicle/304240/hlv/original.jpg",
+                    TypeId = Guid.Parse("372DDED3-031B-4892-B74B-7B4853D68603"),
+                    CategoryId = Guid.Parse("D5A8ECE2-9696-42AE-94E5-30319050DA93"),
+                    LocationId = Guid.Parse("47C0D9B6-FF78-4C4B-8872-14F12E12F024"),
+                    PurposeId = Guid.Parse("545E3752-EE3A-42A4-8AD1-C1250E6BA184")
+
+                },
+                new Vehicle()
+                {
+                    Make = "Mercedes-Benz",
+                    Model = "Actros",
+                    Price = 35000,
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2017",
+                    Doors = 2,
+                    Seats = 2,
+                    TankCapacity = 900,
+                    HorsePower = 450,
+                    Cubage = 12800,
+                    ImageUrl = "https://st.mascus.com/imagetilewm/product/e5a8342d/mercedes-benz-actros-1846-ls,5897e6b7-1.jpg",
+                    TypeId = Guid.Parse("372DDED3-031B-4892-B74B-7B4853D68603"),
+                    CategoryId = Guid.Parse("D5A8ECE2-9696-42AE-94E5-30319050DA93"),
+                    LocationId = Guid.Parse("928C42CE-F6CF-4A56-8EB0-08D9BD65F99A"),
+                    PurposeId = Guid.Parse("545E3752-EE3A-42A4-8AD1-C1250E6BA184")
+
+                },
+                new Vehicle()
+                {
+                    Make = "Iveco",
+                    Model = "35c18",
+                    Price = 42000,
+                    FuelType = "Дизел",
+                    GearBox = "Автоматична",
+                    Year = "2018",
+                    Doors = 2,
+                    Seats = 3,
+                    TankCapacity = 120,
+                    HorsePower = 180,
+                    Cubage = 3000,
+                    ImageUrl = "https://d2e5b8shawuel2.cloudfront.net/vehicle/285996/hlv/original.jpg",
+                    TypeId = Guid.Parse("8474C958-2F28-47D2-9878-D7ECA96EE0D4"),
+                    CategoryId = Guid.Parse("0E706B47-5378-48E6-B7DF-21E2B1D32901"),
+                    LocationId = Guid.Parse("30B08E92-62DE-42F7-B345-ACA315DFD54A"),
+                    PurposeId = Guid.Parse("545E3752-EE3A-42A4-8AD1-C1250E6BA184")
+
+                },
+                new Vehicle()
+                {
+                    Make = "Mercedes-Benz",
+                    Model = "Sprinter 316",
+                    Price = 32000,
+                    FuelType = "Дизел",
+                    GearBox = "Ръчна",
+                    Year = "2015",
+                    Doors = 3,
+                    Seats = 8,
+                    TankCapacity = 100,
+                    HorsePower = 163,
+                    Cubage = 2200,
+                    ImageUrl = "https://d2e5b8shawuel2.cloudfront.net/vehicle/284390/hlv/original.jpg",
+                    TypeId = Guid.Parse("8474C958-2F28-47D2-9878-D7ECA96EE0D4"),
+                    CategoryId = Guid.Parse("0E706B47-5378-48E6-B7DF-21E2B1D32901"),
+                    LocationId = Guid.Parse("729897EC-6A17-4851-8831-4D2B2D04F064"),
+                    PurposeId = Guid.Parse("545E3752-EE3A-42A4-8AD1-C1250E6BA184")
+
+                },
+                new Vehicle()
+                {
+                    Make = "Renault",
+                    Model = "Master",
+                    Price = 32000,
+                    FuelType = "Дизел",
+                    GearBox = "Ръчна",
+                    Year = "2018",
+                    Doors = 3,
+                    Seats = 17,
+                    TankCapacity = 130,
+                    HorsePower = 143,
+                    Cubage = 2300,
+                    ImageUrl = "https://ppdobrich.com/uploads/thumbnail/preoborudvan-mikrobus-reno-master-c880x465.jpg",
+                    TypeId = Guid.Parse("8474C958-2F28-47D2-9878-D7ECA96EE0D4"),
+                    CategoryId = Guid.Parse("0E706B47-5378-48E6-B7DF-21E2B1D32901"),
+                    LocationId = Guid.Parse("683F4284-6138-4DCE-9191-32206DFD442E"),
+                    PurposeId = Guid.Parse("545E3752-EE3A-42A4-8AD1-C1250E6BA184")
+
+                },
             };
 
             return vehicles;
