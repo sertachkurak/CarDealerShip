@@ -12,7 +12,7 @@ namespace CarDealership.Data.Models
         [MaxLength(NameMaxLength)] 
         public string Name { get; set; } = null!;
 
-        public List<Vehicle> Vehicles { get; set; }
-            = new List<Vehicle>();
+        public virtual ICollection<Vehicle> Vehicles { get; set; } =
+            new HashSet<Vehicle>();
     }
 }

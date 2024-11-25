@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CarDealership.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitializeDB : Migration
+    public partial class InitializeDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -237,7 +237,7 @@ namespace CarDealership.Data.Migrations
                         column: x => x.LocationId,
                         principalTable: "Locations",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Vehicles_VehiclesCategories_CategoryId",
                         column: x => x.CategoryId,
@@ -263,11 +263,11 @@ namespace CarDealership.Data.Migrations
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("30b08e92-62de-42f7-b345-aca315dfd54a"), "София" },
-                    { new Guid("47c0d9b6-ff78-4c4b-8872-14f12e12f024"), "Бургас" },
-                    { new Guid("683f4284-6138-4dce-9191-32206dfd442e"), "Пловдив" },
-                    { new Guid("729897ec-6a17-4851-8831-4d2b2d04f064"), "Варна" },
-                    { new Guid("928c42ce-f6cf-4a56-8eb0-08d9bd65f99a"), "Плевен" }
+                    { new Guid("3cb2b945-5fb2-4489-805e-b879154902a6"), "София" },
+                    { new Guid("48141d40-a443-4edf-aa93-80a12db8690e"), "Варна" },
+                    { new Guid("84a3dfe2-4c08-4e18-9156-7452e556c1dd"), "Пловдив" },
+                    { new Guid("95d16d5b-0edb-46ed-9abc-822545a05860"), "Бургас" },
+                    { new Guid("ae187b67-abd1-4c1a-8590-6a22c6de4b17"), "Плевен" }
                 });
 
             migrationBuilder.InsertData(
@@ -275,16 +275,16 @@ namespace CarDealership.Data.Migrations
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("0e706b47-5378-48e6-b7df-21e2b1d32901"), "Бус" },
-                    { new Guid("7ae247d2-af02-4d12-8531-aec70481ec82"), "Кабрио" },
-                    { new Guid("89253114-1117-481a-94c8-c93e798c73f3"), "Седан" },
-                    { new Guid("8d5dd07e-cefe-45c2-8266-c28946a99400"), "Комби" },
-                    { new Guid("94e34e27-1dbd-4d96-b3f2-7bc799cc2853"), "Пикап" },
-                    { new Guid("a9f48de6-0feb-4b5f-8585-bffac93e5041"), "Джип" },
-                    { new Guid("bbcee395-3c50-4b16-8c6b-078997031124"), "Купе" },
-                    { new Guid("d5a8ece2-9696-42ae-94e5-30319050da93"), "Камион" },
-                    { new Guid("e091f5bb-8030-47c1-bf33-4856df0d905e"), "Ван" },
-                    { new Guid("f4216b8c-f6e0-40a8-8a6a-ae0534601801"), "Хечбег" }
+                    { new Guid("247c145d-9b6d-4315-a68a-f8191b687429"), "Бус" },
+                    { new Guid("2fc4c7e6-cad0-4190-95b5-78a7420a1631"), "Джип" },
+                    { new Guid("37545039-ea1a-4970-8a41-abe0005291fd"), "Купе" },
+                    { new Guid("4012cbab-8211-4c37-8566-f73f083e999f"), "Седан" },
+                    { new Guid("5e2e101c-27c9-4b94-b2e8-8f2154a4389b"), "Камион" },
+                    { new Guid("939d5a93-8d55-4ec3-b3ac-39a36cd1ff29"), "Комби" },
+                    { new Guid("a2a6b9be-e626-4d0d-9152-8797da33402f"), "Ван" },
+                    { new Guid("a5a36ddd-f4a0-4e76-844b-558204f00717"), "Кабрио" },
+                    { new Guid("bd91bf4e-67a8-40b4-a992-ae31c76df3a1"), "Хечбег" },
+                    { new Guid("d5b9e746-1458-4c71-98a2-dd2962c8f694"), "Пикап" }
                 });
 
             migrationBuilder.InsertData(
@@ -292,13 +292,13 @@ namespace CarDealership.Data.Migrations
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("13abd18e-8941-4102-ace6-e02ee85b97e3"), "Икономичен Комби" },
-                    { new Guid("1e33c1b2-1c29-4ec3-8907-fbaae15a61f5"), "Компактен" },
-                    { new Guid("545e3752-ee3a-42a4-8ad1-c1250e6ba184"), "Голям" },
-                    { new Guid("5999e3db-7948-47ab-a2b7-2aa0393ad07e"), "Луксозен" },
-                    { new Guid("790c2f30-a75a-45a2-85a7-6f9075a35135"), "Икономичен" },
-                    { new Guid("e1a23bd8-ca1f-43f1-a73e-63dbd887fc20"), "Стандартен" },
-                    { new Guid("edd96e69-2979-4813-99c3-5ede5304d595"), "Стандартен Комби" }
+                    { new Guid("04058c26-b563-4aca-9d33-cb791c7c6dc4"), "Компактен" },
+                    { new Guid("4a848395-3b85-49d8-937a-0a89ddf9025d"), "Стандартен Комби" },
+                    { new Guid("661d2044-185a-4911-8864-1285c0638e09"), "Голям" },
+                    { new Guid("8acdd8a8-ffaa-425d-934e-d13deaea1836"), "Стандартен" },
+                    { new Guid("adf8cee2-4a4f-430a-99a4-b80fcda4d62d"), "Икономичен Комби" },
+                    { new Guid("b5877ed2-bb7a-4a22-be82-6db9308cd2b7"), "Луксозен" },
+                    { new Guid("f140b03d-b93a-47e6-a58a-346fad8599ad"), "Икономичен" }
                 });
 
             migrationBuilder.InsertData(
@@ -306,9 +306,9 @@ namespace CarDealership.Data.Migrations
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("372dded3-031b-4892-b74b-7b4853d68603"), "Камион" },
-                    { new Guid("8474c958-2f28-47d2-9878-d7eca96ee0d4"), "Бус" },
-                    { new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"), "Автомобил" }
+                    { new Guid("8f40d349-c104-430e-81d4-ab1ba6390187"), "Бус" },
+                    { new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"), "Автомобил" },
+                    { new Guid("f7fa7488-e482-493d-a27c-1f1a7d38f79b"), "Камион" }
                 });
 
             migrationBuilder.CreateIndex(

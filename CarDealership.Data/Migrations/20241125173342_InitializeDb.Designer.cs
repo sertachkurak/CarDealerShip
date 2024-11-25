@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarDealership.Data.Migrations
 {
     [DbContext(typeof(DealershipDbContext))]
-    [Migration("20241120205510_AddingVehiclesPart1")]
-    partial class AddingVehiclesPart1
+    [Migration("20241125173342_InitializeDb")]
+    partial class InitializeDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -109,27 +109,27 @@ namespace CarDealership.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("1bd50a85-116c-495a-a6b9-6e95014e7fa7"),
+                            Id = new Guid("3cb2b945-5fb2-4489-805e-b879154902a6"),
                             Name = "София"
                         },
                         new
                         {
-                            Id = new Guid("403fa5e8-1017-472b-875e-26a1ca73cac7"),
+                            Id = new Guid("84a3dfe2-4c08-4e18-9156-7452e556c1dd"),
                             Name = "Пловдив"
                         },
                         new
                         {
-                            Id = new Guid("77b40a00-01f0-44e6-879f-4f0574fcf580"),
+                            Id = new Guid("48141d40-a443-4edf-aa93-80a12db8690e"),
                             Name = "Варна"
                         },
                         new
                         {
-                            Id = new Guid("bfe70aaf-4328-47dd-9268-df9482a5d555"),
+                            Id = new Guid("ae187b67-abd1-4c1a-8590-6a22c6de4b17"),
                             Name = "Плевен"
                         },
                         new
                         {
-                            Id = new Guid("eac92a26-503b-4218-8b5c-a96a23942a42"),
+                            Id = new Guid("95d16d5b-0edb-46ed-9abc-822545a05860"),
                             Name = "Бургас"
                         });
                 });
@@ -219,113 +219,6 @@ namespace CarDealership.Data.Migrations
                     b.HasIndex("TypeId");
 
                     b.ToTable("Vehicles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("bc2d4817-2704-46c9-b7e0-91e40e64064b"),
-                            CategoryId = new Guid("89253114-1117-481a-94c8-c93e798c73f3"),
-                            Cubage = 5000,
-                            Doors = 4,
-                            FuelType = "Бензин",
-                            GearBox = "Автоматична",
-                            HorsePower = 455,
-                            ImageUrl = "https://editorial.pxcrush.net/carsales/general/editorial/ge5710401472975685544.jpg?width=1024&height=682",
-                            IsDeleted = false,
-                            LocationId = new Guid("30b08e92-62de-42f7-b345-aca315dfd54a"),
-                            Make = "Mercedes-Benz",
-                            Model = "S 500",
-                            Price = 80000m,
-                            PurposeId = new Guid("5999e3db-7948-47ab-a2b7-2aa0393ad07e"),
-                            Seats = 5,
-                            TankCapacity = 90,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2016"
-                        },
-                        new
-                        {
-                            Id = new Guid("2ca127ec-4df8-4091-bd25-de8a6bd43d0e"),
-                            CategoryId = new Guid("89253114-1117-481a-94c8-c93e798c73f3"),
-                            Cubage = 6000,
-                            Doors = 4,
-                            FuelType = "Бензин",
-                            GearBox = "Автоматична",
-                            HorsePower = 609,
-                            ImageUrl = "https://a4d540d8508d4f8a94eefc64d221e3d5.objectstore.eu/lot-20087413/1000x0/94a340b554216b7d5753cdc44dc7217c.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("729897ec-6a17-4851-8831-4d2b2d04f064"),
-                            Make = "BMW",
-                            Model = "760",
-                            Price = 180000m,
-                            PurposeId = new Guid("5999e3db-7948-47ab-a2b7-2aa0393ad07e"),
-                            Seats = 5,
-                            TankCapacity = 100,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2019"
-                        },
-                        new
-                        {
-                            Id = new Guid("967be653-60f4-4b13-9935-f82310868122"),
-                            CategoryId = new Guid("89253114-1117-481a-94c8-c93e798c73f3"),
-                            Cubage = 3000,
-                            Doors = 4,
-                            FuelType = "Бензин",
-                            GearBox = "Автоматична",
-                            HorsePower = 340,
-                            ImageUrl = "https://a4d540d8508d4f8a94eefc64d221e3d5.objectstore.eu/ lot-19801563/1000x0/d00867bc670fa9c6fcae88c376ab6628.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("928c42ce-f6cf-4a56-8eb0-08d9bd65f99a"),
-                            Make = "Audi",
-                            Model = "A8",
-                            Price = 90000m,
-                            PurposeId = new Guid("5999e3db-7948-47ab-a2b7-2aa0393ad07e"),
-                            Seats = 5,
-                            TankCapacity = 90,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2018"
-                        },
-                        new
-                        {
-                            Id = new Guid("e21b23e0-7f17-40c1-94ad-2d578bbc9245"),
-                            CategoryId = new Guid("7ae247d2-af02-4d12-8531-aec70481ec82"),
-                            Cubage = 2000,
-                            Doors = 2,
-                            FuelType = "Бензин",
-                            GearBox = "Автоматична",
-                            HorsePower = 299,
-                            ImageUrl = "https://www.inghamdriven.nz/wp-content/files/stockCNM/8098/20538_01.jpg?/  width=2048&optimize=medium",
-                            IsDeleted = false,
-                            LocationId = new Guid("47c0d9b6-ff78-4c4b-8872-14f12e12f024"),
-                            Make = "Mercedes-Benz",
-                            Model = "S 350",
-                            Price = 100000m,
-                            PurposeId = new Guid("5999e3db-7948-47ab-a2b7-2aa0393ad07e"),
-                            Seats = 4,
-                            TankCapacity = 70,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2020"
-                        },
-                        new
-                        {
-                            Id = new Guid("9edcbb44-6daf-4954-8652-9a83c5cd3c10"),
-                            CategoryId = new Guid("bbcee395-3c50-4b16-8c6b-078997031124"),
-                            Cubage = 3800,
-                            Doors = 2,
-                            FuelType = "Бензин",
-                            GearBox = "Автоматична",
-                            HorsePower = 560,
-                            ImageUrl = "https://www.perfectautocollection.com/imagetag/3466/2/l/Used-2014-  Porsche-911-Turbo-S-1722623538.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("30b08e92-62de-42f7-b345-aca315dfd54a"),
-                            Make = "Porsche",
-                            Model = "911 Turbo S",
-                            Price = 270000m,
-                            PurposeId = new Guid("5999e3db-7948-47ab-a2b7-2aa0393ad07e"),
-                            Seats = 4,
-                            TankCapacity = 80,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2014"
-                        });
                 });
 
             modelBuilder.Entity("CarDealership.Data.Models.VehicleCategory", b =>
@@ -346,52 +239,52 @@ namespace CarDealership.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("91fc8851-a1d0-48b9-b314-c06cfc3499e7"),
+                            Id = new Guid("4012cbab-8211-4c37-8566-f73f083e999f"),
                             Name = "Седан"
                         },
                         new
                         {
-                            Id = new Guid("cbdc7f92-d60b-4fec-9226-ca2f69d263be"),
+                            Id = new Guid("939d5a93-8d55-4ec3-b3ac-39a36cd1ff29"),
                             Name = "Комби"
                         },
                         new
                         {
-                            Id = new Guid("4b660fad-9e5b-4e29-a721-5e81e8fcc111"),
+                            Id = new Guid("a5a36ddd-f4a0-4e76-844b-558204f00717"),
                             Name = "Кабрио"
                         },
                         new
                         {
-                            Id = new Guid("f1b0f623-c759-4fe1-b31a-14b46ec26b0f"),
+                            Id = new Guid("bd91bf4e-67a8-40b4-a992-ae31c76df3a1"),
                             Name = "Хечбег"
                         },
                         new
                         {
-                            Id = new Guid("b0542f73-7a58-4c2a-8ea3-ef284f6ac23b"),
+                            Id = new Guid("a2a6b9be-e626-4d0d-9152-8797da33402f"),
                             Name = "Ван"
                         },
                         new
                         {
-                            Id = new Guid("1eb9ccf2-97dd-4f6e-aa53-8254d2710378"),
+                            Id = new Guid("d5b9e746-1458-4c71-98a2-dd2962c8f694"),
                             Name = "Пикап"
                         },
                         new
                         {
-                            Id = new Guid("dd5129fd-3fcf-45de-b2d8-4b7267d92422"),
+                            Id = new Guid("37545039-ea1a-4970-8a41-abe0005291fd"),
                             Name = "Купе"
                         },
                         new
                         {
-                            Id = new Guid("2866aa85-1654-48b6-b9eb-a40c8f664710"),
+                            Id = new Guid("2fc4c7e6-cad0-4190-95b5-78a7420a1631"),
                             Name = "Джип"
                         },
                         new
                         {
-                            Id = new Guid("f621bd9c-272f-4c74-a896-43cac8fc8064"),
+                            Id = new Guid("5e2e101c-27c9-4b94-b2e8-8f2154a4389b"),
                             Name = "Камион"
                         },
                         new
                         {
-                            Id = new Guid("de994d07-3656-4964-83d0-d8a0b85681f9"),
+                            Id = new Guid("247c145d-9b6d-4315-a68a-f8191b687429"),
                             Name = "Бус"
                         });
                 });
@@ -414,37 +307,37 @@ namespace CarDealership.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("743cfe06-7f22-45ec-88af-b79c3f18c0e8"),
+                            Id = new Guid("f140b03d-b93a-47e6-a58a-346fad8599ad"),
                             Name = "Икономичен"
                         },
                         new
                         {
-                            Id = new Guid("56e7cd8e-a2a3-43df-bfe7-7bf703f5cdc0"),
+                            Id = new Guid("adf8cee2-4a4f-430a-99a4-b80fcda4d62d"),
                             Name = "Икономичен Комби"
                         },
                         new
                         {
-                            Id = new Guid("af941060-f25b-49c3-802f-90485ee91871"),
+                            Id = new Guid("04058c26-b563-4aca-9d33-cb791c7c6dc4"),
                             Name = "Компактен"
                         },
                         new
                         {
-                            Id = new Guid("31e05717-6181-4513-b627-c1f350aea82b"),
+                            Id = new Guid("8acdd8a8-ffaa-425d-934e-d13deaea1836"),
                             Name = "Стандартен"
                         },
                         new
                         {
-                            Id = new Guid("863f3051-91b5-4470-be21-60b681da5782"),
+                            Id = new Guid("4a848395-3b85-49d8-937a-0a89ddf9025d"),
                             Name = "Стандартен Комби"
                         },
                         new
                         {
-                            Id = new Guid("566678cc-de96-4d01-8b15-b07f1ece32f1"),
+                            Id = new Guid("661d2044-185a-4911-8864-1285c0638e09"),
                             Name = "Голям"
                         },
                         new
                         {
-                            Id = new Guid("a7a95387-66c9-4c6d-ae02-ed9ce687d202"),
+                            Id = new Guid("b5877ed2-bb7a-4a22-be82-6db9308cd2b7"),
                             Name = "Луксозен"
                         });
                 });
@@ -467,17 +360,17 @@ namespace CarDealership.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9f8d2d56-5fd0-4ad2-b2bf-66e8804bd645"),
+                            Id = new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"),
                             Name = "Автомобил"
                         },
                         new
                         {
-                            Id = new Guid("42fffa4c-8cdf-4888-a3b6-beeb0d65d9e8"),
+                            Id = new Guid("f7fa7488-e482-493d-a27c-1f1a7d38f79b"),
                             Name = "Камион"
                         },
                         new
                         {
-                            Id = new Guid("11a2b000-291f-4342-b1c1-6751f2990551"),
+                            Id = new Guid("8f40d349-c104-430e-81d4-ab1ba6390187"),
                             Name = "Бус"
                         });
                 });
@@ -622,7 +515,7 @@ namespace CarDealership.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("CarDealership.Data.Models.Location", "Location")
-                        .WithMany()
+                        .WithMany("Vehicles")
                         .HasForeignKey("LocationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -697,6 +590,11 @@ namespace CarDealership.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("CarDealership.Data.Models.Location", b =>
+                {
+                    b.Navigation("Vehicles");
                 });
 
             modelBuilder.Entity("CarDealership.Data.Models.VehicleCategory", b =>

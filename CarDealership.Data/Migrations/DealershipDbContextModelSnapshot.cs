@@ -106,27 +106,27 @@ namespace CarDealership.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("ba0e0608-ed29-4da1-ad84-4b890f1941ed"),
+                            Id = new Guid("a185ede2-c628-4807-ba94-144fb3691ca9"),
                             Name = "София"
                         },
                         new
                         {
-                            Id = new Guid("02b16891-0b79-42ae-bed5-52d5dad58f7a"),
+                            Id = new Guid("d70d76aa-015b-4e05-9e7a-79b8addabc1d"),
                             Name = "Пловдив"
                         },
                         new
                         {
-                            Id = new Guid("dba75302-f896-4190-bab9-32293716534d"),
+                            Id = new Guid("d67e2e80-146a-480b-a3e8-4f7b841fe192"),
                             Name = "Варна"
                         },
                         new
                         {
-                            Id = new Guid("fdc10ce4-d92d-4e23-84f3-c25162790b27"),
+                            Id = new Guid("3a5c2414-c3e1-46ba-a429-ed5cb1d6054a"),
                             Name = "Плевен"
                         },
                         new
                         {
-                            Id = new Guid("a3679924-783e-4322-923b-77fcdf2211fa"),
+                            Id = new Guid("b724d8ad-7236-495d-8cb7-64c16902817a"),
                             Name = "Бургас"
                         });
                 });
@@ -220,323 +220,8 @@ namespace CarDealership.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f3f58714-3e2b-4239-b15b-e1e89223a1b1"),
-                            CategoryId = new Guid("e091f5bb-8030-47c1-bf33-4856df0d905e"),
-                            Cubage = 1600,
-                            Doors = 2,
-                            FuelType = "Дизел",
-                            GearBox = "Ръчна",
-                            HorsePower = 92,
-                            ImageUrl = "https://wallpapers.com/images/hd/caption-stylish-citroen-berlingo-onthe-/open-road-r6rrgptqhdh95zwh.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("729897ec-6a17-4851-8831-4d2b2d04f064"),
-                            Make = "Citroen",
-                            Model = "Berlingo",
-                            Price = 9000m,
-                            PurposeId = new Guid("e1a23bd8-ca1f-43f1-a73e-63dbd887fc20"),
-                            Seats = 2,
-                            TankCapacity = 60,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2014"
-                        },
-                        new
-                        {
-                            Id = new Guid("d270641e-6339-4a6f-9e3e-0b5d0db85d15"),
-                            CategoryId = new Guid("f4216b8c-f6e0-40a8-8a6a-ae0534601801"),
-                            Cubage = 1000,
-                            Doors = 4,
-                            FuelType = "Бензин",
-                            GearBox = "Автоматична",
-                            HorsePower = 90,
-                            ImageUrl = "https://img-pa.auto1.com/img53/7a/537a451e1e8592af996df6d02497ae30/pa/FZ44914_961889bcd6782481a45aec95c890dda7.jpeg",
-                            IsDeleted = false,
-                            LocationId = new Guid("47c0d9b6-ff78-4c4b-8872-14f12e12f024"),
-                            Make = "Dacia",
-                            Model = "Sandero",
-                            Price = 16000m,
-                            PurposeId = new Guid("790c2f30-a75a-45a2-85a7-6f9075a35135"),
-                            Seats = 5,
-                            TankCapacity = 60,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2018"
-                        },
-                        new
-                        {
-                            Id = new Guid("73bf0bfb-44a1-4fa3-a580-b4b7a7f70829"),
-                            CategoryId = new Guid("89253114-1117-481a-94c8-c93e798c73f3"),
-                            Cubage = 3000,
-                            Doors = 4,
-                            FuelType = "Дизел",
-                            GearBox = "Автоматична",
-                            HorsePower = 244,
-                            ImageUrl = "https://www.motorbeam.com/wp-content/uploads/Jaguar-XF-Diesel-Review-1200x900.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("729897ec-6a17-4851-8831-4d2b2d04f064"),
-                            Make = "Jaguar",
-                            Model = "XF",
-                            Price = 23500m,
-                            PurposeId = new Guid("e1a23bd8-ca1f-43f1-a73e-63dbd887fc20"),
-                            Seats = 5,
-                            TankCapacity = 80,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2018"
-                        },
-                        new
-                        {
-                            Id = new Guid("28b30c72-1926-4176-a4b9-8b85eace95e8"),
-                            CategoryId = new Guid("a9f48de6-0feb-4b5f-8585-bffac93e5041"),
-                            Cubage = 2200,
-                            Doors = 4,
-                            FuelType = "Дизел",
-                            GearBox = "Ръчна",
-                            HorsePower = 150,
-                            ImageUrl = "https://media.ed.edmunds-media.com/honda/cr-v/2015/oem/2015_honda_cr-v_4dr-suv_touring_fq_oem_1_1600.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("30b08e92-62de-42f7-b345-aca315dfd54a"),
-                            Make = "Honda",
-                            Model = "Cr-v",
-                            Price = 24500m,
-                            PurposeId = new Guid("e1a23bd8-ca1f-43f1-a73e-63dbd887fc20"),
-                            Seats = 5,
-                            TankCapacity = 70,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2015"
-                        },
-                        new
-                        {
-                            Id = new Guid("214ec052-afc7-418e-9cd5-51f3df564d34"),
-                            CategoryId = new Guid("bbcee395-3c50-4b16-8c6b-078997031124"),
-                            Cubage = 1700,
-                            Doors = 4,
-                            FuelType = "Дизел",
-                            GearBox = "Ръчна",
-                            HorsePower = 75,
-                            ImageUrl = "https://img.autoabc.lv/opel-meriva/opel-meriva_2003_Minivens_1512150409_4.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("928c42ce-f6cf-4a56-8eb0-08d9bd65f99a"),
-                            Make = "Opel",
-                            Model = "Meriva",
-                            Price = 2500m,
-                            PurposeId = new Guid("1e33c1b2-1c29-4ec3-8907-fbaae15a61f5"),
-                            Seats = 5,
-                            TankCapacity = 60,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2004"
-                        },
-                        new
-                        {
-                            Id = new Guid("42c3d9b1-fb77-49b4-8083-4fe882e907b4"),
-                            CategoryId = new Guid("89253114-1117-481a-94c8-c93e798c73f3"),
-                            Cubage = 2000,
-                            Doors = 4,
-                            FuelType = "Дизел",
-                            GearBox = "Автоматична",
-                            HorsePower = 240,
-                            ImageUrl = "https://cdn.jdpower.com/JDPA_2020%20Volkswagen%20Passat%20R-Li%/20Aurora/%20Red%20Front%20View%20Small_edited.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("47c0d9b6-ff78-4c4b-8872-14f12e12f024"),
-                            Make = "Volkswagen",
-                            Model = "Passat",
-                            Price = 35500m,
-                            PurposeId = new Guid("e1a23bd8-ca1f-43f1-a73e-63dbd887fc20"),
-                            Seats = 5,
-                            TankCapacity = 65,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2020"
-                        },
-                        new
-                        {
-                            Id = new Guid("c909c8fb-84bf-443f-8166-f4b3ad7d140f"),
-                            CategoryId = new Guid("8d5dd07e-cefe-45c2-8266-c28946a99400"),
-                            Cubage = 2000,
-                            Doors = 4,
-                            FuelType = "Дизел",
-                            GearBox = "Автоматична",
-                            HorsePower = 185,
-                            ImageUrl = "https://automedia.investor.bg/media/files/resizeduploadedfiles/640x0//b26/c230bdb3a7c8e9242f83577101b65b26-1920px-2018-skoda-octavia-5emy185-110tsi-/station-wagon-2018-11-02.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("30b08e92-62de-42f7-b345-aca315dfd54a"),
-                            Make = "Skoda",
-                            Model = "Octavia",
-                            Price = 22500m,
-                            PurposeId = new Guid("13abd18e-8941-4102-ace6-e02ee85b97e3"),
-                            Seats = 5,
-                            TankCapacity = 60,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2017"
-                        },
-                        new
-                        {
-                            Id = new Guid("cf0787cb-2a5f-4106-8adc-35d5748dfb91"),
-                            CategoryId = new Guid("f4216b8c-f6e0-40a8-8a6a-ae0534601801"),
-                            Cubage = 2000,
-                            Doors = 2,
-                            FuelType = "Дизел",
-                            GearBox = "Автоматична",
-                            HorsePower = 136,
-                            ImageUrl = "https://www.auto-data.net/images/f21/Peugeot-307-facelift-2005.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("928c42ce-f6cf-4a56-8eb0-08d9bd65f99a"),
-                            Make = "Peugeot",
-                            Model = "307",
-                            Price = 5500m,
-                            PurposeId = new Guid("790c2f30-a75a-45a2-85a7-6f9075a35135"),
-                            Seats = 4,
-                            TankCapacity = 50,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2009"
-                        },
-                        new
-                        {
-                            Id = new Guid("079f5479-f2a8-4ea4-9c00-e650451d6743"),
-                            CategoryId = new Guid("a9f48de6-0feb-4b5f-8585-bffac93e5041"),
-                            Cubage = 1600,
-                            Doors = 4,
-                            FuelType = "Дизел",
-                            GearBox = "Автоматична",
-                            HorsePower = 130,
-                            ImageUrl = "https://images.clickdealer.co.uk/vehicles/5611/5611012/large1/131132474.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("683f4284-6138-4dce-9191-32206dfd442e"),
-                            Make = "Renault",
-                            Model = "Kadjar",
-                            Price = 19500m,
-                            PurposeId = new Guid("545e3752-ee3a-42a4-8ad1-c1250e6ba184"),
-                            Seats = 5,
-                            TankCapacity = 65,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2017"
-                        },
-                        new
-                        {
-                            Id = new Guid("3b13c738-04c1-4984-a1dc-4fa8aff39f89"),
-                            CategoryId = new Guid("bbcee395-3c50-4b16-8c6b-078997031124"),
-                            Cubage = 2000,
-                            Doors = 2,
-                            FuelType = "Дизел",
-                            GearBox = "Автоматична",
-                            HorsePower = 140,
-                            ImageUrl = "https://www.motortrend.com/uploads/sites/5/2013/11/2013-Volkswagen-Scirocco-R-front-three-quarters1.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("729897ec-6a17-4851-8831-4d2b2d04f064"),
-                            Make = "Volkswagen",
-                            Model = "Scirocco",
-                            Price = 9500m,
-                            PurposeId = new Guid("1e33c1b2-1c29-4ec3-8907-fbaae15a61f5"),
-                            Seats = 4,
-                            TankCapacity = 55,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2013"
-                        },
-                        new
-                        {
-                            Id = new Guid("b074de34-989f-46ba-8270-aa58e33e99ec"),
-                            CategoryId = new Guid("f4216b8c-f6e0-40a8-8a6a-ae0534601801"),
-                            Cubage = 1600,
-                            Doors = 4,
-                            FuelType = "Дизел",
-                            GearBox = "Автоматична",
-                            HorsePower = 110,
-                            ImageUrl = "https://media.stockmanager.ie/media/0380e15958fbd2bb2c34655d332a20d1.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("47c0d9b6-ff78-4c4b-8872-14f12e12f024"),
-                            Make = "Volkswagen",
-                            Model = "Golf",
-                            Price = 12500m,
-                            PurposeId = new Guid("790c2f30-a75a-45a2-85a7-6f9075a35135"),
-                            Seats = 5,
-                            TankCapacity = 50,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2013"
-                        },
-                        new
-                        {
-                            Id = new Guid("7588b40c-6644-4676-a995-6f4080e96524"),
-                            CategoryId = new Guid("8d5dd07e-cefe-45c2-8266-c28946a99400"),
-                            Cubage = 1400,
-                            Doors = 4,
-                            FuelType = "Дизел",
-                            GearBox = "Ръчни",
-                            HorsePower = 90,
-                            ImageUrl = "https://aaaautoeuimg.vshcdn.net/thumb/900482724_640x480x95.jpg?58802",
-                            IsDeleted = false,
-                            LocationId = new Guid("928c42ce-f6cf-4a56-8eb0-08d9bd65f99a"),
-                            Make = "Toyota",
-                            Model = "Auris",
-                            Price = 13000m,
-                            PurposeId = new Guid("13abd18e-8941-4102-ace6-e02ee85b97e3"),
-                            Seats = 5,
-                            TankCapacity = 50,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2013"
-                        },
-                        new
-                        {
-                            Id = new Guid("55f82464-8d1e-443b-9022-c4aeae30af13"),
-                            CategoryId = new Guid("a9f48de6-0feb-4b5f-8585-bffac93e5041"),
-                            Cubage = 1500,
-                            Doors = 4,
-                            FuelType = "Дизел",
-                            GearBox = "Автоматична",
-                            HorsePower = 110,
-                            ImageUrl = "https://autobild.bg/wp-content/uploads/2021/09/IMG_5826.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("30b08e92-62de-42f7-b345-aca315dfd54a"),
-                            Make = "Opel",
-                            Model = "Mokka",
-                            Price = 23000m,
-                            PurposeId = new Guid("1e33c1b2-1c29-4ec3-8907-fbaae15a61f5"),
-                            Seats = 5,
-                            TankCapacity = 45,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2020"
-                        },
-                        new
-                        {
-                            Id = new Guid("02d0ea28-7eb1-4073-aeb8-35918b6f16a2"),
-                            CategoryId = new Guid("e091f5bb-8030-47c1-bf33-4856df0d905e"),
-                            Cubage = 2000,
-                            Doors = 4,
-                            FuelType = "Дизел",
-                            GearBox = "Автоматична",
-                            HorsePower = 140,
-                            ImageUrl = "https://cdn3.riastatic.com/photos/ir/new/auto/photo/volkswagen_sharan__344776878-620x415x70.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("729897ec-6a17-4851-8831-4d2b2d04f064"),
-                            Make = "Volkswagen",
-                            Model = "Sharan",
-                            Price = 15000m,
-                            PurposeId = new Guid("545e3752-ee3a-42a4-8ad1-c1250e6ba184"),
-                            Seats = 5,
-                            TankCapacity = 70,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2012"
-                        },
-                        new
-                        {
-                            Id = new Guid("ce5af414-610b-4f51-87c5-3acd255fc7f8"),
-                            CategoryId = new Guid("f4216b8c-f6e0-40a8-8a6a-ae0534601801"),
-                            Cubage = 1200,
-                            Doors = 4,
-                            FuelType = "Бензин",
-                            GearBox = "Автоматична",
-                            HorsePower = 110,
-                            ImageUrl = "https://cloud.leparking.fr/2021/04/27/00/23/peugeot-208-peugeot-208-2015-67000km-garantie-inconnu_8085850837.jpg",
-                            IsDeleted = false,
-                            LocationId = new Guid("683f4284-6138-4dce-9191-32206dfd442e"),
-                            Make = "Peugeot",
-                            Model = "208",
-                            Price = 9000m,
-                            PurposeId = new Guid("1e33c1b2-1c29-4ec3-8907-fbaae15a61f5"),
-                            Seats = 5,
-                            TankCapacity = 50,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
-                            Year = "2015"
-                        },
-                        new
-                        {
-                            Id = new Guid("af412792-fe6d-461c-8829-7dd94dc53102"),
-                            CategoryId = new Guid("f4216b8c-f6e0-40a8-8a6a-ae0534601801"),
+                            Id = new Guid("5b0ddfa3-1bef-4993-a879-f643a34d374b"),
+                            CategoryId = new Guid("bd91bf4e-67a8-40b4-a992-ae31c76df3a1"),
                             Cubage = 1200,
                             Doors = 4,
                             FuelType = "Бензин",
@@ -544,20 +229,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 110,
                             ImageUrl = "https://ssl.caranddriving.com/cdwebsite/image169.ashx?url=https://ssl.caranddriving.com/ssl/f2/images/used/big/peugeot2082015to2019.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("47c0d9b6-ff78-4c4b-8872-14f12e12f024"),
+                            LocationId = new Guid("ae187b67-abd1-4c1a-8590-6a22c6de4b17"),
                             Make = "Peugeot",
                             Model = "208",
                             Price = 10000m,
-                            PurposeId = new Guid("1e33c1b2-1c29-4ec3-8907-fbaae15a61f5"),
+                            PurposeId = new Guid("f140b03d-b93a-47e6-a58a-346fad8599ad"),
                             Seats = 5,
                             TankCapacity = 50,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
+                            TypeId = new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"),
                             Year = "2015"
                         },
                         new
                         {
-                            Id = new Guid("041c308b-03b9-4b08-b38b-cf64c0113bd6"),
-                            CategoryId = new Guid("f4216b8c-f6e0-40a8-8a6a-ae0534601801"),
+                            Id = new Guid("98f82568-0fe5-4e75-87e1-c5688fe42860"),
+                            CategoryId = new Guid("bd91bf4e-67a8-40b4-a992-ae31c76df3a1"),
                             Cubage = 1600,
                             Doors = 4,
                             FuelType = "Дизел",
@@ -565,20 +250,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 140,
                             ImageUrl = "https://m4.netinfo.bg/media/images/38599/38599839/655-402-renault-cliov-/test-drajv.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("928c42ce-f6cf-4a56-8eb0-08d9bd65f99a"),
+                            LocationId = new Guid("84a3dfe2-4c08-4e18-9156-7452e556c1dd"),
                             Make = "Renault",
                             Model = "Clio",
                             Price = 18000m,
-                            PurposeId = new Guid("790c2f30-a75a-45a2-85a7-6f9075a35135"),
+                            PurposeId = new Guid("f140b03d-b93a-47e6-a58a-346fad8599ad"),
                             Seats = 5,
                             TankCapacity = 45,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
+                            TypeId = new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"),
                             Year = "2020"
                         },
                         new
                         {
-                            Id = new Guid("71fb340c-79c0-4853-92c5-be6f76e9db4d"),
-                            CategoryId = new Guid("a9f48de6-0feb-4b5f-8585-bffac93e5041"),
+                            Id = new Guid("adac99fc-a75f-4af4-9f1e-3570d67e6017"),
+                            CategoryId = new Guid("2fc4c7e6-cad0-4190-95b5-78a7420a1631"),
                             Cubage = 3000,
                             Doors = 4,
                             FuelType = "Дизел",
@@ -586,20 +271,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 286,
                             ImageUrl = "https://pictures.dealer.com/r/rockvilleaudiaoa/1813/530e70010e6e34ac80d27f60876ab89ex.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("30b08e92-62de-42f7-b345-aca315dfd54a"),
+                            LocationId = new Guid("48141d40-a443-4edf-aa93-80a12db8690e"),
                             Make = "Audi",
                             Model = "Q8",
                             Price = 95000m,
-                            PurposeId = new Guid("545e3752-ee3a-42a4-8ad1-c1250e6ba184"),
+                            PurposeId = new Guid("b5877ed2-bb7a-4a22-be82-6db9308cd2b7"),
                             Seats = 5,
                             TankCapacity = 75,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
+                            TypeId = new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"),
                             Year = "2020"
                         },
                         new
                         {
-                            Id = new Guid("dc1c9ea5-b910-4ca1-9435-25175fbf0372"),
-                            CategoryId = new Guid("a9f48de6-0feb-4b5f-8585-bffac93e5041"),
+                            Id = new Guid("194ae085-cc33-46c6-923e-c44a5e14d4df"),
+                            CategoryId = new Guid("2fc4c7e6-cad0-4190-95b5-78a7420a1631"),
                             Cubage = 3000,
                             Doors = 4,
                             FuelType = "Дизел",
@@ -607,20 +292,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 286,
                             ImageUrl = "https://media.ed.edmunds-media.com/audi/q7/2018/oem/2018_audi_q7_4dr-suv_30t-prestige-quattro_fq_oem_1_1600.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("729897ec-6a17-4851-8831-4d2b2d04f064"),
+                            LocationId = new Guid("95d16d5b-0edb-46ed-9abc-822545a05860"),
                             Make = "Audi",
                             Model = "Q7",
                             Price = 50000m,
-                            PurposeId = new Guid("545e3752-ee3a-42a4-8ad1-c1250e6ba184"),
+                            PurposeId = new Guid("b5877ed2-bb7a-4a22-be82-6db9308cd2b7"),
                             Seats = 5,
                             TankCapacity = 75,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
+                            TypeId = new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"),
                             Year = "2018"
                         },
                         new
                         {
-                            Id = new Guid("b1594bfc-d96d-4974-aee4-3addcefb3363"),
-                            CategoryId = new Guid("89253114-1117-481a-94c8-c93e798c73f3"),
+                            Id = new Guid("09ce8f2c-f974-4e36-8093-ce3aa7376cf2"),
+                            CategoryId = new Guid("4012cbab-8211-4c37-8566-f73f083e999f"),
                             Cubage = 4000,
                             Doors = 4,
                             FuelType = "Дизел",
@@ -628,20 +313,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 400,
                             ImageUrl = "https://www.sherifo.lt/_next/image?url=https%3A%2F%2Fproduction-carloading-api-media.s3.amazonaws.com%2Flot_image%/2F1_S1ptd2M.png.1920x1080_q85.png&w=3840&q=75",
                             IsDeleted = false,
-                            LocationId = new Guid("683f4284-6138-4dce-9191-32206dfd442e"),
+                            LocationId = new Guid("3cb2b945-5fb2-4489-805e-b879154902a6"),
                             Make = "BMW",
                             Model = "750",
                             Price = 90000m,
-                            PurposeId = new Guid("5999e3db-7948-47ab-a2b7-2aa0393ad07e"),
+                            PurposeId = new Guid("b5877ed2-bb7a-4a22-be82-6db9308cd2b7"),
                             Seats = 5,
                             TankCapacity = 80,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
+                            TypeId = new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"),
                             Year = "2019"
                         },
                         new
                         {
-                            Id = new Guid("ce5d228f-48eb-42c6-8124-47848e983356"),
-                            CategoryId = new Guid("a9f48de6-0feb-4b5f-8585-bffac93e5041"),
+                            Id = new Guid("a89b2858-ea73-4338-8e02-18d01ae2b008"),
+                            CategoryId = new Guid("2fc4c7e6-cad0-4190-95b5-78a7420a1631"),
                             Cubage = 3000,
                             Doors = 4,
                             FuelType = "Дизел",
@@ -649,20 +334,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 286,
                             ImageUrl = "https://cdn.dealerspike.com/imglib/v1/800x600/imglib/Assets/Inventory/A6/07/A6070369-F91B-47F8-9FA9-93AEF34C7EB4.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("47c0d9b6-ff78-4c4b-8872-14f12e12f024"),
+                            LocationId = new Guid("ae187b67-abd1-4c1a-8590-6a22c6de4b17"),
                             Make = "Audi",
                             Model = "Q7",
                             Price = 55000m,
-                            PurposeId = new Guid("545e3752-ee3a-42a4-8ad1-c1250e6ba184"),
+                            PurposeId = new Guid("b5877ed2-bb7a-4a22-be82-6db9308cd2b7"),
                             Seats = 5,
                             TankCapacity = 75,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
+                            TypeId = new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"),
                             Year = "2018"
                         },
                         new
                         {
-                            Id = new Guid("e1ab3fef-9f6a-486d-830e-ec22d357455b"),
-                            CategoryId = new Guid("a9f48de6-0feb-4b5f-8585-bffac93e5041"),
+                            Id = new Guid("60b708ce-d98a-4c51-a39a-05a50fddf989"),
+                            CategoryId = new Guid("2fc4c7e6-cad0-4190-95b5-78a7420a1631"),
                             Cubage = 5700,
                             Doors = 4,
                             FuelType = "Бензин",
@@ -670,20 +355,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 395,
                             ImageUrl = "https://di-uploads-pod12.dealerinspire.com/universitydodgeram/uploads/2017/11/2018Ram1500_UniversityDodge.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("928c42ce-f6cf-4a56-8eb0-08d9bd65f99a"),
+                            LocationId = new Guid("84a3dfe2-4c08-4e18-9156-7452e556c1dd"),
                             Make = "RAM",
                             Model = "1500",
                             Price = 45000m,
-                            PurposeId = new Guid("545e3752-ee3a-42a4-8ad1-c1250e6ba184"),
+                            PurposeId = new Guid("661d2044-185a-4911-8864-1285c0638e09"),
                             Seats = 6,
                             TankCapacity = 90,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
+                            TypeId = new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"),
                             Year = "2018"
                         },
                         new
                         {
-                            Id = new Guid("f0d69786-1054-432e-a015-f56a0647fd1b"),
-                            CategoryId = new Guid("a9f48de6-0feb-4b5f-8585-bffac93e5041"),
+                            Id = new Guid("07a52dd4-ba04-448d-80b9-0730a0716a24"),
+                            CategoryId = new Guid("2fc4c7e6-cad0-4190-95b5-78a7420a1631"),
                             Cubage = 1500,
                             Doors = 4,
                             FuelType = "Дизел",
@@ -691,20 +376,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 116,
                             ImageUrl = "https://www.carpixel.net/w/a38025585b428caf0a5e472b1da228bb/minicooper-/s-countryman-car-wallpaper-101089.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("30b08e92-62de-42f7-b345-aca315dfd54a"),
+                            LocationId = new Guid("48141d40-a443-4edf-aa93-80a12db8690e"),
                             Make = "Mini",
                             Model = "Countryman",
                             Price = 18000m,
-                            PurposeId = new Guid("e1a23bd8-ca1f-43f1-a73e-63dbd887fc20"),
+                            PurposeId = new Guid("f140b03d-b93a-47e6-a58a-346fad8599ad"),
                             Seats = 5,
                             TankCapacity = 50,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
+                            TypeId = new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"),
                             Year = "2020"
                         },
                         new
                         {
-                            Id = new Guid("4dbd1c58-4f4c-4902-a3e9-5b598f3dfb54"),
-                            CategoryId = new Guid("a9f48de6-0feb-4b5f-8585-bffac93e5041"),
+                            Id = new Guid("5149fb0c-d53e-4ecc-bea2-9d005edbbdd4"),
+                            CategoryId = new Guid("2fc4c7e6-cad0-4190-95b5-78a7420a1631"),
                             Cubage = 1500,
                             Doors = 4,
                             FuelType = "Дизел",
@@ -712,20 +397,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 116,
                             ImageUrl = "https://www.elcarrocolombiano.com/wp-contentuploads/2020/03/20200304-/RENAULT-DUSTER-2021-PRECIO-CARACTERISTICAS-EN-BRASIL-01.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("729897ec-6a17-4851-8831-4d2b2d04f064"),
+                            LocationId = new Guid("95d16d5b-0edb-46ed-9abc-822545a05860"),
                             Make = "Dacia",
                             Model = "Duster",
                             Price = 23000m,
-                            PurposeId = new Guid("790c2f30-a75a-45a2-85a7-6f9075a35135"),
+                            PurposeId = new Guid("f140b03d-b93a-47e6-a58a-346fad8599ad"),
                             Seats = 5,
                             TankCapacity = 50,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
+                            TypeId = new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"),
                             Year = "2021"
                         },
                         new
                         {
-                            Id = new Guid("0d64ef41-b071-4286-bdc8-acf016317ba3"),
-                            CategoryId = new Guid("89253114-1117-481a-94c8-c93e798c73f3"),
+                            Id = new Guid("3cf850a3-2278-4a70-af61-157bc9e9f69a"),
+                            CategoryId = new Guid("4012cbab-8211-4c37-8566-f73f083e999f"),
                             Cubage = 1600,
                             Doors = 4,
                             FuelType = "Бензин",
@@ -733,41 +418,41 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 132,
                             ImageUrl = "https://www.avtotachki.com/wp-content/uploads/2020/11/toyota-corolla-2016-1024x685.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("683f4284-6138-4dce-9191-32206dfd442e"),
+                            LocationId = new Guid("3cb2b945-5fb2-4489-805e-b879154902a6"),
                             Make = "Toyota",
                             Model = "Corolla",
                             Price = 19000m,
-                            PurposeId = new Guid("e1a23bd8-ca1f-43f1-a73e-63dbd887fc20"),
+                            PurposeId = new Guid("8acdd8a8-ffaa-425d-934e-d13deaea1836"),
                             Seats = 5,
                             TankCapacity = 55,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
+                            TypeId = new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"),
                             Year = "2016"
                         },
                         new
                         {
-                            Id = new Guid("481a1cf6-6aad-43ca-a7a3-d8bc6baf8661"),
-                            CategoryId = new Guid("8d5dd07e-cefe-45c2-8266-c28946a99400"),
+                            Id = new Guid("3c3f2cb0-fb06-4616-8396-3aad20b6d7a6"),
+                            CategoryId = new Guid("939d5a93-8d55-4ec3-b3ac-39a36cd1ff29"),
                             Cubage = 2000,
                             Doors = 4,
                             FuelType = "Дизел",
                             GearBox = "Автоматична",
                             HorsePower = 150,
-                            ImageUrl = "https://img-pa.auto1.com/imgd0/8a/d08a3dea07a8b236e71910325cec96f4pa//KS84681_2c7e1945aff6e9ae46f0916d71cee46d.jpeg",
+                            ImageUrl = "https://s3.eu-west-2.amazonaws.com/assets.synetiq-auctions.co.uk/images/items/0026/0453805/cmih8vnjwohimemf7dj6fo5yqu6f5fsm9f52025a.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("47c0d9b6-ff78-4c4b-8872-14f12e12f024"),
+                            LocationId = new Guid("ae187b67-abd1-4c1a-8590-6a22c6de4b17"),
                             Make = "Citroen",
                             Model = "C5",
                             Price = 16000m,
-                            PurposeId = new Guid("13abd18e-8941-4102-ace6-e02ee85b97e3"),
+                            PurposeId = new Guid("8acdd8a8-ffaa-425d-934e-d13deaea1836"),
                             Seats = 5,
                             TankCapacity = 70,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
+                            TypeId = new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"),
                             Year = "2016"
                         },
                         new
                         {
-                            Id = new Guid("799d3711-4eb8-4ddd-8177-bfcaa9342af1"),
-                            CategoryId = new Guid("f4216b8c-f6e0-40a8-8a6a-ae0534601801"),
+                            Id = new Guid("6c57e66b-4ad8-445c-ba76-1408b86ad7fb"),
+                            CategoryId = new Guid("bd91bf4e-67a8-40b4-a992-ae31c76df3a1"),
                             Cubage = 1200,
                             Doors = 4,
                             FuelType = "Дизел",
@@ -775,20 +460,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 75,
                             ImageUrl = "https://www.avtotachki.com/wp-content/uploads/2020/12/hyundai-i10-2017-1024x640.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("928c42ce-f6cf-4a56-8eb0-08d9bd65f99a"),
+                            LocationId = new Guid("84a3dfe2-4c08-4e18-9156-7452e556c1dd"),
                             Make = "Hyundai",
                             Model = "i10",
                             Price = 10000m,
-                            PurposeId = new Guid("1e33c1b2-1c29-4ec3-8907-fbaae15a61f5"),
+                            PurposeId = new Guid("f140b03d-b93a-47e6-a58a-346fad8599ad"),
                             Seats = 5,
                             TankCapacity = 40,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
+                            TypeId = new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"),
                             Year = "2017"
                         },
                         new
                         {
-                            Id = new Guid("cd2f6e03-30e1-4bb4-9e79-a7bc71f4c625"),
-                            CategoryId = new Guid("f4216b8c-f6e0-40a8-8a6a-ae0534601801"),
+                            Id = new Guid("3ccb56a9-4a35-4221-be4c-a8757d297461"),
+                            CategoryId = new Guid("bd91bf4e-67a8-40b4-a992-ae31c76df3a1"),
                             Cubage = 1200,
                             Doors = 4,
                             FuelType = "Дизел",
@@ -796,20 +481,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 75,
                             ImageUrl = "https://www.auto-data.net/images/f11/Hyundai-Grand-i10-facelift-2017.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("30b08e92-62de-42f7-b345-aca315dfd54a"),
+                            LocationId = new Guid("48141d40-a443-4edf-aa93-80a12db8690e"),
                             Make = "Hyundai",
                             Model = "i10",
                             Price = 10500m,
-                            PurposeId = new Guid("1e33c1b2-1c29-4ec3-8907-fbaae15a61f5"),
+                            PurposeId = new Guid("f140b03d-b93a-47e6-a58a-346fad8599ad"),
                             Seats = 5,
                             TankCapacity = 40,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
+                            TypeId = new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"),
                             Year = "2017"
                         },
                         new
                         {
-                            Id = new Guid("c0dfb527-072e-441d-b468-ae5c6003b83f"),
-                            CategoryId = new Guid("a9f48de6-0feb-4b5f-8585-bffac93e5041"),
+                            Id = new Guid("c42c760d-0e3e-4194-a88e-7318a084faab"),
+                            CategoryId = new Guid("2fc4c7e6-cad0-4190-95b5-78a7420a1631"),
                             Cubage = 1500,
                             Doors = 4,
                             FuelType = "Дизел",
@@ -817,20 +502,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 116,
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/c/c2/2018_Dacia_Duster_Comfort_1.6.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("683f4284-6138-4dce-9191-32206dfd442e"),
+                            LocationId = new Guid("95d16d5b-0edb-46ed-9abc-822545a05860"),
                             Make = "Dacia",
                             Model = "Duster",
                             Price = 25000m,
-                            PurposeId = new Guid("790c2f30-a75a-45a2-85a7-6f9075a35135"),
+                            PurposeId = new Guid("f140b03d-b93a-47e6-a58a-346fad8599ad"),
                             Seats = 5,
                             TankCapacity = 50,
-                            TypeId = new Guid("f6fcc477-d738-4077-b0d0-c5f5fcfdbe68"),
+                            TypeId = new Guid("912d4786-5ce9-4dc7-8da8-47ce8fb72bef"),
                             Year = "2021"
                         },
                         new
                         {
-                            Id = new Guid("52a059a5-af5d-4fde-bf9a-1ae9c020cd7f"),
-                            CategoryId = new Guid("d5a8ece2-9696-42ae-94e5-30319050da93"),
+                            Id = new Guid("204e50c5-56b3-492d-bdcb-e0f4e7cc3e93"),
+                            CategoryId = new Guid("5e2e101c-27c9-4b94-b2e8-8f2154a4389b"),
                             Cubage = 13000,
                             Doors = 2,
                             FuelType = "Дизел",
@@ -838,20 +523,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 480,
                             ImageUrl = "https://d2e5b8shawuel2.cloudfront.net/vehicle/304240/hlv/original.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("47c0d9b6-ff78-4c4b-8872-14f12e12f024"),
+                            LocationId = new Guid("3cb2b945-5fb2-4489-805e-b879154902a6"),
                             Make = "Daf",
                             Model = "XF 480",
                             Price = 85000m,
-                            PurposeId = new Guid("545e3752-ee3a-42a4-8ad1-c1250e6ba184"),
+                            PurposeId = new Guid("661d2044-185a-4911-8864-1285c0638e09"),
                             Seats = 2,
                             TankCapacity = 1100,
-                            TypeId = new Guid("372dded3-031b-4892-b74b-7b4853d68603"),
+                            TypeId = new Guid("f7fa7488-e482-493d-a27c-1f1a7d38f79b"),
                             Year = "2020"
                         },
                         new
                         {
-                            Id = new Guid("5a9dcd6c-598a-422a-9595-4571f20d088c"),
-                            CategoryId = new Guid("d5a8ece2-9696-42ae-94e5-30319050da93"),
+                            Id = new Guid("d3c87fc7-8f2e-4385-88cf-750802a00157"),
+                            CategoryId = new Guid("5e2e101c-27c9-4b94-b2e8-8f2154a4389b"),
                             Cubage = 12800,
                             Doors = 2,
                             FuelType = "Дизел",
@@ -859,20 +544,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 450,
                             ImageUrl = "https://st.mascus.com/imagetilewm/product/e5a8342d/mercedes-benz-actros-1846-ls,5897e6b7-1.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("928c42ce-f6cf-4a56-8eb0-08d9bd65f99a"),
+                            LocationId = new Guid("ae187b67-abd1-4c1a-8590-6a22c6de4b17"),
                             Make = "Mercedes-Benz",
                             Model = "Actros",
                             Price = 35000m,
-                            PurposeId = new Guid("545e3752-ee3a-42a4-8ad1-c1250e6ba184"),
+                            PurposeId = new Guid("661d2044-185a-4911-8864-1285c0638e09"),
                             Seats = 2,
                             TankCapacity = 900,
-                            TypeId = new Guid("372dded3-031b-4892-b74b-7b4853d68603"),
+                            TypeId = new Guid("f7fa7488-e482-493d-a27c-1f1a7d38f79b"),
                             Year = "2017"
                         },
                         new
                         {
-                            Id = new Guid("0fa07c2d-d389-485b-9fdd-8dfb700d7f32"),
-                            CategoryId = new Guid("0e706b47-5378-48e6-b7df-21e2b1d32901"),
+                            Id = new Guid("99ec8db1-b331-452c-a22e-1cb72d05379f"),
+                            CategoryId = new Guid("247c145d-9b6d-4315-a68a-f8191b687429"),
                             Cubage = 3000,
                             Doors = 2,
                             FuelType = "Дизел",
@@ -880,20 +565,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 180,
                             ImageUrl = "https://d2e5b8shawuel2.cloudfront.net/vehicle/285996/hlv/original.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("30b08e92-62de-42f7-b345-aca315dfd54a"),
+                            LocationId = new Guid("84a3dfe2-4c08-4e18-9156-7452e556c1dd"),
                             Make = "Iveco",
                             Model = "35c18",
                             Price = 42000m,
-                            PurposeId = new Guid("545e3752-ee3a-42a4-8ad1-c1250e6ba184"),
+                            PurposeId = new Guid("661d2044-185a-4911-8864-1285c0638e09"),
                             Seats = 3,
                             TankCapacity = 120,
-                            TypeId = new Guid("8474c958-2f28-47d2-9878-d7eca96ee0d4"),
+                            TypeId = new Guid("8f40d349-c104-430e-81d4-ab1ba6390187"),
                             Year = "2018"
                         },
                         new
                         {
-                            Id = new Guid("e6840e17-fc8a-4ca9-ab96-deae25088fe0"),
-                            CategoryId = new Guid("0e706b47-5378-48e6-b7df-21e2b1d32901"),
+                            Id = new Guid("f2d53339-77a9-4d2a-a1bd-bd7ab0e07e26"),
+                            CategoryId = new Guid("247c145d-9b6d-4315-a68a-f8191b687429"),
                             Cubage = 2200,
                             Doors = 3,
                             FuelType = "Дизел",
@@ -901,20 +586,20 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 163,
                             ImageUrl = "https://d2e5b8shawuel2.cloudfront.net/vehicle/284390/hlv/original.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("729897ec-6a17-4851-8831-4d2b2d04f064"),
+                            LocationId = new Guid("48141d40-a443-4edf-aa93-80a12db8690e"),
                             Make = "Mercedes-Benz",
                             Model = "Sprinter 316",
                             Price = 32000m,
-                            PurposeId = new Guid("545e3752-ee3a-42a4-8ad1-c1250e6ba184"),
+                            PurposeId = new Guid("661d2044-185a-4911-8864-1285c0638e09"),
                             Seats = 8,
                             TankCapacity = 100,
-                            TypeId = new Guid("8474c958-2f28-47d2-9878-d7eca96ee0d4"),
+                            TypeId = new Guid("8f40d349-c104-430e-81d4-ab1ba6390187"),
                             Year = "2015"
                         },
                         new
                         {
-                            Id = new Guid("e5c1bd17-e63a-4bdd-8b82-2889e0e6bbc7"),
-                            CategoryId = new Guid("0e706b47-5378-48e6-b7df-21e2b1d32901"),
+                            Id = new Guid("a80bdd96-7a9e-49c1-be7b-bd7a371051ed"),
+                            CategoryId = new Guid("247c145d-9b6d-4315-a68a-f8191b687429"),
                             Cubage = 2300,
                             Doors = 3,
                             FuelType = "Дизел",
@@ -922,14 +607,14 @@ namespace CarDealership.Data.Migrations
                             HorsePower = 143,
                             ImageUrl = "https://ppdobrich.com/uploads/thumbnail/preoborudvan-mikrobus-reno-master-c880x465.jpg",
                             IsDeleted = false,
-                            LocationId = new Guid("683f4284-6138-4dce-9191-32206dfd442e"),
+                            LocationId = new Guid("95d16d5b-0edb-46ed-9abc-822545a05860"),
                             Make = "Renault",
                             Model = "Master",
                             Price = 32000m,
-                            PurposeId = new Guid("545e3752-ee3a-42a4-8ad1-c1250e6ba184"),
+                            PurposeId = new Guid("661d2044-185a-4911-8864-1285c0638e09"),
                             Seats = 17,
                             TankCapacity = 130,
-                            TypeId = new Guid("8474c958-2f28-47d2-9878-d7eca96ee0d4"),
+                            TypeId = new Guid("8f40d349-c104-430e-81d4-ab1ba6390187"),
                             Year = "2018"
                         });
                 });
@@ -952,52 +637,52 @@ namespace CarDealership.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("19535f44-9c73-4503-a5e7-707382c4ec27"),
+                            Id = new Guid("62d039da-cf70-417d-aac9-10f8cef8cfb5"),
                             Name = "Седан"
                         },
                         new
                         {
-                            Id = new Guid("ba43b802-0267-4a24-8a7d-9642eb3311d8"),
+                            Id = new Guid("d9480f0a-71ee-41ac-b759-24cf4a8126c5"),
                             Name = "Комби"
                         },
                         new
                         {
-                            Id = new Guid("6288a258-23b3-4273-995e-2135f47979c2"),
+                            Id = new Guid("3aff4118-0f75-45ca-b3fe-7b88c0523240"),
                             Name = "Кабрио"
                         },
                         new
                         {
-                            Id = new Guid("e63f884c-0417-4b2b-b2d9-54008b0b10a0"),
+                            Id = new Guid("fb39c8ff-018a-42e1-aea7-02572c3b0399"),
                             Name = "Хечбег"
                         },
                         new
                         {
-                            Id = new Guid("b8a13786-cc31-4f28-b289-294bba862739"),
+                            Id = new Guid("9f2f02ea-6d7e-4e71-8b78-819e27f2bcd9"),
                             Name = "Ван"
                         },
                         new
                         {
-                            Id = new Guid("9a13dc6a-9670-460d-82bc-e29897c621c8"),
+                            Id = new Guid("087ca00f-c32a-452d-a89a-24949ef590d7"),
                             Name = "Пикап"
                         },
                         new
                         {
-                            Id = new Guid("67ec7ce1-3c1b-477d-8277-7297e9b424fe"),
+                            Id = new Guid("b1af08e0-2b5b-4974-b349-e763cafac7ea"),
                             Name = "Купе"
                         },
                         new
                         {
-                            Id = new Guid("ec7f7474-e3c7-42f5-8c56-5403ae2c867d"),
+                            Id = new Guid("c6961d7c-51cf-41c8-ae19-057c7e451aac"),
                             Name = "Джип"
                         },
                         new
                         {
-                            Id = new Guid("57c4af82-fd68-4a59-a991-e3a4a7a8153c"),
+                            Id = new Guid("0feb15e8-1ae9-42b8-9c3b-1826fcbb6746"),
                             Name = "Камион"
                         },
                         new
                         {
-                            Id = new Guid("982c7c69-9021-48d6-9ca9-1c6d20d9f27e"),
+                            Id = new Guid("9c6036cf-d28d-423d-9acf-f0ec181425b1"),
                             Name = "Бус"
                         });
                 });
@@ -1020,37 +705,37 @@ namespace CarDealership.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("2e75fb25-9512-471f-9ed1-2586205b62ae"),
+                            Id = new Guid("f907dca3-a825-44cd-a4d3-9f86ec5914c0"),
                             Name = "Икономичен"
                         },
                         new
                         {
-                            Id = new Guid("98db6a49-8953-45cd-9273-af044954f35c"),
+                            Id = new Guid("d7627cd7-ee55-4cea-8d75-2dd0d62779d5"),
                             Name = "Икономичен Комби"
                         },
                         new
                         {
-                            Id = new Guid("3a5f2e99-b14e-46dc-8cd8-e282bd1c7adb"),
+                            Id = new Guid("6655e735-5c68-4ac4-a17e-f3657540f83f"),
                             Name = "Компактен"
                         },
                         new
                         {
-                            Id = new Guid("6b0fb268-6387-4d9d-9603-15399344104e"),
+                            Id = new Guid("88481961-58aa-40d3-a07c-0981c7c00e32"),
                             Name = "Стандартен"
                         },
                         new
                         {
-                            Id = new Guid("c16a20cd-77b3-423a-a433-b923f0e31170"),
+                            Id = new Guid("69528fd3-6ba1-42af-ad11-188a79c96954"),
                             Name = "Стандартен Комби"
                         },
                         new
                         {
-                            Id = new Guid("d8291fda-3312-4c00-9038-ea8c593aa29e"),
+                            Id = new Guid("03c43bfa-70fc-4cc1-a117-6ca010e2fa72"),
                             Name = "Голям"
                         },
                         new
                         {
-                            Id = new Guid("febadc67-ac96-4806-9155-9fc7af62d6fa"),
+                            Id = new Guid("b1339249-8a95-47f1-8e12-de6f1455901d"),
                             Name = "Луксозен"
                         });
                 });
@@ -1073,17 +758,17 @@ namespace CarDealership.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("dde87388-fe0c-4077-bea0-a8216ce6bc92"),
+                            Id = new Guid("aaea85c3-03f7-49cd-8a21-e148a5f2f396"),
                             Name = "Автомобил"
                         },
                         new
                         {
-                            Id = new Guid("593176a0-afcd-4b09-bed3-a61d9c6ae6b2"),
+                            Id = new Guid("a1ee8a29-13d2-4399-aa05-83256c25e6bc"),
                             Name = "Камион"
                         },
                         new
                         {
-                            Id = new Guid("2f79a616-6945-4ff7-bd88-8289b0280286"),
+                            Id = new Guid("cee8d2bb-896e-4a43-8203-543326b0f897"),
                             Name = "Бус"
                         });
                 });
@@ -1228,7 +913,7 @@ namespace CarDealership.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("CarDealership.Data.Models.Location", "Location")
-                        .WithMany()
+                        .WithMany("Vehicles")
                         .HasForeignKey("LocationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1303,6 +988,11 @@ namespace CarDealership.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("CarDealership.Data.Models.Location", b =>
+                {
+                    b.Navigation("Vehicles");
                 });
 
             modelBuilder.Entity("CarDealership.Data.Models.VehicleCategory", b =>
