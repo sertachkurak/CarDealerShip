@@ -84,5 +84,9 @@ namespace CarDealership.Data.Models
         public VehiclePurpose Purpose { get; set; } = null!;
 
         public bool IsDeleted { get; set; }
+
+
+        public virtual ICollection<ApplicationUserVehicle> VehicleUser { get; set; }
+            = new HashSet<ApplicationUserVehicle>();
     }
 }

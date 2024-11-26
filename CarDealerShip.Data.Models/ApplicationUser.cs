@@ -10,5 +10,8 @@ namespace CarDealership.Data.Models
         {
             this.Id = Guid.NewGuid();
         }
+
+        public virtual ICollection<ApplicationUserVehicle> ApplicationUserVehicles { get; set; }
+            = new HashSet<ApplicationUserVehicle>();
     }
 }

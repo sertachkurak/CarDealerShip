@@ -15,6 +15,8 @@ namespace CarDealership.Data.Repository.Interfaces
 
         IEnumerable<TType> GetAll();
 
+       // IQueryable<T> AllReadonly<T>() where T : class;
+
         Task<IEnumerable<TType>> GetAllAsync();
 
         IQueryable<TType> GetAllAttached();

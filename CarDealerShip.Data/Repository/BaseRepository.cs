@@ -54,6 +54,12 @@ namespace CarDealership.Data.Repository
             return this.dbSet.ToArray();
         }
 
+       //public async IQueryable<T> AllReadonly<T>() where T : class
+       //{
+       //    return await this.dbSet()
+       //        .AsNoTracking();
+       //}
+
         public async Task<IEnumerable<TType>> GetAllAsync()
         {
             return await this.dbSet.ToArrayAsync();
