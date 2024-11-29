@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CarDealerShip.Common\CarDealership.Common.csproj" />
+    <ProjectReference Include="..\CarDealerShip.Data.Models\CarDealership.Data.Models.csproj" />
   </ItemGroup>
 
 </Project>

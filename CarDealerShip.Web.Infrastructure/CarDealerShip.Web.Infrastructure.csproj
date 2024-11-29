@@ -11,4 +11,9 @@
     <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CarDealerShip.Data.Models\CarDealership.Data.Models.csproj" />
+    <ProjectReference Include="..\CarDealerShip.Data\CarDealership.Data.csproj" />
+  </ItemGroup>
+
 </Project>
