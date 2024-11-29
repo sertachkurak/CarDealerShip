@@ -1,0 +1,28 @@
+﻿@using CarDealership.Web.ViewModels.Vehicle
+
+@model VehicleServiceModel
+
+<div class="col-md-4">
+    <div class="card mb-3">
+        <img class="card-img-top" src="@Model.ImageUrl" alt="Vehicle Image">
+        <div class="card-body text-center">
+            <h4>@Model.Make</h4>
+            <h6>Модел: <b>@Model.Model</b></h6>
+            <h6>
+                Цена на ден:
+                <b>@String.Format("{0:f2}", Model.Price) Лева</b>
+            </h6>
+            <br />
+            <a asp-area="" asp-controller="Vehicle" asp-action="Specifications" asp-route-id="@Model.Id"
+               asp-route-information="@Model." class="btn btn-success">Specifications</a>
+            @if (this.User.Identity.IsAuthenticated)
+            {
+                <a asp-area="" asp-controller="Vehicle" asp-action="Edit" asp-route-id="@Model.Id"
+                   class="btn btn-warning">Edit</a>
+                <a asp-area="" asp-controller="Vehicle" asp-action="Delete" asp-route-id="@Model.Id"
+                   class="btn btn-danger">Delete</a>
+
+            }
+        </div>
+    </div>
+</div>

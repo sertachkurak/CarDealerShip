@@ -16,6 +16,10 @@ namespace CarDealership.Data.Repository
             this.dbContext = dbContext;
             this.dbSet = this.dbContext.Set<TType>();
         }
+        protected DbSet<T> DbSet<T>() where T : class
+        {
+            return this.dbContext.Set<T>();
+        }
 
         public TType GetById(TId id)
         {
@@ -54,11 +58,17 @@ namespace CarDealership.Data.Repository
             return this.dbSet.ToArray();
         }
 
-       //public async IQueryable<T> AllReadonly<T>() where T : class
-       //{
-       //    return await this.dbSet()
-       //        .AsNoTracking();
-       //}
+       public IQueryable<T> AllReadonly<T>() where T : class
+       {
+           return DbSet<T>()
+               .AsNoTracking();
+       }
+       public IQueryable<T> AllReadonly<T>(Expression<Func<T, bool>> search) where T : class
+       {
+           return this.DbSet<T>()
+               .Where(search)
+               .AsNoTracking();
+       }
 
         public async Task<IEnumerable<TType>> GetAllAsync()
         {

@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\CarDealerShip.Data\CarDealership.Data.csproj" />
+    <ProjectReference Include="..\CarDealerShip.Web.ViewModels\CarDealership.Web.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

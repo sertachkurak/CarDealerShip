@@ -21,6 +21,8 @@
   <ItemGroup>
     <ProjectReference Include="..\CarDealerShip.Common\CarDealership.Common.csproj" />
     <ProjectReference Include="..\CarDealerShip.Data\CarDealership.Data.csproj" />
+    <ProjectReference Include="..\CarDealerShip.Services.Data\CarDealership.Services.Data.csproj" />
+    <ProjectReference Include="..\CarDealerShip.Web.Infrastructure\CarDealership.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\CarDealerShip.Web.ViewModels\CarDealership.Web.ViewModels.csproj" />
   </ItemGroup>
 
