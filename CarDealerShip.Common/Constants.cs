@@ -63,6 +63,15 @@
         {
             public const int PhoneNumberMinLength = 6;
             public const int PhoneNumberMaxLength = 16;
+            public const int FirstNameMinLength = 2;
+            public const int FirstNameMaxLength = 40;
+        }
+
+        public static class MessageConstants
+        {
+            public const string ErrorMessage = "ErrorMessage";
+            public const string WarningMessage = "WarningMessage";
+            public const string SuccessMessage = "SuccessMessage";
         }
     }
 }

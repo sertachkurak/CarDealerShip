@@ -1,4 +1,9 @@
-﻿@using CarDealership.Web.ViewModels.Vehicle
+﻿@using CarDealership.Services.Data.Interfaces
+@using CarDealership.Web.Infrastructure
+@using CarDealership.Web.ViewModels.Vehicle
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+@inject IManagerService ManagerService
 
 @model VehicleServiceModel
 
@@ -17,10 +22,13 @@
                asp-route-information="@Model." class="btn btn-success">Specifications</a>
             @if (this.User.Identity.IsAuthenticated)
             {
-                <a asp-area="" asp-controller="Vehicle" asp-action="Edit" asp-route-id="@Model.Id"
-                   class="btn btn-warning">Edit</a>
-                <a asp-area="" asp-controller="Vehicle" asp-action="Delete" asp-route-id="@Model.Id"
-                   class="btn btn-danger">Delete</a>
+                if (await this.ManagerService.ExistById(this.User.GetUserId()))
+                {
+                  <a asp-area="" asp-controller="Vehicle" asp-action="Edit" asp-route-id="@Model.Id"
+                     class="btn btn-warning">Edit</a>
+                  <a asp-area="" asp-controller="Vehicle" asp-action="Delete" asp-route-id="@Model.Id"
+                     class="btn btn-danger">Delete</a>
+                }
 
             }
         </div>
