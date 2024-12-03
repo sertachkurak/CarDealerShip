@@ -58,5 +58,11 @@
         {
             public const int NameMaxLength = 20;
         }
+
+        public static class ManagerValidations
+        {
+            public const int PhoneNumberMinLength = 6;
+            public const int PhoneNumberMaxLength = 16;
+        }
     }
 }

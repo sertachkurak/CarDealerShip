@@ -25,6 +25,8 @@ namespace CarDealership.Data
         public virtual DbSet<Vehicle> Vehicles { get; set; } = null!;
         public virtual DbSet<VehicleCategory> VehiclesCategories { get; set; } = null!;
         public virtual DbSet<VehicleType> VehiclesTypes { get; set; } = null!;
+        public virtual DbSet<ApplicationUserVehicle> UsersVehicles { get; set; } = null!;
+        public virtual DbSet<Manager> Managers { get; set; } = null!;
         public virtual DbSet<VehiclePurpose> VehiclesPurposes { get; set; } = null!;
         public virtual DbSet<Location> Locations { get; set; } = null!;
 
