@@ -24,7 +24,7 @@ namespace CarDealership.Services.Data
         }
 
         public async Task<VehicleTotalModel> GetAllAsync(string? make = null,
-            string? model = null, string? type = null, string? category = null, string? search = null, VehicleSorting sorting = VehicleSorting.Newest, int currPage = 1, int carsOnPage = 1)
+            string? model = null, string? type = null,string? location = null, string? category = null, string? search = null, VehicleSorting sorting = VehicleSorting.Newest, int currPage = 1, int carsOnPage = 1)
         {
             var query = vehicleRepository.GetAllAttached();
 
@@ -42,12 +42,17 @@ namespace CarDealership.Services.Data
 
             if (!string.IsNullOrEmpty(type))
             {
-                query = query.Where(v => v.TypeId.ToString().ToLower().Contains(type.ToLower()));
+                query = query.Where(v => v.VehicleType.Name.ToString().ToLower().Contains(type.ToLower()));
+            }
+
+            if (!string.IsNullOrEmpty(location))
+            {
+                query = query.Where(v => v.Location.Name.ToString().ToLower().Contains(location.ToLower()));
             }
 
             if (!string.IsNullOrEmpty(category))
             {
-                query = query.Where(v => v.CategoryId.ToString().ToLower().Contains(category.ToLower()));
+                query = query.Where(v => v.VehicleCategory.Name.ToString().ToLower().Contains(category.ToLower()));
             }
 
             if (!string.IsNullOrEmpty(search))
@@ -61,8 +66,8 @@ namespace CarDealership.Services.Data
             {
                 VehicleSorting.TheCheapOnesFirst => query.OrderBy(v => v.Price),
                 VehicleSorting.FirstDearOnes => query.OrderByDescending(v => v.Price),
-                VehicleSorting.Newest => query.OrderBy(v => v.Year),
-                _ => query.OrderByDescending(v => v.Year)
+                VehicleSorting.Newest => query.OrderByDescending(v => v.Year),
+                _ => query.OrderBy(v => v.Year)
             };
 
 

@@ -14,6 +14,7 @@ namespace CarDealership.Services.Data.Interfaces
             string? make = null,
             string? model = null,
             string? type = null,
+            string? location = null,
             string? category = null,
             string? search = null,
             VehicleSorting sorting = VehicleSorting.Newest,
