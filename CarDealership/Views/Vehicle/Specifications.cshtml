@@ -1,0 +1,76 @@
+﻿@model CarDealership.Web.ViewModels.Vehicle.VehicleSpecificationsViewModel
+
+@{
+    ViewBag.Title = "Vehicle Specifications";
+}
+
+<div class="container my-5">
+    <h2 class="text-center text-primary">@ViewBag.Title</h2>
+    <hr />
+
+    <div class="row g-4 align-items-center">
+        <div class="col-md-4 text-center">
+            <img class="img-fluid rounded shadow-lg"
+                 src="@Model.ImageUrl"
+                 alt="Car Image"
+                 style="max-width: 100%; height: auto;">
+        </div>
+        <div class="col-md-8">
+            <div class="card border-0">
+                <div class="card-body">
+                    <h4 class="card-title text-primary mb-3">
+                        <u>@Model.Make @Model.Model</u>
+                    </h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <strong>Марка:</strong> @Model.Make
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Модел:</strong> @Model.Model
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Гориво:</strong> @Model.FuelType
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Скорости:</strong> @Model.Gearbox
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Година:</strong> @Model.Year
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Брой врати:</strong> @Model.Doors
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Брой места:</strong> @Model.Seats
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Обем на резервоар:</strong> @Model.TankCapacity L
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Конски сили:</strong> @Model.Horsepower
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Кубатура:</strong> @Model.Cubage
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Цена:</strong>
+                            <str>@String.Format("{0:f2}", Model.Price) Лева</str>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Категория:</strong> @Model.Category.Name
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Тип:</strong> @Model.Type.Name
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Намира се в:</strong> @Model.Location.Name
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Предназначение:</strong> @Model.Purpose.Name
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

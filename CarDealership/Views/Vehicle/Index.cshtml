@@ -91,9 +91,9 @@
     else
     {
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            @foreach (var car in Model.Vehicles)
+            @foreach (var vehicle in Model.Vehicles)
             {
-                <partial name="_VehiclePartial" model="@car" />
+                <partial name="_VehiclePartial" model="@vehicle" />
             }
         </div>
     }

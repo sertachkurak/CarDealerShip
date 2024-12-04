@@ -125,5 +125,33 @@ namespace CarDealership.Services.Data
                 .Distinct()
                 .ToListAsync();
         }
+
+        public async Task<VehicleSpecificationsViewModel> VehicleSpecificationsById(Guid id)
+        {
+            var vehicle = vehicleRepository.GetAllAttached()
+                .Where(v => v.Id == id)
+                .Where(v => v.IsDeleted == false)
+                .Select(v => new VehicleSpecificationsViewModel()
+                {
+                    Id = v.Id.ToString(),
+                    Make = v.Make,
+                    Model = v.Model,
+                    ImageUrl = v.ImageUrl,
+                    FuelType = v.FuelType,
+                    Gearbox = v.GearBox,
+                    Year = v.Year,
+                    Doors = v.Doors,
+                    Seats = v.Seats,
+                    TankCapacity = v.TankCapacity,
+                    Horsepower = v.HorsePower,
+                    Cubage = v.Cubage,
+                    Category = v.VehicleCategory,
+                    Type = v.VehicleType,
+                    Purpose = v.Purpose,
+                    Location = v.Location,
+                }).FirstOrDefaultAsync();
+
+            return await vehicle;
+        }
     }
 }

@@ -2,6 +2,7 @@
 using CarDealership.Services.Data.Interfaces;
 using CarDealership.Web.ViewModels.Vehicle;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarDealership.Web.Controllers
@@ -37,11 +38,33 @@ namespace CarDealership.Web.Controllers
 
 
         }
-        //public async Task<IActionResult> Add()
-        //{
-        //    IEnumerable<Vehic>
+        public async Task<IActionResult> Add()
+        {
+            
+            return View();
+        }
 
-        //    return View();
-        //}
+        [AllowAnonymous]
+        public async Task<IActionResult> Specifications(string? id)
+        {
+            Guid vehicleGuid = Guid.Empty;
+
+            bool isGuidValid = this.IsGuidValid(id, ref vehicleGuid);
+
+            if (!isGuidValid)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+
+            var vehicle = await this.vehicleService
+                .VehicleSpecificationsById(vehicleGuid);
+
+            if (vehicle == null)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+
+            return this.View(vehicle);
+        }
     }
 }

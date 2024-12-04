@@ -26,5 +26,7 @@ namespace CarDealership.Services.Data.Interfaces
         Task<IEnumerable<string>> AllCategoriesNames();
 
         Task<IEnumerable<string>> AllLocations();
+
+        Task<VehicleSpecificationsViewModel> VehicleSpecificationsById(Guid id);
     }
 }
