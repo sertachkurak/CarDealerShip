@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CarDealership.Data.Models;
+﻿using CarDealership.Data.Models;
 using CarDealership.Data.Repository.Interfaces;
 using CarDealership.Services.Data.Interfaces;
 using CarDealership.Web.ViewModels.Vehicle;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 
 namespace CarDealership.Services.Data
 {
@@ -88,6 +81,57 @@ namespace CarDealership.Services.Data
                 .ToListAsync();
 
             return result;
+        }
+
+        public async Task AddVehicleAsync(VehicleViewModel model)
+        {
+            
+            Vehicle vehicle = new Vehicle()
+            {
+                Make = model.Make,
+                Model = model.Model,
+                Price = model.Price,
+                FuelType = model.FuelType,
+                GearBox = model.Gearbox,
+                Year = model.Year,
+                Doors = model.Doors,
+                Seats = model.Seats,
+                TankCapacity = model.TankCapacity,
+                HorsePower = model.Horsepower,
+                Cubage = model.Cubage,
+                ImageUrl = model.ImageUrl,
+                CategoryId = model.CategoryId,
+                TypeId = model.TypeId
+            };
+            await vehicleRepository.AddAsync(vehicle);
+        }
+
+        public async Task<IEnumerable<VehicleCategoryModel>> AllCategories()
+        {
+            var category = vehicleRepository.AllReadonly<VehicleCategory>()
+                .OrderBy(v => v.Name)
+                .Select(v => new VehicleCategoryModel()
+                {
+                    Id = v.Id.ToString(),
+                    Name = v.Name
+                })
+                .ToListAsync();
+
+            return await category;
+        }
+
+        public async Task<IEnumerable<VehicleTypeModel>> AllTypes()
+        {
+            var type = vehicleRepository.AllReadonly<VehicleType>()
+                .OrderBy(v => v.Name)
+                .Select(v => new VehicleTypeModel()
+                {
+                    Id = v.Id.ToString(),
+                    Model = v.Name
+                })
+                .ToListAsync();
+
+            return await type;
         }
 
         public async Task<IEnumerable<string>> AllMakeNames()

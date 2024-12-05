@@ -1,8 +1,9 @@
-﻿using CarDealership.Services.Data;
+﻿using CarDealership.Data.Repository;
+using CarDealership.Services.Data;
 using CarDealership.Services.Data.Interfaces;
+using CarDealership.Web.Infrastructure;
 using CarDealership.Web.ViewModels.Vehicle;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarDealership.Web.Controllers
@@ -11,7 +12,8 @@ namespace CarDealership.Web.Controllers
     {
         private readonly IVehicleService vehicleService;
 
-        public VehicleController(IVehicleService _vehicleService)
+        public VehicleController(IVehicleService _vehicleService, IManagerService managerService)
+            :base(managerService)
         {
             vehicleService = _vehicleService;
         }
@@ -39,10 +41,43 @@ namespace CarDealership.Web.Controllers
 
 
         }
+
+        [HttpGet]
         public async Task<IActionResult> Add()
         {
-            
-            return View();
+            bool isManager = await this.managerService.ExistById(User.GetUserId());
+            if (!isManager)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+
+
+            return this.View();
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> Add(VehicleViewModel model)
+        {
+
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(model);
+            }
+
+            var firstModel = new VehicleViewModel()
+            {
+                VehicleCategories = await vehicleService.AllCategories()
+            };
+
+            var secondModel = new VehicleViewModel()
+            {
+                VehicleTypes = await vehicleService.AllTypes()
+            };
+
+            await this.vehicleService.AddVehicleAsync(model);
+
+            return this.RedirectToAction(nameof(Index));
         }
 
         [AllowAnonymous]

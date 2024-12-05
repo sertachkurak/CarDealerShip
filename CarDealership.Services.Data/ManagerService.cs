@@ -21,8 +21,16 @@ namespace CarDealership.Services.Data
 
         public async Task<bool> ExistById(string? userId)
         {
-            return await managersRepository.AllReadonly<Manager>()
-                .AnyAsync(m => m.UserId.ToString() == userId);
+            if (String.IsNullOrWhiteSpace(userId))
+            {
+                return false;
+            }
+
+            bool result = await this.managersRepository
+                .GetAllAttached()
+                .AnyAsync(m => m.UserId.ToString().ToLower() == userId);
+
+            return result;
         }
 
         public async Task Create(Guid userId, string phoneNumber)

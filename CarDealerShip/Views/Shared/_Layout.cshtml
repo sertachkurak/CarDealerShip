@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using CarDealership.Services.Data.Interfaces
+@using CarDealership.Web.Infrastructure
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+@inject IManagerService ManagerService
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -24,9 +29,12 @@
                         </li>
                         @if (this.User?.Identity != null && this.User.Identity.IsAuthenticated)
                         {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Vehicle" asp-action="Add">Add Vehicles</a>
-                            </li>
+                            @if (await this.ManagerService.ExistById(this.User.GetUserId()))
+                            {
+                               <li class="nav-item">
+                                   <a class="nav-link text-dark" asp-area="" asp-controller="Vehicle" asp-action="Add">Add Vehicles</a>
+                               </li>
+                            }
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="Become">Become Manager</a>
                             </li>

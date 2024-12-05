@@ -21,6 +21,11 @@ namespace CarDealership.Services.Data.Interfaces
             int currPage = 1,
             int carsOnPage = 1);
 
+        Task AddVehicleAsync(VehicleViewModel model);
+
+        Task<IEnumerable<VehicleCategoryModel>> AllCategories();
+        Task<IEnumerable<VehicleTypeModel>> AllTypes();
+
         Task<IEnumerable<string>> AllMakeNames();
         Task<IEnumerable<string>> AllModelsNames();
         Task<IEnumerable<string>> AllTypesNames();

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace CarDealership.Web.ViewModels.Vehicle
 {
@@ -26,7 +21,7 @@ namespace CarDealership.Web.ViewModels.Vehicle
 
         [Required]
         [Display(Name = "Цена")]
-        [Range(1000.00, 510000.00, ErrorMessage = "")]
+        [Range(1000.00, 510000.00)]
         public decimal Price { get; set; }
 
         [Required]
@@ -69,13 +64,13 @@ namespace CarDealership.Web.ViewModels.Vehicle
 
         [Required]
         [Display(Name = "Category")]
-        public int CategoryId { get; set; }
+        public Guid CategoryId { get; set; }
 
         public IEnumerable<VehicleCategoryModel> VehicleCategories { get; set; } = new List<VehicleCategoryModel>();
 
         [Required]
         [Display(Name = "Type")]
-        public int TypeId { get; set; }
+        public Guid TypeId { get; set; }
 
         public IEnumerable<VehicleTypeModel> VehicleTypes { get; set; } = new List<VehicleTypeModel>();
     }
