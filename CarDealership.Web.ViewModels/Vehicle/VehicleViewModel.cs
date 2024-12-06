@@ -6,8 +6,7 @@ namespace CarDealership.Web.ViewModels.Vehicle
 
     public class VehicleViewModel
     {
-        [Required]
-        public string Id { get; set; } = null!;
+        [Required] public Guid Id { get; set; }
 
         [Required]
         [MinLength(MakeMinLength)]

@@ -36,7 +36,7 @@
             public const int SeatsMaxCount = 7;
 
             public const int TankMinCapacity = 30;
-            public const int TankMaxCapacity = 100;
+            public const int TankMaxCapacity = 120;
 
             public const int HorsepowerMinLength = 70;
             public const int HorsepowerMaxLength = 800;

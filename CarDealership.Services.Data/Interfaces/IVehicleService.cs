@@ -23,7 +23,13 @@ namespace CarDealership.Services.Data.Interfaces
 
         Task AddVehicleAsync(VehicleViewModel model);
 
+        Task<VehicleViewModel> EditVehicleById(Guid id);
+
+        Task<bool> EditVehicleAsync(VehicleViewModel model);
+
+
         Task<IEnumerable<VehicleCategoryModel>> AllCategories();
+
         Task<IEnumerable<VehicleTypeModel>> AllTypes();
 
         Task<IEnumerable<string>> AllMakeNames();

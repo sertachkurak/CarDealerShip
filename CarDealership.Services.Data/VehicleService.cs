@@ -85,7 +85,7 @@ namespace CarDealership.Services.Data
 
         public async Task AddVehicleAsync(VehicleViewModel model)
         {
-            
+
             Vehicle vehicle = new Vehicle()
             {
                 Make = model.Make,
@@ -104,6 +104,61 @@ namespace CarDealership.Services.Data
                 TypeId = model.TypeId
             };
             await vehicleRepository.AddAsync(vehicle);
+        }
+
+        public async Task<VehicleViewModel> EditVehicleById(Guid id)
+        {
+            //var car = await vehicleRepository.GetByIdAsync(id);
+
+            VehicleViewModel? vehicle = await vehicleRepository
+                .GetAllAttached()
+                .Where(v => v.IsDeleted == false)
+                .Select(v => new VehicleViewModel()
+                {
+                    Make = v.Make,
+                    Model = v.Model,
+                    Price = v.Price,
+                    FuelType = v.FuelType,
+                    Gearbox = v.GearBox,
+                    Year = v.Year,
+                    Doors = v.Doors,
+                    Seats = v.Seats,
+                    TankCapacity = v.TankCapacity,
+                    Horsepower = v.HorsePower,
+                    Cubage = v.Cubage,
+                    ImageUrl = v.ImageUrl,
+                    CategoryId = v.CategoryId,
+                    TypeId = v.TypeId
+
+                })
+                .FirstOrDefaultAsync(v => v.Id == id);
+            return vehicle;
+        }
+
+        public async Task<bool> EditVehicleAsync(VehicleViewModel model)
+        {
+            Vehicle vehicle = new Vehicle()
+            {
+                Make = model.Make,
+                Model = model.Model,
+                Price = model.Price,
+                FuelType = model.FuelType,
+                GearBox = model.Gearbox,
+                Year = model.Year,
+                Doors = model.Doors,
+                Seats = model.Seats,
+                TankCapacity = model.TankCapacity,
+                HorsePower = model.Horsepower,
+                Cubage = model.Cubage,
+                ImageUrl = model.ImageUrl,
+                CategoryId = model.CategoryId,
+                TypeId = model.TypeId
+
+            };
+
+            bool result = await vehicleRepository.UpdateAsync(vehicle);
+
+            return result;
         }
 
         public async Task<IEnumerable<VehicleCategoryModel>> AllCategories()
