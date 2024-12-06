@@ -1,12 +1,8 @@
-﻿using System.Runtime.InteropServices.JavaScript;
-using CarDealership.Data.Repository;
-using CarDealership.Services.Data;
-using CarDealership.Services.Data.Interfaces;
+﻿using CarDealership.Services.Data.Interfaces;
 using CarDealership.Web.Infrastructure;
 using CarDealership.Web.ViewModels.Vehicle;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
 
 namespace CarDealership.Web.Controllers
 {
@@ -45,7 +41,7 @@ namespace CarDealership.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Add()
+        public async Task<IActionResult> Add(VehicleViewModel vehicle, Guid id)
         {
             bool isManager = await this.managerService.ExistById(User.GetUserId());
             if (!isManager)
@@ -53,22 +49,35 @@ namespace CarDealership.Web.Controllers
                 return this.RedirectToAction(nameof(Index));
             }
 
-            var category = await vehicleService.AllCategories();
+            Guid vehicleGuid = Guid.Empty;
+            bool isIdValid = this.IsGuidValid(id.ToString(), ref vehicleGuid);
+            if (!isIdValid)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
 
             var model = new VehicleViewModel()
             {
-                VehicleCategories = category
+                Make = vehicle.Make,
+                Model = vehicle.Model,
+                FuelType = vehicle.FuelType,
+                Gearbox = vehicle.Gearbox,
+                Year = vehicle.Year,
+                Seats = vehicle.Seats,
+                Doors = vehicle.Doors,
+                TankCapacity = vehicle.TankCapacity,
+                Horsepower = vehicle.Horsepower,
+                Cubage = vehicle.Cubage,
+                Price = vehicle.Price.Scale,
+                ImageUrl = vehicle.ImageUrl,
+                CategoryId = vehicle.CategoryId,
+                TypeId = vehicle.TypeId,
+                VehicleTypes = await vehicleService.AllTypes(),
+                VehicleCategories = await vehicleService.AllCategories()
+
             };
 
-
-            var type = await vehicleService.AllTypes();
-
-            model = new VehicleViewModel()
-            {
-                VehicleTypes = type
-            };
-
-            return this.View();
+            return View(model);
         }
 
 
@@ -79,7 +88,7 @@ namespace CarDealership.Web.Controllers
 
             if (!this.ModelState.IsValid)
             {
-                return this.View(model);
+                return this.RedirectToAction(nameof(Index));
             }
             model.VehicleCategories = await vehicleService.AllCategories();
             model.VehicleTypes = await vehicleService.AllTypes();
@@ -175,6 +184,61 @@ namespace CarDealership.Web.Controllers
             }
 
             return this.View(vehicle);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(string? id)
+        {
+            bool isManager = await this.managerService.ExistById(User.GetUserId());
+            if (!isManager)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            Guid vehicleGuid = Guid.Empty;
+
+            bool isGuidValid = this.IsGuidValid(id, ref vehicleGuid);
+
+            if (!isGuidValid)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            DeleteViewModel deleteModel = await vehicleService.DeleteByIdAsync(vehicleGuid);
+
+            if (deleteModel == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(deleteModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> SoftDelete(DeleteViewModel delete)
+        {
+            bool isManager = await this.managerService.ExistById(User.GetUserId());
+            if (!isManager)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            Guid vehicleGuid = Guid.Empty;
+
+            if (!this.IsGuidValid(delete.Id, ref vehicleGuid))
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            bool isDeleted = await vehicleService
+                .SoftDeleteAsync(vehicleGuid);
+
+            if (!isDeleted)
+            {
+                return RedirectToAction(nameof(Delete), new { id = delete.Id });
+            }
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

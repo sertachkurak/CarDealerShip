@@ -25,7 +25,7 @@ namespace CarDealership.Web.Controllers
             {
                 TempData[Constants.MessageConstants.ErrorMessage] = "Вие вече сте Мениджър";
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Vehicle");
             }
 
             var model = new BecomeManagerViewModel();

@@ -27,6 +27,9 @@ namespace CarDealership.Services.Data.Interfaces
 
         Task<bool> EditVehicleAsync(VehicleViewModel model);
 
+        Task<DeleteViewModel?> DeleteByIdAsync(Guid id);
+
+        Task<bool> SoftDeleteAsync(Guid id);
 
         Task<IEnumerable<VehicleCategoryModel>> AllCategories();
 

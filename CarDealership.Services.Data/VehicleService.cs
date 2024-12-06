@@ -161,6 +161,46 @@ namespace CarDealership.Services.Data
             return result;
         }
 
+        public async Task<DeleteViewModel?> DeleteByIdAsync(Guid id)
+        {
+            DeleteViewModel? vehicleDelete = await vehicleRepository.GetAllAttached()
+                .Where(v => v.IsDeleted == false)
+                .Select(v => new DeleteViewModel()
+                {
+                    Id = v.Id.ToString(),
+                    Make = v.Make,
+                    Model = v.Model,
+                    Price = v.Price,
+                    FuelType = v.FuelType,
+                    Gearbox = v.GearBox,
+                    Year = v.Year,
+                    Doors = v.Doors,
+                    Seats = v.Seats,
+                    TankCapacity = v.TankCapacity,
+                    Horsepower = v.HorsePower,
+                    Cubage = v.Cubage,
+                    ImageUrl = v.ImageUrl,
+                    Category = v.VehicleCategory,
+                    Type = v.VehicleType
+                })
+                .FirstOrDefaultAsync(v => v.Id.ToLower() == id.ToString().ToLower());
+
+            return vehicleDelete;
+        }
+
+        public async Task<bool> SoftDeleteAsync(Guid id)
+        {
+            Vehicle? deleteVehicle = await vehicleRepository
+                .FirstOrDefaultAsync(c => c.Id.ToString().ToLower() == id.ToString().ToLower());
+            if (deleteVehicle == null)
+            {
+                return false;
+            }
+
+            deleteVehicle.IsDeleted = true;
+            return await this.vehicleRepository.UpdateAsync(deleteVehicle);
+        }
+
         public async Task<IEnumerable<VehicleCategoryModel>> AllCategories()
         {
             var category = vehicleRepository.AllReadonly<VehicleCategory>()
