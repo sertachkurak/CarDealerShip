@@ -33,6 +33,8 @@ namespace CarDealership.Services.Data.Interfaces
         Task<bool> SoftDeleteAsync(Guid id);
 
         Task<IEnumerable<VehicleCategoryModel>> AllCategories();
+        Task<IEnumerable<VehicleLocationModel>> AllLocations();
+        Task<IEnumerable<VehiclePurposeModel>> AllPurposes();
 
         Task<IEnumerable<VehicleTypeModel>> AllTypes();
 
@@ -41,7 +43,7 @@ namespace CarDealership.Services.Data.Interfaces
         Task<IEnumerable<string>> AllTypesNames();
         Task<IEnumerable<string>> AllCategoriesNames();
 
-        Task<IEnumerable<string>> AllLocations();
+        Task<IEnumerable<string>> AllLocationsNames();
 
         Task<VehicleSpecificationsViewModel> VehicleSpecificationsById(Guid id);
     }

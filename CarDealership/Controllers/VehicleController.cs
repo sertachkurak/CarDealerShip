@@ -33,7 +33,7 @@ namespace CarDealership.Web.Controllers
             query.Models = await vehicleService.AllModelsNames();
             query.Types = await vehicleService.AllTypesNames();
             query.Categories = await vehicleService.AllCategoriesNames();
-            query.LocatedIns = await vehicleService.AllLocations();
+            query.LocatedIns = await vehicleService.AllLocationsNames();
             query.Vehicles = result.Vehicles;
 
             return View(query);
@@ -54,7 +54,9 @@ namespace CarDealership.Web.Controllers
             var vehicle = new VehicleViewModel
             {
                 VehicleCategories = await vehicleService.AllCategories(),
-                VehicleTypes = await vehicleService.AllTypes()
+                VehicleTypes = await vehicleService.AllTypes(),
+                VehicleLocations = await vehicleService.AllLocations(),
+                VehiclePurposes = await vehicleService.AllPurposes()
             };
 
             return View(vehicle);
@@ -76,6 +78,8 @@ namespace CarDealership.Web.Controllers
 
             vehicleViewModel.VehicleCategories = await vehicleService.AllCategories();
             vehicleViewModel.VehicleTypes = await vehicleService.AllTypes();
+            vehicleViewModel.VehicleLocations = await vehicleService.AllLocations();
+            vehicleViewModel.VehiclePurposes = await vehicleService.AllPurposes();
 
             await this.vehicleService.AddVehicleAsync(vehicleViewModel);
 
@@ -103,6 +107,8 @@ namespace CarDealership.Web.Controllers
 
             vehicle.VehicleCategories = await vehicleService.AllCategories();
             vehicle.VehicleTypes = await vehicleService.AllTypes();
+            vehicle.VehicleLocations = await vehicleService.AllLocations();
+            vehicle.VehiclePurposes = await vehicleService.AllPurposes();
 
             return View(vehicle);
         }

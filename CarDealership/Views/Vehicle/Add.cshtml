@@ -131,6 +131,33 @@
                 <span asp-validation-for="TypeId" class="small text-danger"></span>
             </div>
         </div>
+        
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="LocationId" class="form-label">Location</label>
+                <select asp-for="LocationId" class="form-control">
+                    <option value="">Select Location</option>
+                    @foreach (var location in Model.VehicleLocations)
+                    {
+                        <option value="@location.Id">@location.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="LocationId" class="small text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="PurposeId" class="form-label">Purpose</label>
+                <select asp-for="PurposeId" class="form-control">
+                    <option value="">Select Purpose</option>
+                    @foreach (var purpose in Model.VehiclePurposes)
+                    {
+                        <option value="@purpose.Id">@purpose.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="PurposeId" class="small text-danger"></span>
+            </div>
+        </div>
     </div>
 
     <div class="text-center my-4">

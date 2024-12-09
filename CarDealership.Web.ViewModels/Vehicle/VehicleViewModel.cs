@@ -72,5 +72,17 @@ namespace CarDealership.Web.ViewModels.Vehicle
         public Guid TypeId { get; set; }
 
         public IEnumerable<VehicleTypeModel> VehicleTypes { get; set; } = new List<VehicleTypeModel>();
+
+        [Required]
+        [Display(Name = "Location")]
+        public Guid LocationId { get; set; }
+
+        public IEnumerable<VehicleLocationModel> VehicleLocations { get; set; } = new List<VehicleLocationModel>();
+
+        [Required]
+        [Display(Name = "Purpose")]
+        public Guid PurposeId { get; set; }
+
+        public IEnumerable<VehiclePurposeModel> VehiclePurposes { get; set; } = new List<VehiclePurposeModel>();
     }
 }

@@ -102,7 +102,9 @@ namespace CarDealership.Services.Data
                 Cubage = model.Cubage,
                 ImageUrl = model.ImageUrl,
                 CategoryId = model.CategoryId,
-                TypeId = model.TypeId
+                TypeId = model.TypeId,
+                LocationId = model.LocationId,
+                PurposeId = model.PurposeId
             };
             await vehicleRepository.AddAsync(vehicle);
         }
@@ -134,7 +136,9 @@ namespace CarDealership.Services.Data
                     Cubage = v.Cubage,
                     ImageUrl = v.ImageUrl,
                     CategoryId = v.CategoryId,
-                    TypeId = v.TypeId
+                    TypeId = v.TypeId,
+                    LocationId = v.LocationId,
+                    PurposeId = v.PurposeId
                 })
                 .FirstOrDefaultAsync();
 
@@ -158,6 +162,8 @@ namespace CarDealership.Services.Data
             vehicle.ImageUrl = model.ImageUrl;
             vehicle.CategoryId = model.CategoryId;
             vehicle.TypeId = model.TypeId;
+            vehicle.LocationId = model.LocationId;
+            vehicle.PurposeId = model.PurposeId;
 
             bool result = await vehicleRepository.UpdateAsync(vehicle);
 
@@ -217,6 +223,30 @@ namespace CarDealership.Services.Data
 
         }
 
+        public async Task<IEnumerable<VehicleLocationModel>> AllLocations()
+        {
+            return await vehicleRepository.AllReadonly<Location>()
+                .OrderBy(v => v.Name)
+                .Select(v => new VehicleLocationModel()
+                {
+                    Id = v.Id,
+                    Name = v.Name
+                })
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<VehiclePurposeModel>> AllPurposes()
+        {
+            return await vehicleRepository.AllReadonly<VehiclePurpose>()
+                .OrderBy(v => v.Name)
+                .Select(v => new VehiclePurposeModel()
+                {
+                    Id = v.Id,
+                    Name = v.Name
+                })
+                .ToListAsync();
+        }
+
         public async Task<IEnumerable<VehicleTypeModel>> AllTypes()
         {
             return await vehicleRepository.AllReadonly<VehicleType>()
@@ -263,7 +293,7 @@ namespace CarDealership.Services.Data
 
         }
 
-        public async Task<IEnumerable<string>> AllLocations()
+        public async Task<IEnumerable<string>> AllLocationsNames()
         {
             return await vehicleRepository.AllReadonly<Location>()
                 .Select(v => v.Name)
