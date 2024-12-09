@@ -1,28 +1,22 @@
-using CarDealership.Data;
-using CarDealership.Data.Models;
-using CarDealership.Services.Data;
 using CarDealership.Web.Infrastructure;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace CarDealership.Web
 {
-    using Microsoft.AspNetCore.Identity;
-    using Microsoft.EntityFrameworkCore;
-
     using Data;
     using Data.Models;
-    //using Infrastructure.Extensions;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
     using Services.Data.Interfaces;
-    //using Services.Mapping;
-    using ViewModels;
     public class Program
     {
         public static void Main(string[] args)
         {
             WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
             var connectionString = builder.Configuration.GetConnectionString("SQLServer");
+            string adminEmail = builder.Configuration.GetValue<string>("Administrator:Email")!;
+            string adminUsername = builder.Configuration.GetValue<string>("Administrator:Username")!;
+            string adminPassword = builder.Configuration.GetValue<string>("Administrator:Password")!;
 
             builder.Services
                 .AddDbContext<DealershipDbContext>(
@@ -74,6 +68,12 @@ namespace CarDealership.Web
 
             app.UseStatusCodePagesWithRedirects("/Home/Error/{0}");
 
+            app.SeedAdmin(adminEmail, adminUsername, adminPassword);
+
+
+            app.MapControllerRoute(
+                name: "Areas",
+                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
             app.MapControllerRoute(
                 name: "Errors",
                 pattern: "{controller=Home}/{action=Index}/{statusCode?}");

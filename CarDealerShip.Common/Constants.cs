@@ -73,5 +73,10 @@
             public const string WarningMessage = "WarningMessage";
             public const string SuccessMessage = "SuccessMessage";
         }
+
+        public static class AdminConstants
+        {
+            public const string AdminRoleName = "Admin";
+        }
     }
 }
