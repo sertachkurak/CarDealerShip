@@ -26,9 +26,9 @@
                 <span asp-validation-for="FuelType" class="small text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Gearbox"></label>
-                <textarea asp-for="Gearbox" rows="4" class="form-control" placeholder="Gearbox..."></textarea>
-                <span asp-validation-for="Gearbox" class="small text-danger"></span>
+                <label asp-for="GearBox"></label>
+                <textarea asp-for="GearBox" rows="4" class="form-control" placeholder="Gearbox..."></textarea>
+                <span asp-validation-for="GearBox" class="small text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Year"></label>
@@ -51,9 +51,9 @@
                 <span asp-validation-for="TankCapacity" class="small text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Horsepower"></label>
-                <textarea asp-for="Horsepower" rows="4" class="form-control" placeholder="Horsepower..."></textarea>
-                <span asp-validation-for="Horsepower" class="small text-danger"></span>
+                <label asp-for="HorsePower"></label>
+                <textarea asp-for="HorsePower" rows="4" class="form-control" placeholder="Horsepower..."></textarea>
+                <span asp-validation-for="HorsePower" class="small text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Cubage"></label>
@@ -80,7 +80,7 @@
                 <select asp-for="TypeId" class="form-control">
                     @foreach (var type in Model.VehicleTypes)
                     {
-                        <option value="@type.Id">@type.Model</option>
+                        <option value="@type.Id">@type.Name</option>
                     }
                 </select>
                 <span asp-validation-for="TypeId" class="small text-danger"></span>

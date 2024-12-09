@@ -8,8 +8,8 @@ namespace CarDealership.Web.ViewModels.Vehicle
 {
     public class VehicleTypeModel
     {
-        public string Id { get; set; } = null!;
+        public Guid Id { get; set; }
 
-        public string Model { get; set; } = null!;
+        public string Name { get; set; } = null!;
     }
 }

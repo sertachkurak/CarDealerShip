@@ -6,7 +6,7 @@ namespace CarDealership.Web.ViewModels.Vehicle
 
     public class VehicleViewModel
     {
-        [Required] public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required]
         [MinLength(MakeMinLength)]
@@ -31,7 +31,7 @@ namespace CarDealership.Web.ViewModels.Vehicle
         [Required]
         [MinLength(GearBoxMinLength)]
         [MaxLength(GearBoxMaxLength)]
-        public string Gearbox { get; set; } = null!;
+        public string GearBox { get; set; } = null!;
 
         [Required]
         public string Year { get; set; } = null!;
@@ -50,7 +50,7 @@ namespace CarDealership.Web.ViewModels.Vehicle
 
         [Required]
         [Range(HorsepowerMinLength, HorsepowerMaxLength)]
-        public int Horsepower { get; set; }
+        public int HorsePower { get; set; }
 
         [Required]
         [Range(MinCubage, MaxCubage)]

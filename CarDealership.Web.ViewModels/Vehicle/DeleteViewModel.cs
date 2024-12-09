@@ -26,7 +26,7 @@ namespace CarDealership.Web.ViewModels.Vehicle
         [Display(Name = "Fuel type")]
         public string FuelType { get; set; } = null!;
 
-        public string Gearbox { get; set; } = null!;
+        public string GearBox { get; set; } = null!;
 
         public int Doors { get; set; }
 
@@ -34,7 +34,7 @@ namespace CarDealership.Web.ViewModels.Vehicle
 
         public int TankCapacity { get; set; }
 
-        public int Horsepower { get; set; }
+        public int HorsePower { get; set; }
 
         public int Cubage { get; set; }
 

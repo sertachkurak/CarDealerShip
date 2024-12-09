@@ -22,10 +22,11 @@ namespace CarDealership.Services.Data.Interfaces
             int carsOnPage = 1);
 
         Task AddVehicleAsync(VehicleViewModel model);
+        Task<bool> CaregoryExist(Guid categoryGuid);
 
         Task<VehicleViewModel> EditVehicleById(Guid id);
 
-        Task<bool> EditVehicleAsync(VehicleViewModel model);
+        Task<bool> EditVehicleAsync(Guid id, VehicleViewModel model);
 
         Task<DeleteViewModel?> DeleteByIdAsync(Guid id);
 

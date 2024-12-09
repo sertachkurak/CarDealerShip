@@ -11,13 +11,13 @@ namespace CarDealership.Services.Data
         private readonly IRepository<Vehicle, Guid> vehicleRepository;
 
 
-        public VehicleService(IRepository<Vehicle, Guid> _vehicleRepository)
+        public VehicleService(IRepository<Vehicle, Guid> vehicleRepository)
         {
-            vehicleRepository = _vehicleRepository;
+            this.vehicleRepository = vehicleRepository;
         }
 
         public async Task<VehicleTotalModel> GetAllAsync(string? make = null,
-            string? model = null, string? type = null,string? location = null, string? category = null, string? search = null, VehicleSorting sorting = VehicleSorting.Newest, int currPage = 1, int carsOnPage = 1)
+            string? model = null, string? type = null, string? location = null, string? category = null, string? search = null, VehicleSorting sorting = VehicleSorting.Newest, int currPage = 1, int carsOnPage = 1)
         {
             var query = vehicleRepository.GetAllAttached();
 
@@ -68,7 +68,7 @@ namespace CarDealership.Services.Data
 
             query = query.Skip(skip).Take(carsOnPage);
 
-           
+
             result.Vehicles = await query
                 .Select(v => new VehicleServiceModel()
                 {
@@ -86,18 +86,19 @@ namespace CarDealership.Services.Data
         public async Task AddVehicleAsync(VehicleViewModel model)
         {
 
-            Vehicle vehicle = new Vehicle()
+            var vehicle = new Vehicle()
             {
+                Id = Guid.NewGuid(),
                 Make = model.Make,
                 Model = model.Model,
                 Price = model.Price,
                 FuelType = model.FuelType,
-                GearBox = model.Gearbox,
+                GearBox = model.GearBox,
                 Year = model.Year,
                 Doors = model.Doors,
                 Seats = model.Seats,
                 TankCapacity = model.TankCapacity,
-                HorsePower = model.Horsepower,
+                HorsePower = model.HorsePower,
                 Cubage = model.Cubage,
                 ImageUrl = model.ImageUrl,
                 CategoryId = model.CategoryId,
@@ -106,55 +107,57 @@ namespace CarDealership.Services.Data
             await vehicleRepository.AddAsync(vehicle);
         }
 
+        public async Task<bool> CaregoryExist(Guid categoryGuid)
+        {
+            return await vehicleRepository.AllReadonly<VehicleCategory>()
+                 .AnyAsync(v => v.Id == categoryGuid);
+        }
+
         public async Task<VehicleViewModel> EditVehicleById(Guid id)
         {
-            //var car = await vehicleRepository.GetByIdAsync(id);
-
-            VehicleViewModel? vehicle = await vehicleRepository
+            var vehicle = await vehicleRepository
                 .GetAllAttached()
-                .Where(v => v.IsDeleted == false)
-                .Select(v => new VehicleViewModel()
+                .Where(v => v.IsDeleted == false && v.Id == id)
+                .Select(v => new VehicleViewModel
                 {
+                    Id = v.Id,
                     Make = v.Make,
                     Model = v.Model,
                     Price = v.Price,
                     FuelType = v.FuelType,
-                    Gearbox = v.GearBox,
+                    GearBox = v.GearBox,
                     Year = v.Year,
                     Doors = v.Doors,
                     Seats = v.Seats,
                     TankCapacity = v.TankCapacity,
-                    Horsepower = v.HorsePower,
+                    HorsePower = v.HorsePower,
                     Cubage = v.Cubage,
                     ImageUrl = v.ImageUrl,
                     CategoryId = v.CategoryId,
                     TypeId = v.TypeId
-
                 })
-                .FirstOrDefaultAsync(v => v.Id == id);
+                .FirstOrDefaultAsync();
+
             return vehicle;
         }
 
-        public async Task<bool> EditVehicleAsync(VehicleViewModel model)
+        public async Task<bool> EditVehicleAsync(Guid id, VehicleViewModel model)
         {
-            Vehicle vehicle = new Vehicle()
-            {
-                Make = model.Make,
-                Model = model.Model,
-                Price = model.Price,
-                FuelType = model.FuelType,
-                GearBox = model.Gearbox,
-                Year = model.Year,
-                Doors = model.Doors,
-                Seats = model.Seats,
-                TankCapacity = model.TankCapacity,
-                HorsePower = model.Horsepower,
-                Cubage = model.Cubage,
-                ImageUrl = model.ImageUrl,
-                CategoryId = model.CategoryId,
-                TypeId = model.TypeId
+            var vehicle = await vehicleRepository.GetByIdAsync(id);
 
-            };
+            vehicle.Make = model.Make;
+            vehicle.Model = model.Model;
+            vehicle.FuelType = model.FuelType;
+            vehicle.GearBox = model.GearBox;
+            vehicle.Year = model.Year;
+            vehicle.Seats = model.Seats;
+            vehicle.Doors = model.Doors;
+            vehicle.TankCapacity = model.TankCapacity;
+            vehicle.HorsePower = model.HorsePower;
+            vehicle.Cubage = model.Cubage;
+            vehicle.ImageUrl = model.ImageUrl;
+            vehicle.CategoryId = model.CategoryId;
+            vehicle.TypeId = model.TypeId;
 
             bool result = await vehicleRepository.UpdateAsync(vehicle);
 
@@ -172,12 +175,12 @@ namespace CarDealership.Services.Data
                     Model = v.Model,
                     Price = v.Price,
                     FuelType = v.FuelType,
-                    Gearbox = v.GearBox,
+                    GearBox = v.GearBox,
                     Year = v.Year,
                     Doors = v.Doors,
                     Seats = v.Seats,
                     TankCapacity = v.TankCapacity,
-                    Horsepower = v.HorsePower,
+                    HorsePower = v.HorsePower,
                     Cubage = v.Cubage,
                     ImageUrl = v.ImageUrl,
                     Category = v.VehicleCategory,
@@ -203,30 +206,28 @@ namespace CarDealership.Services.Data
 
         public async Task<IEnumerable<VehicleCategoryModel>> AllCategories()
         {
-            var category = vehicleRepository.AllReadonly<VehicleCategory>()
+            return await vehicleRepository.AllReadonly<VehicleCategory>()
                 .OrderBy(v => v.Name)
                 .Select(v => new VehicleCategoryModel()
                 {
-                    Id = v.Id.ToString(),
+                    Id = v.Id,
                     Name = v.Name
                 })
                 .ToListAsync();
 
-            return await category;
         }
 
         public async Task<IEnumerable<VehicleTypeModel>> AllTypes()
         {
-            var type = vehicleRepository.AllReadonly<VehicleType>()
+            return await vehicleRepository.AllReadonly<VehicleType>()
                 .OrderBy(v => v.Name)
                 .Select(v => new VehicleTypeModel()
                 {
-                    Id = v.Id.ToString(),
-                    Model = v.Name
+                    Id = v.Id,
+                    Name = v.Name
                 })
                 .ToListAsync();
 
-            return await type;
         }
 
         public async Task<IEnumerable<string>> AllMakeNames()
@@ -286,6 +287,7 @@ namespace CarDealership.Services.Data
                     Year = v.Year,
                     Doors = v.Doors,
                     Seats = v.Seats,
+                    Price = v.Price,
                     TankCapacity = v.TankCapacity,
                     Horsepower = v.HorsePower,
                     Cubage = v.Cubage,
