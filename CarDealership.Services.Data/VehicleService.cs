@@ -173,26 +173,16 @@ namespace CarDealership.Services.Data
         public async Task<DeleteViewModel?> DeleteByIdAsync(Guid id)
         {
             DeleteViewModel? vehicleDelete = await vehicleRepository.GetAllAttached()
-                .Where(v => v.IsDeleted == false)
+                .Where(v => v.IsDeleted == false && v.Id == id)
                 .Select(v => new DeleteViewModel()
                 {
-                    Id = v.Id.ToString(),
+                    Id = v.Id,
                     Make = v.Make,
                     Model = v.Model,
-                    Price = v.Price,
-                    FuelType = v.FuelType,
-                    GearBox = v.GearBox,
                     Year = v.Year,
-                    Doors = v.Doors,
-                    Seats = v.Seats,
-                    TankCapacity = v.TankCapacity,
-                    HorsePower = v.HorsePower,
-                    Cubage = v.Cubage,
                     ImageUrl = v.ImageUrl,
-                    Category = v.VehicleCategory,
-                    Type = v.VehicleType
                 })
-                .FirstOrDefaultAsync(v => v.Id.ToLower() == id.ToString().ToLower());
+                .FirstOrDefaultAsync();
 
             return vehicleDelete;
         }

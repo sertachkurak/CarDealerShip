@@ -160,7 +160,7 @@ namespace CarDealership.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Delete(string? id)
+        public async Task<IActionResult> Delete(Guid id)
         {
             bool isManager = await this.managerService.ExistById(User.GetUserId());
             if (!isManager)
@@ -168,16 +168,7 @@ namespace CarDealership.Web.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            Guid vehicleGuid = Guid.Empty;
-
-            bool isGuidValid = this.IsGuidValid(id, ref vehicleGuid);
-
-            if (!isGuidValid)
-            {
-                return RedirectToAction(nameof(Index));
-            }
-
-            DeleteViewModel deleteModel = await vehicleService.DeleteByIdAsync(vehicleGuid);
+            var deleteModel = await vehicleService.DeleteByIdAsync(id);
 
             if (deleteModel == null)
             {
@@ -188,7 +179,7 @@ namespace CarDealership.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SoftDelete(DeleteViewModel vehicleModel)
+        public async Task<IActionResult> Delete(Guid id, DeleteViewModel deleteVehicle)
         {
             bool isManager = await this.managerService.ExistById(User.GetUserId());
             if (!isManager)
@@ -196,19 +187,12 @@ namespace CarDealership.Web.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            Guid vehicleGuid = Guid.Empty;
-
-            if (!this.IsGuidValid(vehicleModel.Id, ref vehicleGuid))
-            {
-                return RedirectToAction(nameof(Index));
-            }
-
             bool isDeleted = await vehicleService
-                .SoftDeleteAsync(vehicleGuid);
+                .SoftDeleteAsync(id);
 
             if (!isDeleted)
             {
-                return RedirectToAction(nameof(Delete), new { id = vehicleModel.Id });
+                return RedirectToAction(nameof(Delete), new { id = deleteVehicle.Id });
             }
 
             return RedirectToAction(nameof(Index));
