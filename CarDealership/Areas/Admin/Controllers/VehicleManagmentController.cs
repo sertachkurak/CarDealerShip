@@ -1,27 +1,27 @@
-﻿using CarDealership.Data.Models;
-using CarDealership.Services.Data.Interfaces;
+﻿using CarDealership.Services.Data.Interfaces;
+using CarDealership.Web.Controllers;
 using CarDealership.Web.Infrastructure;
 using CarDealership.Web.ViewModels.Vehicle;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CarDealership.Web.Controllers
+namespace CarDealership.Web.Areas.Admin.Controllers
 {
     using static Common.Constants.AdminConstants;
 
-    public class VehicleController : BaseController
+    [Area(AdminRoleName)]
+    [Authorize(Roles = AdminRoleName)]
+    public class VehicleManagmentController : BaseController
     {
-        private readonly IVehicleService vehicleService;
+        private readonly IVehicleService vehicleService; 
 
-        public VehicleController(IVehicleService _vehicleService, IManagerService managerService)
+        public VehicleManagmentController(IVehicleService vehicleService, IManagerService managerService) 
             : base(managerService)
         {
-            vehicleService = _vehicleService;
+            this.vehicleService = vehicleService;
         }
 
-
         [HttpGet]
-        [AllowAnonymous]
         public async Task<IActionResult> Index([FromQuery] VehicleAllViewModel query)
         {
 
@@ -40,19 +40,13 @@ namespace CarDealership.Web.Controllers
 
             return View(query);
 
-
         }
 
         [HttpGet]
         [Authorize]
         public async Task<IActionResult> Add()
         {
-            bool isManager = await this.managerService.ExistById(User.GetUserId());
-            if (!isManager)
-            {
-                return this.RedirectToAction(nameof(Index));
-            }
-
+            
             var vehicle = new VehicleViewModel
             {
                 VehicleCategories = await vehicleService.AllCategories(),
@@ -72,7 +66,7 @@ namespace CarDealership.Web.Controllers
             {
                 ModelState.AddModelError(nameof(vehicleViewModel.CategoryId), "Category does not exists");
             }
-            
+
             if (!this.ModelState.IsValid)
             {
                 return this.View(vehicleViewModel);
@@ -92,11 +86,6 @@ namespace CarDealership.Web.Controllers
         [Authorize]
         public async Task<IActionResult> Edit(Guid id)
         {
-            bool isManager = await this.managerService.ExistById(User.GetUserId());
-            if (!isManager)
-            {
-                return this.RedirectToAction(nameof(Index));
-            }
 
             Guid vehicleGuid = Guid.Empty;
             bool isIdValid = this.IsGuidValid(id.ToString(), ref vehicleGuid);
@@ -121,12 +110,6 @@ namespace CarDealership.Web.Controllers
         [Authorize]
         public async Task<IActionResult> Edit(Guid id, VehicleViewModel editModel)
         {
-            bool isManager = await this.managerService.ExistById(User.GetUserId());
-            if (!isManager)
-            {
-                ModelState.AddModelError(string.Empty, "Unexpected error. Please contact administrator");
-                return RedirectToAction(nameof(Index));
-            }
 
             if (!ModelState.IsValid)
             {
@@ -138,40 +121,11 @@ namespace CarDealership.Web.Controllers
             await vehicleService.EditVehicleAsync(editModel.Id, editModel, isAdmin);
 
 
-            return RedirectToAction(nameof(Specifications), "Vehicle", new { id = editModel.Id });
+            return RedirectToAction(nameof(Index));
         }
-
-        [AllowAnonymous]
-        public async Task<IActionResult> Specifications(string? id)
-        {
-            Guid vehicleGuid = Guid.Empty;
-
-            bool isGuidValid = this.IsGuidValid(id, ref vehicleGuid);
-
-            if (!isGuidValid)
-            {
-                return this.RedirectToAction(nameof(Index));
-            }
-
-            var vehicle = await this.vehicleService
-                .VehicleSpecificationsById(vehicleGuid);
-
-            if (vehicle == null)
-            {
-                return this.RedirectToAction(nameof(Index));
-            }
-
-            return this.View(vehicle);
-        }
-
         [HttpGet]
         public async Task<IActionResult> Delete(Guid id)
         {
-            bool isManager = await this.managerService.ExistById(User.GetUserId());
-            if (!isManager)
-            {
-                return RedirectToAction(nameof(Index));
-            }
             bool isAdmin = User.IsInRole(AdminRoleName);
 
             var deleteModel = await vehicleService.DeleteByIdAsync(id, isAdmin);
@@ -187,11 +141,6 @@ namespace CarDealership.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(Guid id, DeleteViewModel deleteVehicle)
         {
-            bool isManager = await this.managerService.ExistById(User.GetUserId());
-            if (!isManager)
-            {
-                return RedirectToAction(nameof(Index));
-            }
             bool isAdmin = User.IsInRole(AdminRoleName);
 
             bool isDeleted = await vehicleService

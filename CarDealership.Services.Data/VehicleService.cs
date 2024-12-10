@@ -115,7 +115,7 @@ namespace CarDealership.Services.Data
                  .AnyAsync(v => v.Id == categoryGuid);
         }
 
-        public async Task<VehicleViewModel> EditVehicleById(Guid id)
+        public async Task<VehicleViewModel> EditVehicleById(Guid id, bool isAdmin)
         {
             var vehicle = await vehicleRepository
                 .GetAllAttached()
@@ -145,7 +145,7 @@ namespace CarDealership.Services.Data
             return vehicle;
         }
 
-        public async Task<bool> EditVehicleAsync(Guid id, VehicleViewModel model)
+        public async Task<bool> EditVehicleAsync(Guid id, VehicleViewModel model, bool isAdmin)
         {
             var vehicle = await vehicleRepository.GetByIdAsync(id);
 
@@ -170,7 +170,7 @@ namespace CarDealership.Services.Data
             return result;
         }
 
-        public async Task<DeleteViewModel?> DeleteByIdAsync(Guid id)
+        public async Task<DeleteViewModel?> DeleteByIdAsync(Guid id, bool isAdmin)
         {
             DeleteViewModel? vehicleDelete = await vehicleRepository.GetAllAttached()
                 .Where(v => v.IsDeleted == false && v.Id == id)
@@ -187,7 +187,7 @@ namespace CarDealership.Services.Data
             return vehicleDelete;
         }
 
-        public async Task<bool> SoftDeleteAsync(Guid id)
+        public async Task<bool> SoftDeleteAsync(Guid id, bool isAdmin)
         {
             Vehicle? deleteVehicle = await vehicleRepository
                 .FirstOrDefaultAsync(c => c.Id.ToString().ToLower() == id.ToString().ToLower());
@@ -200,6 +200,20 @@ namespace CarDealership.Services.Data
             return await this.vehicleRepository.UpdateAsync(deleteVehicle);
         }
 
+        public async Task<IEnumerable<VehicleServiceModel>> AllVehiclesByAgentId(Guid id)
+        {
+            return await vehicleRepository.AllReadonly<Vehicle>()
+                .Where(c => c.IsDeleted)
+                .Select(c => new VehicleServiceModel()
+                {
+                    Id = c.Id.ToString(),
+                    Make = c.Make,
+                    Model = c.Model,
+                    ImageUrl = c.ImageUrl,
+                    Price = c.Price,
+                })
+                .ToListAsync();
+        }
         public async Task<IEnumerable<VehicleCategoryModel>> AllCategories()
         {
             return await vehicleRepository.AllReadonly<VehicleCategory>()
@@ -290,6 +304,8 @@ namespace CarDealership.Services.Data
                 .Distinct()
                 .ToListAsync();
         }
+
+
 
         public async Task<VehicleSpecificationsViewModel> VehicleSpecificationsById(Guid id)
         {

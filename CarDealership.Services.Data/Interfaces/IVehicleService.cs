@@ -24,13 +24,15 @@ namespace CarDealership.Services.Data.Interfaces
         Task AddVehicleAsync(VehicleViewModel model);
         Task<bool> CaregoryExist(Guid categoryGuid);
 
-        Task<VehicleViewModel> EditVehicleById(Guid id);
+        Task<VehicleViewModel> EditVehicleById(Guid id, bool isAdmin);
 
-        Task<bool> EditVehicleAsync(Guid id, VehicleViewModel model);
+        Task<bool> EditVehicleAsync(Guid id, VehicleViewModel model, bool isAdmin);
 
-        Task<DeleteViewModel?> DeleteByIdAsync(Guid id);
+        Task<DeleteViewModel?> DeleteByIdAsync(Guid id, bool isAdmin);
 
-        Task<bool> SoftDeleteAsync(Guid id);
+        Task<bool> SoftDeleteAsync(Guid id, bool isAdmin);
+
+        Task<IEnumerable<VehicleServiceModel>> AllVehiclesByAgentId(Guid id);
 
         Task<IEnumerable<VehicleCategoryModel>> AllCategories();
         Task<IEnumerable<VehicleLocationModel>> AllLocations();
