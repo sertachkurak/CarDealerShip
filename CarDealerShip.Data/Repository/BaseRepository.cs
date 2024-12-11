@@ -58,17 +58,17 @@ namespace CarDealership.Data.Repository
             return this.dbSet.ToArray();
         }
 
-       public IQueryable<T> AllReadonly<T>() where T : class
-       {
-           return DbSet<T>()
-               .AsNoTracking();
-       }
-       public IQueryable<T> AllReadonly<T>(Expression<Func<T, bool>> search) where T : class
-       {
-           return this.DbSet<T>()
-               .Where(search)
-               .AsNoTracking();
-       }
+        public IQueryable<T> AllReadonly<T>() where T : class
+        {
+            return DbSet<T>()
+                .AsNoTracking();
+        }
+        public IQueryable<T> AllReadonly<T>(Expression<Func<T, bool>> search) where T : class
+        {
+            return this.DbSet<T>()
+                .Where(search)
+                .AsNoTracking();
+        }
 
         public async Task<IEnumerable<TType>> GetAllAsync()
         {

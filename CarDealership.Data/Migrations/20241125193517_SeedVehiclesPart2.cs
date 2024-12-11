@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -13,7 +12,7 @@ namespace CarDealership.Data.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-           
+
 
             migrationBuilder.InsertData(
                 table: "Vehicles",
@@ -42,14 +41,14 @@ namespace CarDealership.Data.Migrations
                     { new Guid("e991d671-419a-44df-a608-587fa101b229"), new Guid("247c145d-9b6d-4315-a68a-f8191b687429"), 2000, 4, "Дизел", "Ръчна", 130, "https://images.clickdealer.co.uk/vehicles/4175/4175102/large2/92193323.jpg", false, new Guid("ae187b67-abd1-4c1a-8590-6a22c6de4b17"), "Ford", "Transit", 27000m, new Guid("661d2044-185a-4911-8864-1285c0638e09"), 3, 90, new Guid("8f40d349-c104-430e-81d4-ab1ba6390187"), "2019" }
                 });
 
-            
+
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            
-           
+
+
         }
     }
 }

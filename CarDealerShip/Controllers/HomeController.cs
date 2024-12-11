@@ -1,7 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-using CarDealership.Data.Models;
-using CarDealership.Web.ViewModels;
 
 namespace CarDealership.Web.Controllers
 {

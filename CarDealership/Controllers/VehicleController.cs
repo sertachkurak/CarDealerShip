@@ -1,5 +1,4 @@
-﻿using CarDealership.Data.Models;
-using CarDealership.Services.Data.Interfaces;
+﻿using CarDealership.Services.Data.Interfaces;
 using CarDealership.Web.Infrastructure;
 using CarDealership.Web.ViewModels.Vehicle;
 using Microsoft.AspNetCore.Authorization;
@@ -72,7 +71,7 @@ namespace CarDealership.Web.Controllers
             {
                 ModelState.AddModelError(nameof(vehicleViewModel.CategoryId), "Category does not exists");
             }
-            
+
             if (!this.ModelState.IsValid)
             {
                 return this.View(vehicleViewModel);

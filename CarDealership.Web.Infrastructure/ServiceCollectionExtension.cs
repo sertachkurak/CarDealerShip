@@ -1,13 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using CarDealership.Data.Models;
+﻿using CarDealership.Data.Models;
 using CarDealership.Data.Repository;
 using CarDealership.Data.Repository.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace CarDealership.Web.Infrastructure
 {

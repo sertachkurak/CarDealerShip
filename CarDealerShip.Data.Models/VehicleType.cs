@@ -10,8 +10,8 @@ namespace CarDealership.Data.Models
         public Guid Id { get; set; } = Guid.NewGuid();
 
 
-        [Required] 
-        [MaxLength(NameMaxLength)] 
+        [Required]
+        [MaxLength(NameMaxLength)]
         public string Name { get; set; } = null!;
 
         public virtual ICollection<Vehicle> Vehicles { get; set; } =

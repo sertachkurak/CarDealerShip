@@ -1,5 +1,4 @@
 ﻿using System.Security.Claims;
-using CarDealership.Common;
 
 namespace CarDealership.Web.Infrastructure
 {

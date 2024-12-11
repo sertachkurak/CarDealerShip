@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CarDealership.Data.Models;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CarDealership.Data.Models;
 
 namespace CarDealership.Web.ViewModels.Vehicle
 {

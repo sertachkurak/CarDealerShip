@@ -1,25 +1,24 @@
-﻿using CarDealership.Data.Models;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarDealership.Data
 {
-    using Models;
     using Configuration;
+    using Models;
     public class DealershipDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
     {
 
         public DealershipDbContext()
         {
-            
+
         }
 
 
         public DealershipDbContext(DbContextOptions<DealershipDbContext> options)
-                :base(options)
+                : base(options)
         {
-            
+
         }
 
         public virtual DbSet<Vehicle> Vehicles { get; set; } = null!;
@@ -40,6 +39,6 @@ namespace CarDealership.Data
             modelBuilder.ApplyConfiguration(new ApplicationUserVehicleConfiguration());
 
             base.OnModelCreating(modelBuilder);
-        } 
+        }
     }
 }

@@ -1,5 +1,4 @@
-﻿using CarDealership.Data.Models;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace CarDealership.Web.ViewModels.Vehicle
 {

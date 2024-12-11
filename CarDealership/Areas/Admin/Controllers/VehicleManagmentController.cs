@@ -1,6 +1,5 @@
 ﻿using CarDealership.Services.Data.Interfaces;
 using CarDealership.Web.Controllers;
-using CarDealership.Web.Infrastructure;
 using CarDealership.Web.ViewModels.Vehicle;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -13,9 +12,9 @@ namespace CarDealership.Web.Areas.Admin.Controllers
     [Authorize(Roles = AdminRoleName)]
     public class VehicleManagmentController : BaseController
     {
-        private readonly IVehicleService vehicleService; 
+        private readonly IVehicleService vehicleService;
 
-        public VehicleManagmentController(IVehicleService vehicleService, IManagerService managerService) 
+        public VehicleManagmentController(IVehicleService vehicleService, IManagerService managerService)
             : base(managerService)
         {
             this.vehicleService = vehicleService;
@@ -46,7 +45,7 @@ namespace CarDealership.Web.Areas.Admin.Controllers
         [Authorize]
         public async Task<IActionResult> Add()
         {
-            
+
             var vehicle = new VehicleViewModel
             {
                 VehicleCategories = await vehicleService.AllCategories(),

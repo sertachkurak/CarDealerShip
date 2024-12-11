@@ -5,7 +5,7 @@ namespace CarDealership.Data.Models
     using static Common.Constants.LocationValidations;
     public class Location
     {
-        [Key] 
+        [Key]
         public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required]

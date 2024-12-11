@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CarDealership.Data.Models;
+﻿using CarDealership.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -35,7 +30,7 @@ namespace CarDealership.Data.Configuration
                 new VehicleCategory()
                 {
                     Name = "Хечбег"
-                }, 
+                },
                 new VehicleCategory()
                 {
                     Name = "Ван"

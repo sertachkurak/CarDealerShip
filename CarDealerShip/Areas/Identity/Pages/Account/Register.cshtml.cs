@@ -2,17 +2,13 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 namespace CinemaApp.Web.Areas.Identity.Pages.Account
 {
-    using System.ComponentModel.DataAnnotations;
-
+    using CarDealership.Data.Models;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.RazorPages;
-
-    using CarDealership.Data.Models;
+    using System.ComponentModel.DataAnnotations;
 
     public class RegisterModel : PageModel
     {

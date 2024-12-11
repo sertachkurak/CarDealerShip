@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -40,13 +39,13 @@ namespace CarDealership.Data.Migrations
                     { new Guid("f2d53339-77a9-4d2a-a1bd-bd7ab0e07e26"), new Guid("247c145d-9b6d-4315-a68a-f8191b687429"), 2200, 3, "Дизел", "Ръчна", 163, "https://d2e5b8shawuel2.cloudfront.net/vehicle/284390/hlv/original.jpg", false, new Guid("48141d40-a443-4edf-aa93-80a12db8690e"), "Mercedes-Benz", "Sprinter 316", 32000m, new Guid("661d2044-185a-4911-8864-1285c0638e09"), 8, 100, new Guid("8f40d349-c104-430e-81d4-ab1ba6390187"), "2015" }
                 });
 
-            
+
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            
+
         }
     }
 }

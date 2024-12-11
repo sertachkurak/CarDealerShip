@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace CarDealership.Data.Models
 {
@@ -10,18 +10,18 @@ namespace CarDealership.Data.Models
         [Key]
         public Guid Id { get; set; } = Guid.NewGuid();
 
-        [Required] 
-        [MaxLength(MakeMaxLength)] 
+        [Required]
+        [MaxLength(MakeMaxLength)]
         public string Make { get; set; } = null!;
 
-        [Required] 
-        [MaxLength(ModelMaxLength)] 
+        [Required]
+        [MaxLength(ModelMaxLength)]
         public string Model { get; set; } = null!;
 
 
 
         [Required]
-        [Precision(18,2)]
+        [Precision(18, 2)]
         public decimal Price { get; set; }
 
         [Required]

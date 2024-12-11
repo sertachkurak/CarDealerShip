@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CarDealership.Services.Data.Interfaces;
+﻿using CarDealership.Services.Data.Interfaces;
 
 namespace CarDealership.Services.Data
 {

@@ -13,7 +13,7 @@ namespace CarDealership.Web.Controllers
 
 
         public ManagerController(IManagerService managerService)
-            :base(managerService)
+            : base(managerService)
         {
             this.managerService = managerService;
         }
