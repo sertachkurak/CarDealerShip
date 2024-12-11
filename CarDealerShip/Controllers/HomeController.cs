@@ -30,7 +30,6 @@ namespace CarDealership.Web.Controllers
             {
                 return this.View("Error403");
             }
-
             return this.View("Error500");
         }
     }

@@ -33,10 +33,17 @@
                     </li>
                     @if (this.User?.Identity != null && this.User.Identity.IsAuthenticated)
                     {
-                        @if (await this.managerService.ExistById(this.User.GetUserId()) ||User.IsAdmin())
+                        @if (User.IsAdmin())
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="Admin" asp-controller="VehicleManagment" asp-action="Add">Add Vehicles</a>
+                                </li>
+
+                        }
+                            else if (await this.managerService.ExistById(this.User.GetUserId()))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Vehicle" asp-action="Add">Add Vehicles</a>
                             </li>
                         }
 
