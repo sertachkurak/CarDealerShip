@@ -197,7 +197,7 @@ namespace CarDealership.Services.Data
             }
 
             deleteVehicle.IsDeleted = true;
-            return await this.vehicleRepository.UpdateAsync(deleteVehicle);
+            return await this.vehicleRepository.DeleteAsync(deleteVehicle);
         }
 
         public async Task<IEnumerable<VehicleServiceModel>> AllVehiclesByAgentId(Guid id)
