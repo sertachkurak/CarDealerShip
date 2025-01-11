@@ -4,7 +4,7 @@ namespace CarDealership.Services.Data.Interfaces
 {
     public interface IVehicleService
     {
-        Task<VehicleTotalModel> GetAllAsync(
+        Task<VehicleTotalModel> Index(
             string? make = null,
             string? model = null,
             string? type = null,

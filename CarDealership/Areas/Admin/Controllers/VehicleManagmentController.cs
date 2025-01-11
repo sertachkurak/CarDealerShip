@@ -25,7 +25,7 @@ namespace CarDealership.Web.Areas.Admin.Controllers
         {
 
 
-            var result = await vehicleService.GetAllAsync(query.Make, query.Model, query.Type,
+            var result = await vehicleService.Index(query.Make, query.Model, query.Type,
                 query.LocatedIn, query.Category, query.Search, query.Sorting, query.CurrentPage, VehicleAllViewModel.VehicleOnPage);
 
 

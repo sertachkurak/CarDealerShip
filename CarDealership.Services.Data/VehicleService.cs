@@ -16,7 +16,7 @@ namespace CarDealership.Services.Data
             this.vehicleRepository = vehicleRepository;
         }
 
-        public async Task<VehicleTotalModel> GetAllAsync(string? make = null,
+        public async Task<VehicleTotalModel> Index(string? make = null,
             string? model = null, string? type = null, string? location = null, string? category = null, string? search = null, VehicleSorting sorting = VehicleSorting.Newest, int currPage = 1, int carsOnPage = 1)
         {
             var query = vehicleRepository.GetAllAttached();

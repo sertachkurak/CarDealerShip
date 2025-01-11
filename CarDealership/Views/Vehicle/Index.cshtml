@@ -9,9 +9,8 @@
 @{
     ViewData["Title"] = "Search Vehicles";
 }
-
+<form method="get">
 <div class="container my-5">
-    <form method="get" class="mb-4">
         <div class="row g-3">
             <div class="col-md-3">
                 <label asp-for="Make" class="form-label">Make</label>
@@ -19,7 +18,7 @@
                     <option value="">All Makes</option>
                     @foreach (var make in Model.Makes)
                     {
-                        <option value="@make">@make</option>
+                            <option value="@make">@make</option>
                     }
                 </select>
             </div>
@@ -29,7 +28,7 @@
                     <option value="">All Models</option>
                     @foreach (var modl in Model.Models)
                     {
-                        <option value="@modl">@modl</option>
+                            <option value="@modl">@modl</option>
                     }
                 </select>
             </div>
@@ -39,7 +38,7 @@
                     <option value="">All Types</option>
                     @foreach (var type in Model.Types)
                     {
-                        <option value="@type">@type</option>
+                            <option value="@type">@type</option>
                     }
                 </select>
             </div>
@@ -49,7 +48,7 @@
                     <option value="">All Categories</option>
                     @foreach (var category in Model.Categories)
                     {
-                        <option value="@category">@category</option>
+                            <option value="@category">@category</option>
                     }
                 </select>
             </div>
@@ -62,7 +61,7 @@
                     <option value="">All Locations</option>
                     @foreach (var location in Model.LocatedIns)
                     {
-                        <option value="@location">@location</option>
+                            <option value="@location">@location</option>
                     }
                 </select>
             </div>
@@ -81,44 +80,67 @@
             <div class="col-md-3 d-flex align-items-end">
                 <button type="submit" class="btn btn-primary w-100">Search</button>
             </div>
-        </div>
-    </form>
+        </div
+</form>
 
     <hr />
 
     @if (!Model.Vehicles.Any())
     {
-        <h4 class="text-center text-danger">No vehicles found matching your criteria.</h4>
+            <h4 class="text-center text-danger">No vehicles found matching your criteria.</h4>
     }
     else
     {
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach (var vehicle in Model.Vehicles)
             {
-                <partial name="_VehiclePartial" model="@vehicle" />
+                        <partial name="_VehiclePartial" model="@vehicle" />
             }
-        </div>
+            </div>
     }
-
-    <div class="mt-4 d-flex justify-content-between">
-        @{
-            var previousPage = Model.CurrentPage > 1 ? Model.CurrentPage - 1 : 1;
-            var maxPage = (int)Math.Ceiling((double)Model.VehiclesCount / VehicleAllViewModel.VehicleOnPage);
+    @{
+        var previousPage = Model.CurrentPage - 1;
+        if (previousPage < 1)
+        {
+            previousPage = 1;
         }
 
-        <a class="btn btn-outline-primary @(Model.CurrentPage == 1 ? "disabled" : "")"
-           asp-route-currentPage="@previousPage"
-           asp-route-search="@Model.Search"
-           asp-route-sorting="@((int)Model.Sorting)">
-            &laquo; Previous
-        </a>
+        var maxPage = Math.Ceiling((double)Model.VehiclesCount /
+            VehicleAllViewModel.VehicleOnPage);
+    }
 
-        <a class="btn btn-outline-primary @(Model.CurrentPage == maxPage ? "disabled" : "")"
-           asp-route-currentPage="@(Model.CurrentPage + 1)"
-           asp-route-search="@Model.Search"
-           asp-route-sorting="@((int)Model.Sorting)">
-            Next &raquo;
-        </a>
+<div class="row mb-5">
+    <div class="col-md-6 d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-primary @(Model.CurrentPage == 1 ? "disabled" : string.Empty)"
+            asp-route-currentPage="@(Model.CurrentPage + 1)"
+            asp-route-search="@Model.Search"
+            asp-route-sorting="@((int)Model.Sorting)"
+            asp-route-make="@Model.Make" 
+            asp-route-model="@Model.Model"
+            asp-route-type="@Model.Type"
+            asp-route-category="@Model.Category"
+            asp-route-locatedIn="@Model.LocatedIn">
+        &laquo; Previous</a>     
     </div>
+
+        @{
+            var shouldButtonBeDisabled = Model.CurrentPage == maxPage ||
+            !Model.Vehicles.Any();
+        }
+
+    <div class="col-md-6 d-grid gap-2 d-md-flex justify-content-md-end">
+        <a class="btn btn-primary
+           @(shouldButtonBeDisabled ? "disabled" : string.Empty)"
+            asp-route-currentPage="@(Model.CurrentPage + 1)"
+            asp-route-search="@Model.Search"
+            asp-route-sorting="@((int)Model.Sorting)"
+            asp-route-make="@Model.Make" 
+            asp-route-model="@Model.Model"
+            asp-route-type="@Model.Type"
+            asp-route-category="@Model.Category"
+            asp-route-locatedIn="@Model.LocatedIn">
+         Next &raquo;</a>        
+    </div>
+</div>
 </div>
 

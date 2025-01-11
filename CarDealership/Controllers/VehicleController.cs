@@ -24,9 +24,16 @@ namespace CarDealership.Web.Controllers
         public async Task<IActionResult> Index([FromQuery] VehicleAllViewModel query)
         {
 
-
-            var result = await vehicleService.GetAllAsync(query.Make, query.Model, query.Type,
-                query.LocatedIn, query.Category, query.Search, query.Sorting, query.CurrentPage, VehicleAllViewModel.VehicleOnPage);
+            var result = await vehicleService.Index(
+                query.Make,
+                query.Model,
+                query.Type,
+                query.LocatedIn,
+                query.Category,
+                query.Search,
+                query.Sorting,
+                query.CurrentPage,
+                VehicleAllViewModel.VehicleOnPage);
 
 
             query.VehiclesCount = result.TotalVehicles;
