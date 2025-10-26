@@ -1,0 +1,47 @@
+﻿@using CarDealership.Services.Data.Interfaces
+@using CarDealership.Web.Infrastructure
+@using CarDealership.Web.ViewModels.Vehicle
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+@inject IManagerService ManagerService
+
+@model IEnumerable<CarDealership.Web.ViewModels.Vehicle.VehicleServiceModel>
+
+@{
+    ViewBag.Title = "My Vehicles";
+}
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+<div class="row">
+    @foreach (var vehicle in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img class="card-img-top" src="@vehicle.ImageUrl" alt="Vehicle Image">
+                <div class="card-body text-center">
+                    <h4>@vehicle.Make</h4>
+                    <h6>Модел: <b>@vehicle.Model</b></h6>
+                    <h6>
+                        Цена:
+                        <b>@String.Format("{0:f2}", vehicle.Price) Лева</b>
+                    </h6>
+                    <br />
+                    <a asp-area="" asp-controller="Vehicle" asp-action="Specifications" asp-route-id="@vehicle.Id"
+                       asp-route-information="@($"{vehicle.Make}-{vehicle.Model}")" class="btn btn-success">Specifications</a>
+                    @if (this.User.Identity.IsAuthenticated)
+                    {
+                        if (await this.ManagerService.ExistById(this.User.GetUserId()))
+                        {
+                            <a asp-area="" asp-controller="Vehicle" asp-action="Edit" asp-route-id="@vehicle.Id"
+                               class="btn btn-warning">Edit</a>
+                            <a asp-area="" asp-controller="Vehicle" asp-action="Delete" asp-route-id="@vehicle.Id"
+                               class="btn btn-danger">Delete</a>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>

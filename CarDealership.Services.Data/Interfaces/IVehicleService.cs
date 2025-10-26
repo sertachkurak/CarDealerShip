@@ -27,6 +27,7 @@ namespace CarDealership.Services.Data.Interfaces
         Task<bool> SoftDeleteAsync(Guid id, bool isAdmin);
 
         Task<IEnumerable<VehicleServiceModel>> AllVehiclesByAgentId(Guid id);
+        Task<IEnumerable<VehicleServiceModel>> AllVehiclesByUserId(Guid managerId);
 
         Task<IEnumerable<VehicleCategoryModel>> AllCategories();
         Task<IEnumerable<VehicleLocationModel>> AllLocations();

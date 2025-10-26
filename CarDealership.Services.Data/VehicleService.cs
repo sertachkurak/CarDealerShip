@@ -2,6 +2,7 @@
 using CarDealership.Data.Repository.Interfaces;
 using CarDealership.Services.Data.Interfaces;
 using CarDealership.Web.ViewModels.Vehicle;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarDealership.Services.Data
@@ -72,7 +73,7 @@ namespace CarDealership.Services.Data
             result.Vehicles = await query
                 .Select(v => new VehicleServiceModel()
                 {
-                    Id = v.Id.ToString(),
+                    Id = v.Id,
                     Make = v.Make,
                     Model = v.Model,
                     Price = v.Price,
@@ -206,11 +207,26 @@ namespace CarDealership.Services.Data
                 .Where(c => c.IsDeleted)
                 .Select(c => new VehicleServiceModel()
                 {
-                    Id = c.Id.ToString(),
+                    Id = c.Id,
                     Make = c.Make,
                     Model = c.Model,
                     ImageUrl = c.ImageUrl,
                     Price = c.Price,
+                })
+                .ToListAsync();
+        }
+        public async Task<IEnumerable<VehicleServiceModel>> AllVehiclesByUserId(Guid managerId)
+        {
+
+            return await vehicleRepository.AllReadonly<Vehicle>()
+                //.Where(v => v.ManagerId == managerId)
+                .Select(c => new VehicleServiceModel()
+                {
+                    Id = c.Id,
+                    Model = c.Model,
+                    ImageUrl = c.ImageUrl,
+                    Price = c.Price,
+                    //UserId = c.UserId
                 })
                 .ToListAsync();
         }
@@ -335,6 +351,5 @@ namespace CarDealership.Services.Data
 
             return await vehicle;
         }
-
     }
 }

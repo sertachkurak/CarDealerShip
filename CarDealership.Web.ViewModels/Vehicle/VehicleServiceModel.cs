@@ -4,7 +4,7 @@ namespace CarDealership.Web.ViewModels.Vehicle
 {
     public class VehicleServiceModel
     {
-        public string Id { get; set; } = null!;
+        public Guid Id { get; set; }
 
         public string Make { get; set; } = null!;
         public string? Year { get; set; } = null!;
@@ -16,5 +16,6 @@ namespace CarDealership.Web.ViewModels.Vehicle
 
         [Display(Name = "Price")]
         public decimal Price { get; set; }
+        public Guid UserId { get; set; }
     }
 }

@@ -85,7 +85,10 @@ namespace CarDealership.Data.Models
 
         public bool IsDeleted { get; set; }
 
+        [ForeignKey(nameof(Manager))]
+        //public Guid ManagerId { get; set; }
 
+        //public Manager Manager { get; set; } = null!;
         public virtual ICollection<ApplicationUserVehicle> VehicleUser { get; set; }
             = new HashSet<ApplicationUserVehicle>();
     }

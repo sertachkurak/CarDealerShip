@@ -38,6 +38,7 @@ namespace CarDealership.Data
             modelBuilder.ApplyConfiguration(new VehicleConfiguration());
             modelBuilder.ApplyConfiguration(new ApplicationUserVehicleConfiguration());
 
+           
             base.OnModelCreating(modelBuilder);
         }
     }

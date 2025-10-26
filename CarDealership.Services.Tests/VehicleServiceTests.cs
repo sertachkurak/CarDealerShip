@@ -39,7 +39,7 @@ namespace CarDealership.Services.Tests
 
             _vehicleRepositoryMock.Setup(r => r.GetAllAttached()).Returns(vehicles);
 
-            var result = await _vehicleService.GetAllAsync(make: "Toyota", model: "Corolla", type: "Sedan", location: "NY", category: "Compact", search: "Toyota", sorting: VehicleSorting.Newest, currPage: 1, carsOnPage: 1);
+            var result = await _vehicleService.Index(make: "Toyota", model: "Corolla", type: "Sedan", location: "NY", category: "Compact", search: "Toyota", sorting: VehicleSorting.Newest, currPage: 1, carsOnPage: 1);
 
             Assert.AreEqual(1, result.Vehicles.Count());
             Assert.AreEqual("Toyota", result.Vehicles.First().Make);
@@ -57,7 +57,7 @@ namespace CarDealership.Services.Tests
 
             _vehicleRepositoryMock.Setup(r => r.GetAllAttached()).Returns(vehicles);
 
-            var result = await _vehicleService.GetAllAsync(currPage: 2, carsOnPage: 1);
+            var result = await _vehicleService.Index(currPage: 2, carsOnPage: 1);
 
             Assert.AreEqual(1, result.Vehicles.Count());
             Assert.AreEqual("Toyota", result.Vehicles.First().Make);
@@ -74,7 +74,7 @@ namespace CarDealership.Services.Tests
 
             _vehicleRepositoryMock.Setup(r => r.GetAllAttached()).Returns(vehicles);
 
-            var result = await _vehicleService.GetAllAsync(sorting: VehicleSorting.TheCheapOnesFirst);
+            var result = await _vehicleService.Index(sorting: VehicleSorting.TheCheapOnesFirst);
 
             Assert.AreEqual("Toyota", result.Vehicles.First().Make);
         }
@@ -167,7 +167,7 @@ namespace CarDealership.Services.Tests
             _vehicleRepositoryMock.Setup(r => r.GetAllAttached())
                 .Returns(vehicles.BuildMock());
 
-            var result = await _vehicleService.EditVehicleById(vehicleId, false);
+            var result = await _vehicleService.EditVehicleById(vehicleId, false, false);
 
             Assert.IsNotNull(result);
             Assert.AreEqual("Toyota", result.Make);
@@ -202,7 +202,7 @@ namespace CarDealership.Services.Tests
             _vehicleRepositoryMock.Setup(r => r.GetByIdAsync(vehicleId)).ReturnsAsync(vehicle);
             _vehicleRepositoryMock.Setup(r => r.UpdateAsync(It.IsAny<Vehicle>())).ReturnsAsync(true);
 
-            var result = await _vehicleService.EditVehicleAsync(vehicleId, model, false);
+            var result = await _vehicleService.EditVehicleAsync(vehicleId, model, false, false);
 
             Assert.IsTrue(result);
         }
@@ -235,7 +235,7 @@ namespace CarDealership.Services.Tests
             _vehicleRepositoryMock.Setup(r => r.GetByIdAsync(vehicleId)).ReturnsAsync(vehicle);
             _vehicleRepositoryMock.Setup(r => r.UpdateAsync(It.IsAny<Vehicle>())).ReturnsAsync(false);
 
-            var result = await _vehicleService.EditVehicleAsync(vehicleId, model, false);
+            var result = await _vehicleService.EditVehicleAsync(vehicleId, model, false, false);
 
             Assert.IsFalse(result);
         }

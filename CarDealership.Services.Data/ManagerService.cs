@@ -45,10 +45,14 @@ namespace CarDealership.Services.Data
                 .AnyAsync(m => m.PhoneNumber == phoneNumber);
         }
 
-        public async Task<Manager?> GetManagerId(string userId)
+        public async Task<Guid> GetManagerId(string userId)
         {
-            return await managersRepository.AllReadonly<Manager>()
-                .FirstOrDefaultAsync(m => m.UserId.ToString() == userId);
+            Guid userGuid = Guid.Parse(userId);
+
+            var manager = await managersRepository.AllReadonly<Manager>()
+                .FirstOrDefaultAsync(m => m.UserId == userGuid);
+
+            return manager?.Id ?? Guid.Empty;
         }
     }
 }

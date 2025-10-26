@@ -1,5 +1,6 @@
 ﻿using CarDealership.Services.Data.Interfaces;
 using CarDealership.Web.Controllers;
+using CarDealership.Web.Infrastructure;
 using CarDealership.Web.ViewModels.Vehicle;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

@@ -29,11 +29,11 @@
                   <a asp-area="Admin" asp-controller="VehicleManagment" asp-action="Delete" asp-route-id="@Model.Id"
                      class="btn btn-danger">Delete</a>
                 }
-                else if (await this.ManagerService.ExistById(this.User.GetUserId()))
+                @* else if (await this.ManagerService.ExistById(this.User.GetUserId()))
                 {
                     <a asp-area="" asp-controller="Vehicle" asp-action="Edit" asp-route-id="@Model.Id"
                          class="btn btn-warning">Edit</a>
-                }
+                } *@
             }
         </div>
     </div>

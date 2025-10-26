@@ -1,7 +1,9 @@
-﻿using CarDealership.Services.Data.Interfaces;
+﻿using CarDealership.Services.Data;
+using CarDealership.Services.Data.Interfaces;
 using CarDealership.Web.Infrastructure;
 using CarDealership.Web.ViewModels.Vehicle;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarDealership.Web.Controllers
@@ -168,6 +170,21 @@ namespace CarDealership.Web.Controllers
             }
 
             return this.View(vehicle);
+        }
+        public async Task<IActionResult> MyCars()
+        {
+            var userId = User.GetUserId();
+
+            if (!await managerService.ExistById(userId))
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            var managerId = await managerService.GetManagerId(userId);
+
+            var myVehicles = await vehicleService.AllVehiclesByUserId(managerId);
+
+            return View(myVehicles);
         }
 
         [HttpGet]

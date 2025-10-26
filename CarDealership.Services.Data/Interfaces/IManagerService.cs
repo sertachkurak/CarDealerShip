@@ -10,6 +10,6 @@ namespace CarDealership.Services.Data.Interfaces
 
         Task<bool> UserWithPhoneNumberExist(string phoneNumber);
 
-        Task<Manager?> GetManagerId(string userId);
+        Task<Guid> GetManagerId(string userId);
     }
 }

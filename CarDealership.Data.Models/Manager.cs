@@ -19,5 +19,7 @@ namespace CarDealership.Data.Models
         public Guid UserId { get; set; }
         [ForeignKey(nameof(UserId))]
         public virtual ApplicationUser User { get; set; } = null!;
+        //public virtual ICollection<Vehicle> Vehicles { get; set; } =
+        //    new HashSet<Vehicle>();
     }
 }
